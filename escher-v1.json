@@ -1,0 +1,1795 @@
+[
+    {
+        "map_name": "RECON1.Glycolysis TCA PPP",
+        "map_id": "3f685e1b934e33e5471b1a56540bbabe",
+        "map_description": "\nLast Modified Tue Jun 18 2024 10:43:50 GMT+0100 (Irish Standard Time)",
+        "homepage": "https://escher.github.io",
+        "schema": "https://escher.github.io/escher/jsonschema/1-0-0#"
+    },
+    {
+        "reactions": {
+            "re2": {
+                "name": "HEX1",
+                "bigg_id": "HEX1",
+                "reversibility": false,
+                "metabolites": [
+                    {
+                        "bigg_id": "glc__D_c",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "g6p_c",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "atp_c",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "adp_c",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "h_c",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 317.5,
+                "label_y": 1012.0,
+                "segments": {
+                    "d3884625-5e8a-4805-9f70-418e7c6c2ddc": {
+                        "from_node_id": "712a1d79-a0f7-418f-b886-5a747d6de656",
+                        "to_node_id": "a984d752-3e51-45bd-ac4a-f0adc48b2743",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "0a669080-8ef6-4c70-b482-a299c9e88b51": {
+                        "from_node_id": "sa1",
+                        "to_node_id": "712a1d79-a0f7-418f-b886-5a747d6de656",
+                        "b1": {
+                            "x": 195.4,
+                            "y": 1011.6333333333333
+                        },
+                        "b2": {
+                            "x": 239.8,
+                            "y": 1011.7666666666667
+                        }
+                    },
+                    "e65df631-03e9-43d5-9639-e094bb6ec917": {
+                        "from_node_id": "sa5",
+                        "to_node_id": "712a1d79-a0f7-418f-b886-5a747d6de656",
+                        "b1": {
+                            "x": 169.26666666666668,
+                            "y": 966.0333333333333
+                        },
+                        "b2": {
+                            "x": 140.53333333333333,
+                            "y": 954.5666666666667
+                        }
+                    },
+                    "a4d245ef-f5f0-44bf-abfd-70cec4a053c1": {
+                        "from_node_id": "a984d752-3e51-45bd-ac4a-f0adc48b2743",
+                        "to_node_id": "e202ee82-631b-49d3-94f8-0d8fe88b6f81",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "56a57e90-8676-4802-bf08-0f07bdf65008": {
+                        "from_node_id": "e202ee82-631b-49d3-94f8-0d8fe88b6f81",
+                        "to_node_id": "sa4",
+                        "b1": {
+                            "x": 395.2,
+                            "y": 1012.2333333333333
+                        },
+                        "b2": {
+                            "x": 439.6,
+                            "y": 1012.3666666666667
+                        }
+                    },
+                    "d6447860-969b-4b2f-9239-f04c5f5f2a46": {
+                        "from_node_id": "e202ee82-631b-49d3-94f8-0d8fe88b6f81",
+                        "to_node_id": "sa6",
+                        "b1": {
+                            "x": 360.53333333333336,
+                            "y": 997.5666666666667
+                        },
+                        "b2": {
+                            "x": 370.26666666666665,
+                            "y": 983.0333333333333
+                        }
+                    },
+                    "d35cc1e5-bd35-4dba-abad-ed2df79f30d3": {
+                        "from_node_id": "e202ee82-631b-49d3-94f8-0d8fe88b6f81",
+                        "to_node_id": "sa7",
+                        "b1": {
+                            "x": 377.7,
+                            "y": 997.2333333333333
+                        },
+                        "b2": {
+                            "x": 404.6,
+                            "y": 982.3666666666667
+                        }
+                    }
+                }
+            },
+            "re4": {
+                "name": "PGI",
+                "bigg_id": "PGI",
+                "reversibility": true,
+                "metabolites": [
+                    {
+                        "bigg_id": "g6p_c",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "f6p_c",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 595.0,
+                "label_y": 1012.5,
+                "segments": {
+                    "1d98fb50-39c9-4e44-a496-98643065d831": {
+                        "from_node_id": "sa4",
+                        "to_node_id": "4a45f1d4-9606-41ff-8623-21bc0c8e9c91",
+                        "b1": {
+                            "x": 521.0,
+                            "y": 1012.5
+                        },
+                        "b2": {
+                            "x": 558.0,
+                            "y": 1012.5
+                        }
+                    },
+                    "0311d0ba-a9e4-44bc-a3bb-72db947d24bc": {
+                        "from_node_id": "4a45f1d4-9606-41ff-8623-21bc0c8e9c91",
+                        "to_node_id": "sa8",
+                        "b1": {
+                            "x": 743.0,
+                            "y": 1012.5
+                        },
+                        "b2": {
+                            "x": 780.0,
+                            "y": 1012.5
+                        }
+                    },
+                    "e996d278-a630-4440-98ec-c5592f20845b": {
+                        "from_node_id": "sa4",
+                        "to_node_id": "4a45f1d4-9606-41ff-8623-21bc0c8e9c91",
+                        "b1": {
+                            "x": 521.0,
+                            "y": 1012.5
+                        },
+                        "b2": {
+                            "x": 558.0,
+                            "y": 1012.5
+                        }
+                    },
+                    "5b60408b-e167-4ede-985d-372ebdab3106": {
+                        "from_node_id": "4a45f1d4-9606-41ff-8623-21bc0c8e9c91",
+                        "to_node_id": "sa8",
+                        "b1": {
+                            "x": 743.0,
+                            "y": 1012.5
+                        },
+                        "b2": {
+                            "x": 780.0,
+                            "y": 1012.5
+                        }
+                    }
+                }
+            },
+            "re5": {
+                "name": "PFK",
+                "bigg_id": "PFK",
+                "reversibility": false,
+                "metabolites": [
+                    {
+                        "bigg_id": "f6p_c",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "fdp_c",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "atp_c",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "adp_c",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "h_c",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 843.5,
+                "label_y": 1013.0,
+                "segments": {
+                    "5bdf9067-0b90-4680-bcb8-79cbfb2529b8": {
+                        "from_node_id": "cba03c87-4002-4655-8319-7ad4f855e72f",
+                        "to_node_id": "62e2467a-0644-4b12-a938-0f15ef0a951b",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "27d4f4b7-543d-46da-9bc8-084b37f55760": {
+                        "from_node_id": "sa8",
+                        "to_node_id": "cba03c87-4002-4655-8319-7ad4f855e72f",
+                        "b1": {
+                            "x": 742.6666666666666,
+                            "y": 1012.6333333333333
+                        },
+                        "b2": {
+                            "x": 779.3333333333334,
+                            "y": 1012.7666666666667
+                        }
+                    },
+                    "106faa96-4db8-4a1c-b320-d8720bc1c580": {
+                        "from_node_id": "sa14",
+                        "to_node_id": "cba03c87-4002-4655-8319-7ad4f855e72f",
+                        "b1": {
+                            "x": 743.3333333333334,
+                            "y": 1077.0333333333333
+                        },
+                        "b2": {
+                            "x": 725.1666666666666,
+                            "y": 1093.0666666666666
+                        }
+                    },
+                    "ed1a67f5-b3a2-4044-9a0f-db62d5623885": {
+                        "from_node_id": "62e2467a-0644-4b12-a938-0f15ef0a951b",
+                        "to_node_id": "bf1474e3-4174-47c5-951f-ed16f1cf9aae",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "474a5b16-e7a5-4560-8002-28d8507f8c80": {
+                        "from_node_id": "bf1474e3-4174-47c5-951f-ed16f1cf9aae",
+                        "to_node_id": "sa13",
+                        "b1": {
+                            "x": 907.6666666666666,
+                            "y": 1013.2333333333333
+                        },
+                        "b2": {
+                            "x": 944.3333333333334,
+                            "y": 1013.3666666666667
+                        }
+                    },
+                    "fab33ced-7571-444d-931f-205297e9165b": {
+                        "from_node_id": "bf1474e3-4174-47c5-951f-ed16f1cf9aae",
+                        "to_node_id": "sa15",
+                        "b1": {
+                            "x": 878.5,
+                            "y": 1030.4
+                        },
+                        "b2": {
+                            "x": 886.0,
+                            "y": 1047.7
+                        }
+                    },
+                    "00fd5482-6bf0-407e-b2d5-24083a7c5050": {
+                        "from_node_id": "bf1474e3-4174-47c5-951f-ed16f1cf9aae",
+                        "to_node_id": "sa16",
+                        "b1": {
+                            "x": 900.0,
+                            "y": 1031.7333333333333
+                        },
+                        "b2": {
+                            "x": 929.0,
+                            "y": 1050.3666666666668
+                        }
+                    }
+                }
+            },
+            "re7": {
+                "name": "FBA",
+                "bigg_id": "FBA",
+                "reversibility": false,
+                "metabolites": [
+                    {
+                        "bigg_id": "fdp_c",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "g3p_c",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "dhap_c",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 1125.5,
+                "label_y": 1012.5,
+                "segments": {
+                    "e00efbd7-403f-4433-8e16-459ae49194c6": {
+                        "from_node_id": "sa13",
+                        "to_node_id": "f4892528-a334-4719-9f12-0e9c9a1ca44c",
+                        "b1": {
+                            "x": 1029.1666666666667,
+                            "y": 1013.8333333333334
+                        },
+                        "b2": {
+                            "x": 1077.3333333333333,
+                            "y": 1014.1666666666666
+                        }
+                    },
+                    "f65ef20f-3f12-466c-b638-b56b38a1011d": {
+                        "from_node_id": "f4892528-a334-4719-9f12-0e9c9a1ca44c",
+                        "to_node_id": "ac53ea2e-1e03-44c2-972a-1ef1c12d1bf8",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "3fa07ae8-d17a-4935-9865-5409801dbfb5": {
+                        "from_node_id": "ac53ea2e-1e03-44c2-972a-1ef1c12d1bf8",
+                        "to_node_id": "sa17",
+                        "b1": {
+                            "x": 1192.9333333333334,
+                            "y": 1013.1
+                        },
+                        "b2": {
+                            "x": 1231.4666666666667,
+                            "y": 1013.5000000000001
+                        }
+                    },
+                    "384a4050-3799-49b6-afbe-4e988911cdff": {
+                        "from_node_id": "ac53ea2e-1e03-44c2-972a-1ef1c12d1bf8",
+                        "to_node_id": "sa18",
+                        "b1": {
+                            "x": 1176.9333333333334,
+                            "y": 1039.6333333333334
+                        },
+                        "b2": {
+                            "x": 1199.4666666666667,
+                            "y": 1066.5666666666666
+                        }
+                    }
+                }
+            },
+            "re8": {
+                "name": "re8",
+                "bigg_id": "re8",
+                "reversibility": true,
+                "metabolites": [
+                    {
+                        "bigg_id": "dhap_c",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "g3p_c",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 1246.0,
+                "label_y": 1052.5,
+                "segments": {
+                    "d1263f7a-2e4f-4f38-b82b-e112afefa08d": {
+                        "from_node_id": "sa18",
+                        "to_node_id": "becdc00f-b7ad-4433-87a2-a272ae7be4e1",
+                        "b1": {
+                            "x": 1230.0,
+                            "y": 1107.1666666666667
+                        },
+                        "b2": {
+                            "x": 1238.0,
+                            "y": 1120.8333333333333
+                        }
+                    },
+                    "b293999d-4732-46e0-b496-f39e3c4dbef5": {
+                        "from_node_id": "becdc00f-b7ad-4433-87a2-a272ae7be4e1",
+                        "to_node_id": "sa17",
+                        "b1": {
+                            "x": 1278.0,
+                            "y": 1025.1666666666667
+                        },
+                        "b2": {
+                            "x": 1286.0,
+                            "y": 1038.8333333333333
+                        }
+                    },
+                    "a62ab7cf-a927-441a-97df-598a796b5a7b": {
+                        "from_node_id": "sa18",
+                        "to_node_id": "becdc00f-b7ad-4433-87a2-a272ae7be4e1",
+                        "b1": {
+                            "x": 1230.0,
+                            "y": 1107.1666666666667
+                        },
+                        "b2": {
+                            "x": 1238.0,
+                            "y": 1120.8333333333333
+                        }
+                    },
+                    "a3cf7c44-7d21-41f3-9291-21b8e25cefb1": {
+                        "from_node_id": "becdc00f-b7ad-4433-87a2-a272ae7be4e1",
+                        "to_node_id": "sa17",
+                        "b1": {
+                            "x": 1278.0,
+                            "y": 1025.1666666666667
+                        },
+                        "b2": {
+                            "x": 1286.0,
+                            "y": 1038.8333333333333
+                        }
+                    }
+                }
+            },
+            "re9": {
+                "name": "G6PDH2r",
+                "bigg_id": "G6PDH2r",
+                "reversibility": true,
+                "metabolites": [
+                    {
+                        "bigg_id": "g6p_c",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "6pgl_c",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "nadp_c",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "nadph_c",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "h_c",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 483.0,
+                "label_y": 865.5,
+                "segments": {
+                    "431254f6-69ef-43da-a8df-10add6e72115": {
+                        "from_node_id": "d23a02cf-f016-4cb2-b9c2-2e566ef798e6",
+                        "to_node_id": "34a334bb-cce7-4f76-9448-0071d9620519",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "c8d063a9-8c93-4e05-a401-ffdd396a8355": {
+                        "from_node_id": "sa4",
+                        "to_node_id": "d23a02cf-f016-4cb2-b9c2-2e566ef798e6",
+                        "b1": {
+                            "x": 484.4,
+                            "y": 1071.3
+                        },
+                        "b2": {
+                            "x": 484.8,
+                            "y": 1130.1
+                        }
+                    },
+                    "cb9e02f0-f2e7-462e-970c-5e995e687664": {
+                        "from_node_id": "sa20",
+                        "to_node_id": "d23a02cf-f016-4cb2-b9c2-2e566ef798e6",
+                        "b1": {
+                            "x": 409.73333333333335,
+                            "y": 952.6333333333333
+                        },
+                        "b2": {
+                            "x": 391.46666666666664,
+                            "y": 981.7666666666667
+                        }
+                    },
+                    "3cd13e8a-be2c-4be7-8461-7eb6bcc81762": {
+                        "from_node_id": "34a334bb-cce7-4f76-9448-0071d9620519",
+                        "to_node_id": "ea8ea34e-5df5-4fda-ae85-6619a7817407",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "3df3e474-6e62-4eeb-a707-41468ad2b949": {
+                        "from_node_id": "ea8ea34e-5df5-4fda-ae85-6619a7817407",
+                        "to_node_id": "sa19",
+                        "b1": {
+                            "x": 483.59999999999997,
+                            "y": 953.6999999999999
+                        },
+                        "b2": {
+                            "x": 484.0,
+                            "y": 1012.5
+                        }
+                    },
+                    "c858d4f4-aa51-4b89-a418-544baee7e96c": {
+                        "from_node_id": "ea8ea34e-5df5-4fda-ae85-6619a7817407",
+                        "to_node_id": "sa21",
+                        "b1": {
+                            "x": 457.1333333333333,
+                            "y": 868.1
+                        },
+                        "b2": {
+                            "x": 431.06666666666666,
+                            "y": 841.3
+                        }
+                    },
+                    "9fefb644-405c-4d3f-b148-206fd4fa63a8": {
+                        "from_node_id": "ea8ea34e-5df5-4fda-ae85-6619a7817407",
+                        "to_node_id": "sa22",
+                        "b1": {
+                            "x": 460.46666666666664,
+                            "y": 852.1
+                        },
+                        "b2": {
+                            "x": 437.73333333333335,
+                            "y": 809.3
+                        }
+                    }
+                }
+            },
+            "re10": {
+                "name": "PGL",
+                "bigg_id": "PGL",
+                "reversibility": false,
+                "metabolites": [
+                    {
+                        "bigg_id": "6pgl_c",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "6pgc_c",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "h2o_c",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "h_c",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 481.0,
+                "label_y": 611.0,
+                "segments": {
+                    "c4e7561e-019c-4fa0-bce0-9d1ec92e6556": {
+                        "from_node_id": "4f166316-39ba-44a6-982c-0c6175c53fa7",
+                        "to_node_id": "8915cf72-e74c-4b64-bb14-e08d15e4bec3",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "e7e1c9b8-a5c5-4f64-b08b-9685858ce45a": {
+                        "from_node_id": "sa19",
+                        "to_node_id": "4f166316-39ba-44a6-982c-0c6175c53fa7",
+                        "b1": {
+                            "x": 482.4,
+                            "y": 761.5
+                        },
+                        "b2": {
+                            "x": 482.8,
+                            "y": 804.5
+                        }
+                    },
+                    "e9f29069-11d7-48d6-b2d5-aeb816fa1771": {
+                        "from_node_id": "sa24",
+                        "to_node_id": "4f166316-39ba-44a6-982c-0c6175c53fa7",
+                        "b1": {
+                            "x": 390.4,
+                            "y": 682.8333333333334
+                        },
+                        "b2": {
+                            "x": 367.8,
+                            "y": 706.1666666666666
+                        }
+                    },
+                    "d0454cc3-c4b5-47de-8209-196f3d222b57": {
+                        "from_node_id": "8915cf72-e74c-4b64-bb14-e08d15e4bec3",
+                        "to_node_id": "c7295641-4fae-4f7e-a713-fb64b6c8fc2b",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "8b3f08ee-f3e9-47c8-957a-5cd7c566355c": {
+                        "from_node_id": "c7295641-4fae-4f7e-a713-fb64b6c8fc2b",
+                        "to_node_id": "sa23",
+                        "b1": {
+                            "x": 481.59999999999997,
+                            "y": 675.5
+                        },
+                        "b2": {
+                            "x": 482.0,
+                            "y": 718.5
+                        }
+                    },
+                    "6e607111-7ac0-40b2-81b2-54c8c2306908": {
+                        "from_node_id": "c7295641-4fae-4f7e-a713-fb64b6c8fc2b",
+                        "to_node_id": "sa25",
+                        "b1": {
+                            "x": 464.1333333333333,
+                            "y": 604.5
+                        },
+                        "b2": {
+                            "x": 447.06666666666666,
+                            "y": 576.5
+                        }
+                    }
+                }
+            },
+            "re11": {
+                "name": "GND",
+                "bigg_id": "GND",
+                "reversibility": false,
+                "metabolites": [
+                    {
+                        "bigg_id": "6pgc_c",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "ru5p__D_c",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "nadp_c",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "co2",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "nadph_c",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 479.0,
+                "label_y": 391.0,
+                "segments": {
+                    "e4433fb1-68f4-4c9c-b272-727e46a22e27": {
+                        "from_node_id": "62183caa-dfdf-4629-b0b1-387ea9e8717b",
+                        "to_node_id": "a9d3e35b-94e5-49df-ae09-94b514b73e2a",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "cd4254b3-84c6-4d72-a0b0-a487971264e1": {
+                        "from_node_id": "sa23",
+                        "to_node_id": "62183caa-dfdf-4629-b0b1-387ea9e8717b",
+                        "b1": {
+                            "x": 480.4,
+                            "y": 548.5
+                        },
+                        "b2": {
+                            "x": 480.8,
+                            "y": 593.5
+                        }
+                    },
+                    "bc77c292-675f-434d-8cbc-7086cd7ee5ea": {
+                        "from_node_id": "sa27",
+                        "to_node_id": "62183caa-dfdf-4629-b0b1-387ea9e8717b",
+                        "b1": {
+                            "x": 373.06666666666666,
+                            "y": 479.8333333333333
+                        },
+                        "b2": {
+                            "x": 346.6333333333333,
+                            "y": 507.6666666666667
+                        }
+                    },
+                    "cf76d689-761b-4391-97ed-c2b6c52656fb": {
+                        "from_node_id": "a9d3e35b-94e5-49df-ae09-94b514b73e2a",
+                        "to_node_id": "129a2aba-9dd1-41e2-9389-12a62dcfdd0c",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "a47e5fc8-d333-4f98-8e6f-3d76a56739ae": {
+                        "from_node_id": "129a2aba-9dd1-41e2-9389-12a62dcfdd0c",
+                        "to_node_id": "sa26",
+                        "b1": {
+                            "x": 479.59999999999997,
+                            "y": 458.5
+                        },
+                        "b2": {
+                            "x": 480.0,
+                            "y": 503.5
+                        }
+                    },
+                    "1e4a84f0-8dff-4767-aedc-18c9c7bbfa06": {
+                        "from_node_id": "129a2aba-9dd1-41e2-9389-12a62dcfdd0c",
+                        "to_node_id": "sa29",
+                        "b1": {
+                            "x": 452.46666666666664,
+                            "y": 394.8333333333333
+                        },
+                        "b2": {
+                            "x": 425.73333333333335,
+                            "y": 376.1666666666667
+                        }
+                    },
+                    "d5d37d00-042d-4420-bc2b-bc2f9fbc020d": {
+                        "from_node_id": "129a2aba-9dd1-41e2-9389-12a62dcfdd0c",
+                        "to_node_id": "sa28",
+                        "b1": {
+                            "x": 452.3,
+                            "y": 382.6666666666667
+                        },
+                        "b2": {
+                            "x": 425.4,
+                            "y": 351.8333333333333
+                        }
+                    }
+                }
+            },
+            "re12": {
+                "name": "RPI",
+                "bigg_id": "RPI",
+                "reversibility": true,
+                "metabolites": [
+                    {
+                        "bigg_id": "ru5p__D_c",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "r5p_c",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 543.0,
+                "label_y": 226.0,
+                "segments": {
+                    "744a88a0-c1a5-4cb1-a69b-09dd2295dbe0": {
+                        "from_node_id": "sa26",
+                        "to_node_id": "23531a1f-ce5f-419b-a068-f5b8da98a69f",
+                        "b1": {
+                            "x": 499.6666666666667,
+                            "y": 296.0
+                        },
+                        "b2": {
+                            "x": 521.3333333333334,
+                            "y": 313.5
+                        }
+                    },
+                    "668d52ab-e030-4665-907e-4b6a8e3f83b3": {
+                        "from_node_id": "23531a1f-ce5f-419b-a068-f5b8da98a69f",
+                        "to_node_id": "sa30",
+                        "b1": {
+                            "x": 629.6666666666666,
+                            "y": 191.0
+                        },
+                        "b2": {
+                            "x": 651.3333333333334,
+                            "y": 208.5
+                        }
+                    },
+                    "4573e8a9-106b-42e3-8e4f-2056e7c8212b": {
+                        "from_node_id": "sa26",
+                        "to_node_id": "23531a1f-ce5f-419b-a068-f5b8da98a69f",
+                        "b1": {
+                            "x": 499.6666666666667,
+                            "y": 296.0
+                        },
+                        "b2": {
+                            "x": 521.3333333333334,
+                            "y": 313.5
+                        }
+                    },
+                    "a86864fc-1d2e-4a69-a787-ca0947b1e1d0": {
+                        "from_node_id": "23531a1f-ce5f-419b-a068-f5b8da98a69f",
+                        "to_node_id": "sa30",
+                        "b1": {
+                            "x": 629.6666666666666,
+                            "y": 191.0
+                        },
+                        "b2": {
+                            "x": 651.3333333333334,
+                            "y": 208.5
+                        }
+                    }
+                }
+            },
+            "re13": {
+                "name": "PPM",
+                "bigg_id": "PPM",
+                "reversibility": true,
+                "metabolites": [
+                    {
+                        "bigg_id": "r5p_c",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "r1p_c",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 730.0,
+                "label_y": 173.5,
+                "segments": {
+                    "ae78ea67-9fc2-4bbb-901e-29517ca496db": {
+                        "from_node_id": "sa30",
+                        "to_node_id": "258f5585-25ac-4e31-a4f6-ed0ffbb142b6",
+                        "b1": {
+                            "x": 648.6666666666666,
+                            "y": 173.5
+                        },
+                        "b2": {
+                            "x": 689.3333333333334,
+                            "y": 173.5
+                        }
+                    },
+                    "17dae57f-423b-47f8-ad9e-eeb66bc3753f": {
+                        "from_node_id": "258f5585-25ac-4e31-a4f6-ed0ffbb142b6",
+                        "to_node_id": "sa31",
+                        "b1": {
+                            "x": 892.6666666666666,
+                            "y": 173.5
+                        },
+                        "b2": {
+                            "x": 933.3333333333334,
+                            "y": 173.5
+                        }
+                    },
+                    "a1a728fb-9518-44f2-862e-b3a6208fed1b": {
+                        "from_node_id": "sa30",
+                        "to_node_id": "258f5585-25ac-4e31-a4f6-ed0ffbb142b6",
+                        "b1": {
+                            "x": 648.6666666666666,
+                            "y": 173.5
+                        },
+                        "b2": {
+                            "x": 689.3333333333334,
+                            "y": 173.5
+                        }
+                    },
+                    "1de58047-7462-4353-9c2e-9bb47e6af6d7": {
+                        "from_node_id": "258f5585-25ac-4e31-a4f6-ed0ffbb142b6",
+                        "to_node_id": "sa31",
+                        "b1": {
+                            "x": 892.6666666666666,
+                            "y": 173.5
+                        },
+                        "b2": {
+                            "x": 933.3333333333334,
+                            "y": 173.5
+                        }
+                    }
+                }
+            },
+            "re14": {
+                "name": "PRPPS",
+                "bigg_id": "PRPPS",
+                "reversibility": true,
+                "metabolites": [
+                    {
+                        "bigg_id": "r5p_c",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "prpp_c",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "atp_c",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "h_c",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "amp_c",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 608.5,
+                "label_y": 91.5,
+                "segments": {
+                    "a9b66395-3c2b-413f-b56c-ebded4f2873b": {
+                        "from_node_id": "de085cda-f762-40ea-91b5-5c5e6fe71cd2",
+                        "to_node_id": "0c3b03a7-d51e-4c7c-a3fd-19a484d05018",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "a12dcd76-7212-4fa4-93d1-16f3a33a944a": {
+                        "from_node_id": "sa30",
+                        "to_node_id": "de085cda-f762-40ea-91b5-5c5e6fe71cd2",
+                        "b1": {
+                            "x": 608.1333333333333,
+                            "y": 206.3
+                        },
+                        "b2": {
+                            "x": 608.2666666666667,
+                            "y": 239.10000000000002
+                        }
+                    },
+                    "0c5a20da-100e-4faf-9390-aeff85ae7c7c": {
+                        "from_node_id": "sa34",
+                        "to_node_id": "de085cda-f762-40ea-91b5-5c5e6fe71cd2",
+                        "b1": {
+                            "x": 527.8666666666667,
+                            "y": 172.96666666666667
+                        },
+                        "b2": {
+                            "x": 507.73333333333335,
+                            "y": 197.43333333333334
+                        }
+                    },
+                    "1ad57821-7a72-4edf-ba0c-8d20d0987a23": {
+                        "from_node_id": "0c3b03a7-d51e-4c7c-a3fd-19a484d05018",
+                        "to_node_id": "2ec9a9e1-2ed2-4bb8-a922-d7fc0da3de4e",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "3387cb65-bd55-4ea3-9a62-20cbf697eb60": {
+                        "from_node_id": "2ec9a9e1-2ed2-4bb8-a922-d7fc0da3de4e",
+                        "to_node_id": "sa32",
+                        "b1": {
+                            "x": 608.7333333333333,
+                            "y": 140.70000000000002
+                        },
+                        "b2": {
+                            "x": 608.8666666666667,
+                            "y": 173.5
+                        }
+                    },
+                    "af4432e3-6885-4a36-80bd-fe45a41b2535": {
+                        "from_node_id": "2ec9a9e1-2ed2-4bb8-a922-d7fc0da3de4e",
+                        "to_node_id": "sa35",
+                        "b1": {
+                            "x": 581.4,
+                            "y": 79.10000000000001
+                        },
+                        "b2": {
+                            "x": 554.2,
+                            "y": 50.300000000000004
+                        }
+                    },
+                    "303fe186-f2e6-4329-bd4a-729b1f585a47": {
+                        "from_node_id": "2ec9a9e1-2ed2-4bb8-a922-d7fc0da3de4e",
+                        "to_node_id": "sa33",
+                        "b1": {
+                            "x": 583.7333333333333,
+                            "y": 94.43333333333334
+                        },
+                        "b2": {
+                            "x": 558.8666666666667,
+                            "y": 80.96666666666667
+                        }
+                    }
+                }
+            },
+            "re15": {
+                "name": "RPE",
+                "bigg_id": "RPE",
+                "reversibility": true,
+                "metabolites": [
+                    {
+                        "bigg_id": "ru5p__D_c",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "xu5p__D_c",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 554.0,
+                "label_y": 352.0,
+                "segments": {
+                    "476bb293-be36-4f6e-975c-f793ec5ea7c9": {
+                        "from_node_id": "sa26",
+                        "to_node_id": "70bf683f-8dae-4170-8697-207ab61099f4",
+                        "b1": {
+                            "x": 503.3333333333333,
+                            "y": 303.0
+                        },
+                        "b2": {
+                            "x": 528.6666666666666,
+                            "y": 327.5
+                        }
+                    },
+                    "4d726de8-06dc-47dc-b5ae-36cbd2887ec7": {
+                        "from_node_id": "70bf683f-8dae-4170-8697-207ab61099f4",
+                        "to_node_id": "sa38",
+                        "b1": {
+                            "x": 655.3333333333334,
+                            "y": 450.0
+                        },
+                        "b2": {
+                            "x": 680.6666666666666,
+                            "y": 474.5
+                        }
+                    },
+                    "cbf67b85-35de-4a0f-9e4b-dcbabe32ac50": {
+                        "from_node_id": "sa26",
+                        "to_node_id": "70bf683f-8dae-4170-8697-207ab61099f4",
+                        "b1": {
+                            "x": 503.3333333333333,
+                            "y": 303.0
+                        },
+                        "b2": {
+                            "x": 528.6666666666666,
+                            "y": 327.5
+                        }
+                    },
+                    "b1ea0167-979f-4533-a92b-cc8b3b9e9c28": {
+                        "from_node_id": "70bf683f-8dae-4170-8697-207ab61099f4",
+                        "to_node_id": "sa38",
+                        "b1": {
+                            "x": 655.3333333333334,
+                            "y": 450.0
+                        },
+                        "b2": {
+                            "x": 680.6666666666666,
+                            "y": 474.5
+                        }
+                    }
+                }
+            },
+            "re16": {
+                "name": "TKT1",
+                "bigg_id": "TKT1",
+                "reversibility": true,
+                "metabolites": [
+                    {
+                        "bigg_id": "s7p_c",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "r5p_c",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "g3p_c",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "xu5p__D_c",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 765.5,
+                "label_y": 208.5,
+                "segments": {
+                    "6b114808-a1a7-4b1e-b297-3c1e6907745b": {
+                        "from_node_id": "2d95b901-cea0-4c26-b946-ba7c4691b75c",
+                        "to_node_id": "52e032e8-f818-42cd-99e6-ae9c65248c47",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "1e8adcb4-4ade-4f68-9565-90f324c49972": {
+                        "from_node_id": "sa36",
+                        "to_node_id": "2d95b901-cea0-4c26-b946-ba7c4691b75c",
+                        "b1": {
+                            "x": 986.0,
+                            "y": 257.5
+                        },
+                        "b2": {
+                            "x": 1049.0,
+                            "y": 271.5
+                        }
+                    },
+                    "6b9855b7-2b07-4672-ab57-89b68dbd62b3": {
+                        "from_node_id": "sa37",
+                        "to_node_id": "2d95b901-cea0-4c26-b946-ba7c4691b75c",
+                        "b1": {
+                            "x": 840.6666666666666,
+                            "y": 405.5
+                        },
+                        "b2": {
+                            "x": 867.3333333333334,
+                            "y": 456.5
+                        }
+                    },
+                    "bdc92e04-e165-4177-bd0c-2b2b66c81ab4": {
+                        "from_node_id": "52e032e8-f818-42cd-99e6-ae9c65248c47",
+                        "to_node_id": "1d05cae3-0c48-4dc8-b2ab-0acc2454f17a",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "23f4bb2f-64a1-4872-a2e4-718760327e62": {
+                        "from_node_id": "1d05cae3-0c48-4dc8-b2ab-0acc2454f17a",
+                        "to_node_id": "sa30",
+                        "b1": {
+                            "x": 860.0,
+                            "y": 229.5
+                        },
+                        "b2": {
+                            "x": 923.0,
+                            "y": 243.5
+                        }
+                    },
+                    "11242f77-ead5-4594-a27d-65af269c00a5": {
+                        "from_node_id": "1d05cae3-0c48-4dc8-b2ab-0acc2454f17a",
+                        "to_node_id": "sa38",
+                        "b1": {
+                            "x": 741.3333333333334,
+                            "y": 285.5
+                        },
+                        "b2": {
+                            "x": 685.6666666666666,
+                            "y": 355.5
+                        }
+                    }
+                }
+            },
+            "re17": {
+                "name": "TKT2",
+                "bigg_id": "TKT2",
+                "reversibility": true,
+                "metabolites": [
+                    {
+                        "bigg_id": "f6p_c",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "xu5p__D_c",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "g3p_c",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "e4p_c",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 668.0,
+                "label_y": 719.0,
+                "segments": {
+                    "17bf2993-6428-4d77-bc9c-ecacbcb6a4a8": {
+                        "from_node_id": "56253686-a48e-403a-b196-1e1bf0c7593d",
+                        "to_node_id": "d6959a10-7af5-4b51-9724-fe492a64e997",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "6b201dd0-9e10-40e5-9cc4-abdc9ee909b5": {
+                        "from_node_id": "sa8",
+                        "to_node_id": "56253686-a48e-403a-b196-1e1bf0c7593d",
+                        "b1": {
+                            "x": 721.2,
+                            "y": 1129.9
+                        },
+                        "b2": {
+                            "x": 736.4,
+                            "y": 1247.3
+                        }
+                    },
+                    "c9b7a331-da17-4779-9a42-21a41a824c10": {
+                        "from_node_id": "sa37",
+                        "to_node_id": "56253686-a48e-403a-b196-1e1bf0c7593d",
+                        "b1": {
+                            "x": 865.2,
+                            "y": 252.56666666666666
+                        },
+                        "b2": {
+                            "x": 916.4,
+                            "y": 150.63333333333335
+                        }
+                    },
+                    "c6e37450-a4c3-4a19-b2ed-23ad82b38efd": {
+                        "from_node_id": "d6959a10-7af5-4b51-9724-fe492a64e997",
+                        "to_node_id": "4ffb0f81-7856-4085-a18f-6d3cdad0731a",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "faa5d63e-5851-4ac4-be34-54fffcb17e0e": {
+                        "from_node_id": "4ffb0f81-7856-4085-a18f-6d3cdad0731a",
+                        "to_node_id": "sa38",
+                        "b1": {
+                            "x": 690.8000000000001,
+                            "y": 895.1
+                        },
+                        "b2": {
+                            "x": 706.0,
+                            "y": 1012.5000000000001
+                        }
+                    },
+                    "24dd2308-6462-472f-98ed-8f00bda0987c": {
+                        "from_node_id": "4ffb0f81-7856-4085-a18f-6d3cdad0731a",
+                        "to_node_id": "sa39",
+                        "b1": {
+                            "x": 640.0666666666667,
+                            "y": 717.3000000000001
+                        },
+                        "b2": {
+                            "x": 604.5333333333333,
+                            "y": 656.9
+                        }
+                    }
+                }
+            },
+            "re18": {
+                "name": "TALA",
+                "bigg_id": "TALA",
+                "reversibility": true,
+                "metabolites": [
+                    {
+                        "bigg_id": "f6p_c",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "s7p_c",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "e4p_c",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "g3p_c",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 814.5,
+                "label_y": 628.0,
+                "segments": {
+                    "43f7f4de-5546-4bed-9206-092f2c7a6d65": {
+                        "from_node_id": "15786cef-ff6c-4788-9a39-d24e443cd402",
+                        "to_node_id": "aea75348-921f-42e5-95af-3e174eff30aa",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "6756f8df-4b9d-4e4e-91be-ce6e2485a37a": {
+                        "from_node_id": "sa8",
+                        "to_node_id": "15786cef-ff6c-4788-9a39-d24e443cd402",
+                        "b1": {
+                            "x": 734.9333333333333,
+                            "y": 1166.3
+                        },
+                        "b2": {
+                            "x": 763.8666666666667,
+                            "y": 1320.1
+                        }
+                    },
+                    "8e4256d2-8f22-4c76-a22b-a6e9ab2bba4a": {
+                        "from_node_id": "sa40",
+                        "to_node_id": "15786cef-ff6c-4788-9a39-d24e443cd402",
+                        "b1": {
+                            "x": 965.9555555555556,
+                            "y": 793.188888888889
+                        },
+                        "b2": {
+                            "x": 1009.2444444444446,
+                            "y": 853.7111111111112
+                        }
+                    },
+                    "4f9a7044-0ea9-40a6-aa45-36bec51779ac": {
+                        "from_node_id": "aea75348-921f-42e5-95af-3e174eff30aa",
+                        "to_node_id": "b2c32149-b0cf-494b-9e3b-1d887726afe3",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "87c46d39-414a-4294-93d0-ea60085357c8": {
+                        "from_node_id": "b2c32149-b0cf-494b-9e3b-1d887726afe3",
+                        "to_node_id": "sa36",
+                        "b1": {
+                            "x": 865.1333333333333,
+                            "y": 858.6999999999999
+                        },
+                        "b2": {
+                            "x": 894.0666666666667,
+                            "y": 1012.5
+                        }
+                    },
+                    "fbae684a-dce0-44db-95c8-20bac7330beb": {
+                        "from_node_id": "b2c32149-b0cf-494b-9e3b-1d887726afe3",
+                        "to_node_id": "sa37",
+                        "b1": {
+                            "x": 828.8000000000001,
+                            "y": 588.1
+                        },
+                        "b2": {
+                            "x": 821.4,
+                            "y": 471.29999999999995
+                        }
+                    }
+                }
+            }
+        },
+        "nodes": {
+            "sa1": {
+                "bigg_id": "glc__D_c",
+                "name": "s1",
+                "node_type": "metabolite",
+                "x": 151.0,
+                "y": 1011.5,
+                "label_x": 151.0,
+                "label_y": 1011.5,
+                "node_is_primary": true
+            },
+            "sa4": {
+                "bigg_id": "g6p_c",
+                "name": "s3",
+                "node_type": "metabolite",
+                "x": 484.0,
+                "y": 1012.5,
+                "label_x": 484.0,
+                "label_y": 1012.5,
+                "node_is_primary": true
+            },
+            "sa5": {
+                "bigg_id": "atp_c",
+                "name": "s4",
+                "node_type": "metabolite",
+                "x": 198.0,
+                "y": 977.5,
+                "label_x": 198.0,
+                "label_y": 977.5,
+                "node_is_primary": false
+            },
+            "sa6": {
+                "bigg_id": "adp_c",
+                "name": "s5",
+                "node_type": "metabolite",
+                "x": 380.0,
+                "y": 968.5,
+                "label_x": 380.0,
+                "label_y": 968.5,
+                "node_is_primary": false
+            },
+            "sa7": {
+                "bigg_id": "h_c",
+                "name": "s6",
+                "node_type": "metabolite",
+                "x": 431.5,
+                "y": 967.5,
+                "label_x": 431.5,
+                "label_y": 967.5,
+                "node_is_primary": false
+            },
+            "sa8": {
+                "bigg_id": "f6p_c",
+                "name": "s7",
+                "node_type": "metabolite",
+                "x": 706.0,
+                "y": 1012.5,
+                "label_x": 706.0,
+                "label_y": 1012.5,
+                "node_is_primary": true
+            },
+            "sa13": {
+                "bigg_id": "fdp_c",
+                "name": "s11",
+                "node_type": "metabolite",
+                "x": 981.0,
+                "y": 1013.5,
+                "label_x": 981.0,
+                "label_y": 1013.5,
+                "node_is_primary": true
+            },
+            "sa14": {
+                "bigg_id": "atp_c",
+                "name": "s4",
+                "node_type": "metabolite",
+                "x": 761.5,
+                "y": 1061.0,
+                "label_x": 761.5,
+                "label_y": 1061.0,
+                "node_is_primary": false
+            },
+            "sa15": {
+                "bigg_id": "adp_c",
+                "name": "s5",
+                "node_type": "metabolite",
+                "x": 893.5,
+                "y": 1065.0,
+                "label_x": 893.5,
+                "label_y": 1065.0,
+                "node_is_primary": false
+            },
+            "sa16": {
+                "bigg_id": "h_c",
+                "name": "s6",
+                "node_type": "metabolite",
+                "x": 958.0,
+                "y": 1069.0,
+                "label_x": 958.0,
+                "label_y": 1069.0,
+                "node_is_primary": false
+            },
+            "sa17": {
+                "bigg_id": "g3p_c",
+                "name": "s12",
+                "node_type": "metabolite",
+                "x": 1270.0,
+                "y": 1011.5,
+                "label_x": 1270.0,
+                "label_y": 1011.5,
+                "node_is_primary": true
+            },
+            "sa18": {
+                "bigg_id": "dhap_c",
+                "name": "s13",
+                "node_type": "metabolite",
+                "x": 1222.0,
+                "y": 1093.5,
+                "label_x": 1222.0,
+                "label_y": 1093.5,
+                "node_is_primary": true
+            },
+            "sa19": {
+                "bigg_id": "6pgl_c",
+                "name": "s14",
+                "node_type": "metabolite",
+                "x": 482.0,
+                "y": 718.5,
+                "label_x": 482.0,
+                "label_y": 718.5,
+                "node_is_primary": true
+            },
+            "sa20": {
+                "bigg_id": "nadp_c",
+                "name": "s15",
+                "node_type": "metabolite",
+                "x": 428.0,
+                "y": 923.5,
+                "label_x": 428.0,
+                "label_y": 923.5,
+                "node_is_primary": false
+            },
+            "sa21": {
+                "bigg_id": "nadph_c",
+                "name": "s16",
+                "node_type": "metabolite",
+                "x": 405.0,
+                "y": 814.5,
+                "label_x": 405.0,
+                "label_y": 814.5,
+                "node_is_primary": false
+            },
+            "sa22": {
+                "bigg_id": "h_c",
+                "name": "s6",
+                "node_type": "metabolite",
+                "x": 415.0,
+                "y": 766.5,
+                "label_x": 415.0,
+                "label_y": 766.5,
+                "node_is_primary": false
+            },
+            "sa23": {
+                "bigg_id": "6pgc_c",
+                "name": "s17",
+                "node_type": "metabolite",
+                "x": 480.0,
+                "y": 503.5,
+                "label_x": 480.0,
+                "label_y": 503.5,
+                "node_is_primary": true
+            },
+            "sa24": {
+                "bigg_id": "h2o_c",
+                "name": "s18",
+                "node_type": "metabolite",
+                "x": 413.0,
+                "y": 659.5,
+                "label_x": 413.0,
+                "label_y": 659.5,
+                "node_is_primary": false
+            },
+            "sa25": {
+                "bigg_id": "h_c",
+                "name": "s6",
+                "node_type": "metabolite",
+                "x": 430.0,
+                "y": 548.5,
+                "label_x": 430.0,
+                "label_y": 548.5,
+                "node_is_primary": false
+            },
+            "sa26": {
+                "bigg_id": "ru5p__D_c",
+                "name": "s19",
+                "node_type": "metabolite",
+                "x": 478.0,
+                "y": 278.5,
+                "label_x": 478.0,
+                "label_y": 278.5,
+                "node_is_primary": true
+            },
+            "sa27": {
+                "bigg_id": "nadp_c",
+                "name": "s15",
+                "node_type": "metabolite",
+                "x": 399.5,
+                "y": 452.0,
+                "label_x": 399.5,
+                "label_y": 452.0,
+                "node_is_primary": false
+            },
+            "sa28": {
+                "bigg_id": "nadph_c",
+                "name": "s16",
+                "node_type": "metabolite",
+                "x": 398.5,
+                "y": 321.0,
+                "label_x": 398.5,
+                "label_y": 321.0,
+                "node_is_primary": false
+            },
+            "sa29": {
+                "bigg_id": "co2",
+                "name": "s20",
+                "node_type": "metabolite",
+                "x": 399.0,
+                "y": 357.5,
+                "label_x": 399.0,
+                "label_y": 357.5,
+                "node_is_primary": false
+            },
+            "sa30": {
+                "bigg_id": "r5p_c",
+                "name": "s21",
+                "node_type": "metabolite",
+                "x": 608.0,
+                "y": 173.5,
+                "label_x": 608.0,
+                "label_y": 173.5,
+                "node_is_primary": true
+            },
+            "sa31": {
+                "bigg_id": "r1p_c",
+                "name": "s22",
+                "node_type": "metabolite",
+                "x": 852.0,
+                "y": 173.5,
+                "label_x": 852.0,
+                "label_y": 173.5,
+                "node_is_primary": true
+            },
+            "sa32": {
+                "bigg_id": "prpp_c",
+                "name": "s23",
+                "node_type": "metabolite",
+                "x": 609.0,
+                "y": 9.5,
+                "label_x": 609.0,
+                "label_y": 9.5,
+                "node_is_primary": true
+            },
+            "sa33": {
+                "bigg_id": "amp_c",
+                "name": "s24",
+                "node_type": "metabolite",
+                "x": 534.0,
+                "y": 67.5,
+                "label_x": 534.0,
+                "label_y": 67.5,
+                "node_is_primary": false
+            },
+            "sa34": {
+                "bigg_id": "atp_c",
+                "name": "s4",
+                "node_type": "metabolite",
+                "x": 548.0,
+                "y": 148.5,
+                "label_x": 548.0,
+                "label_y": 148.5,
+                "node_is_primary": false
+            },
+            "sa35": {
+                "bigg_id": "h_c",
+                "name": "s6",
+                "node_type": "metabolite",
+                "x": 527.0,
+                "y": 21.5,
+                "label_x": 527.0,
+                "label_y": 21.5,
+                "node_is_primary": false
+            },
+            "sa36": {
+                "bigg_id": "s7p_c",
+                "name": "s25",
+                "node_type": "metabolite",
+                "x": 923.0,
+                "y": 243.5,
+                "label_x": 923.0,
+                "label_y": 243.5,
+                "node_is_primary": true
+            },
+            "sa37": {
+                "bigg_id": "g3p_c",
+                "name": "s12",
+                "node_type": "metabolite",
+                "x": 814.0,
+                "y": 354.5,
+                "label_x": 814.0,
+                "label_y": 354.5,
+                "node_is_primary": false
+            },
+            "sa38": {
+                "bigg_id": "xu5p__D_c",
+                "name": "s26",
+                "node_type": "metabolite",
+                "x": 630.0,
+                "y": 425.5,
+                "label_x": 630.0,
+                "label_y": 425.5,
+                "node_is_primary": true
+            },
+            "sa39": {
+                "bigg_id": "e4p_c",
+                "name": "s27",
+                "node_type": "metabolite",
+                "x": 569.0,
+                "y": 596.5,
+                "label_x": 569.0,
+                "label_y": 596.5,
+                "node_is_primary": false
+            },
+            "sa40": {
+                "bigg_id": "e4p_c",
+                "name": "s27",
+                "node_type": "metabolite",
+                "x": 922.6666666666667,
+                "y": 732.6666666666667,
+                "label_x": 922.6666666666667,
+                "label_y": 732.6666666666667,
+                "node_is_primary": false
+            },
+            "a984d752-3e51-45bd-ac4a-f0adc48b2743": {
+                "node_type": "midmarker",
+                "x": 317.5,
+                "y": 1012.0
+            },
+            "712a1d79-a0f7-418f-b886-5a747d6de656": {
+                "node_type": "midmarker",
+                "x": 284.2,
+                "y": 1011.9
+            },
+            "e202ee82-631b-49d3-94f8-0d8fe88b6f81": {
+                "node_type": "midmarker",
+                "x": 350.8,
+                "y": 1012.1
+            },
+            "4a45f1d4-9606-41ff-8623-21bc0c8e9c91": {
+                "node_type": "midmarker",
+                "x": 595.0,
+                "y": 1012.5
+            },
+            "62e2467a-0644-4b12-a938-0f15ef0a951b": {
+                "node_type": "midmarker",
+                "x": 843.5,
+                "y": 1013.0
+            },
+            "cba03c87-4002-4655-8319-7ad4f855e72f": {
+                "node_type": "midmarker",
+                "x": 816.0,
+                "y": 1012.9
+            },
+            "bf1474e3-4174-47c5-951f-ed16f1cf9aae": {
+                "node_type": "midmarker",
+                "x": 871.0,
+                "y": 1013.1
+            },
+            "f4892528-a334-4719-9f12-0e9c9a1ca44c": {
+                "node_type": "midmarker",
+                "x": 1125.5,
+                "y": 1012.5
+            },
+            "ac53ea2e-1e03-44c2-972a-1ef1c12d1bf8": {
+                "node_type": "midmarker",
+                "x": 1154.4,
+                "y": 1012.7
+            },
+            "becdc00f-b7ad-4433-87a2-a272ae7be4e1": {
+                "node_type": "midmarker",
+                "x": 1246.0,
+                "y": 1052.5
+            },
+            "34a334bb-cce7-4f76-9448-0071d9620519": {
+                "node_type": "midmarker",
+                "x": 483.0,
+                "y": 865.5
+            },
+            "d23a02cf-f016-4cb2-b9c2-2e566ef798e6": {
+                "node_type": "midmarker",
+                "x": 482.8,
+                "y": 836.1
+            },
+            "ea8ea34e-5df5-4fda-ae85-6619a7817407": {
+                "node_type": "midmarker",
+                "x": 483.2,
+                "y": 894.9
+            },
+            "8915cf72-e74c-4b64-bb14-e08d15e4bec3": {
+                "node_type": "midmarker",
+                "x": 481.0,
+                "y": 611.0
+            },
+            "4f166316-39ba-44a6-982c-0c6175c53fa7": {
+                "node_type": "midmarker",
+                "x": 480.8,
+                "y": 589.5
+            },
+            "c7295641-4fae-4f7e-a713-fb64b6c8fc2b": {
+                "node_type": "midmarker",
+                "x": 481.2,
+                "y": 632.5
+            },
+            "a9d3e35b-94e5-49df-ae09-94b514b73e2a": {
+                "node_type": "midmarker",
+                "x": 479.0,
+                "y": 391.0
+            },
+            "62183caa-dfdf-4629-b0b1-387ea9e8717b": {
+                "node_type": "midmarker",
+                "x": 478.8,
+                "y": 368.5
+            },
+            "129a2aba-9dd1-41e2-9389-12a62dcfdd0c": {
+                "node_type": "midmarker",
+                "x": 479.2,
+                "y": 413.5
+            },
+            "23531a1f-ce5f-419b-a068-f5b8da98a69f": {
+                "node_type": "midmarker",
+                "x": 543.0,
+                "y": 226.0
+            },
+            "258f5585-25ac-4e31-a4f6-ed0ffbb142b6": {
+                "node_type": "midmarker",
+                "x": 730.0,
+                "y": 173.5
+            },
+            "0c3b03a7-d51e-4c7c-a3fd-19a484d05018": {
+                "node_type": "midmarker",
+                "x": 608.5,
+                "y": 91.5
+            },
+            "de085cda-f762-40ea-91b5-5c5e6fe71cd2": {
+                "node_type": "midmarker",
+                "x": 608.4,
+                "y": 75.1
+            },
+            "2ec9a9e1-2ed2-4bb8-a922-d7fc0da3de4e": {
+                "node_type": "midmarker",
+                "x": 608.6,
+                "y": 107.9
+            },
+            "70bf683f-8dae-4170-8697-207ab61099f4": {
+                "node_type": "midmarker",
+                "x": 554.0,
+                "y": 352.0
+            },
+            "52e032e8-f818-42cd-99e6-ae9c65248c47": {
+                "node_type": "midmarker",
+                "x": 765.5,
+                "y": 208.5
+            },
+            "2d95b901-cea0-4c26-b946-ba7c4691b75c": {
+                "node_type": "midmarker",
+                "x": 734.0,
+                "y": 201.5
+            },
+            "1d05cae3-0c48-4dc8-b2ab-0acc2454f17a": {
+                "node_type": "midmarker",
+                "x": 797.0,
+                "y": 215.5
+            },
+            "d6959a10-7af5-4b51-9724-fe492a64e997": {
+                "node_type": "midmarker",
+                "x": 668.0,
+                "y": 719.0
+            },
+            "56253686-a48e-403a-b196-1e1bf0c7593d": {
+                "node_type": "midmarker",
+                "x": 660.4,
+                "y": 660.3
+            },
+            "4ffb0f81-7856-4085-a18f-6d3cdad0731a": {
+                "node_type": "midmarker",
+                "x": 675.6,
+                "y": 777.7
+            },
+            "aea75348-921f-42e5-95af-3e174eff30aa": {
+                "node_type": "midmarker",
+                "x": 814.5,
+                "y": 628.0
+            },
+            "15786cef-ff6c-4788-9a39-d24e443cd402": {
+                "node_type": "midmarker",
+                "x": 792.8,
+                "y": 551.1
+            },
+            "b2c32149-b0cf-494b-9e3b-1d887726afe3": {
+                "node_type": "midmarker",
+                "x": 836.2,
+                "y": 704.9
+            }
+        },
+        "text_labels": {},
+        "canvas": {
+            "x": -246,
+            "y": -336.05,
+            "width": 6622,
+            "height": 3213.1
+        }
+    }
+]

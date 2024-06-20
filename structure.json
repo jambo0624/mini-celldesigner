@@ -1,0 +1,297 @@
+{
+  "sbml": {
+    "model": {
+      "@metaid": null,
+      "@id": null,
+      "annotation": {
+        "celldesigner:extension": {
+          "celldesigner:modelVersion": null,
+          "celldesigner:modelDisplay": {
+            "@sizeX": null,
+            "@sizeY": null
+          },
+          "celldesigner:listOfCompartmentAliases": {
+            "celldesigner:compartmentAlias": [
+              {
+                "@id": null,
+                "@compartment": null,
+                "celldesigner:class": null,
+                "celldesigner:bounds": {
+                  "@x": null,
+                  "@y": null,
+                  "@w": null,
+                  "@h": null
+                },
+                "celldesigner:namePoint": {
+                  "@x": null,
+                  "@y": null
+                },
+                "celldesigner:doubleLine": {
+                  "@thickness": null,
+                  "@outerWidth": null,
+                  "@innerWidth": null
+                },
+                "celldesigner:paint": {
+                  "@color": null,
+                  "@scheme": null
+                },
+                "celldesigner:info": {
+                  "@state": null,
+                  "@angle": null
+                }
+              }
+            ]
+          },
+          "celldesigner:listOfComplexSpeciesAliases": null,
+          "celldesigner:listOfSpeciesAliases": {
+            "celldesigner:speciesAlias": [
+              {
+                "@id": null,
+                "@species": null,
+                "@compartmentAlias": null,
+                "celldesigner:activity": null,
+                "celldesigner:bounds": {
+                  "@x": null,
+                  "@y": null,
+                  "@w": null,
+                  "@h": null
+                },
+                "celldesigner:font": {
+                  "@size": null
+                },
+                "celldesigner:view": {
+                  "@state": null
+                },
+                "celldesigner:usualView": {
+                  "celldesigner:innerPosition": {
+                    "@x": null,
+                    "@y": null
+                  },
+                  "celldesigner:boxSize": {
+                    "@width": null,
+                    "@height": null
+                  },
+                  "celldesigner:singleLine": {
+                    "@width": null
+                  },
+                  "celldesigner:paint": {
+                    "@color": null,
+                    "@scheme": null
+                  }
+                },
+                "celldesigner:briefView": {
+                  "celldesigner:innerPosition": {
+                    "@x": null,
+                    "@y": null
+                  },
+                  "celldesigner:boxSize": {
+                    "@width": null,
+                    "@height": null
+                  },
+                  "celldesigner:singleLine": {
+                    "@width": null
+                  },
+                  "celldesigner:paint": {
+                    "@color": null,
+                    "@scheme": null
+                  }
+                },
+                "celldesigner:info": {
+                  "@state": null,
+                  "@angle": null
+                }
+              }
+            ]
+          },
+          "celldesigner:listOfGroups": null,
+          "celldesigner:listOfProteins": {
+            "celldesigner:protein": [
+              {
+                "@id": null,
+                "@name": null,
+                "@type": null
+              }
+            ]
+          },
+          "celldesigner:listOfGenes": null,
+          "celldesigner:listOfRNAs": null,
+          "celldesigner:listOfAntisenseRNAs": null,
+          "celldesigner:listOfLayers": null,
+          "celldesigner:listOfBlockDiagrams": null
+        }
+      },
+      "listOfUnitDefinitions": {
+        "unitDefinition": [
+          {
+            "@metaid": null,
+            "@id": null,
+            "@name": null,
+            "listOfUnits": {
+              "unit": {
+                "@metaid": null,
+                "@kind": null
+              }
+            }
+          }
+        ]
+      },
+      "listOfCompartments": {
+        "compartment": [
+          {
+            "@metaid": null,
+            "@id": null,
+            "@size": null,
+            "@units": null
+          }
+        ]
+      },
+      "listOfSpecies": {
+        "species": [
+          {
+            "@metaid": null,
+            "@id": null,
+            "@name": null,
+            "@compartment": null,
+            "@initialAmount": null,
+            "@charge": null,
+            "annotation": {
+              "celldesigner:extension": {
+                "celldesigner:positionToCompartment": null,
+                "celldesigner:speciesIdentity": {
+                  "celldesigner:class": null,
+                  "celldesigner:name": null
+                }
+              }
+            }
+          }
+        ]
+      },
+      "listOfReactions": {
+        "reaction": [
+          {
+            "@metaid": null,
+            "@id": null,
+            "@name": null,
+            "@reversible": null,
+            "annotation": {
+              "celldesigner:extension": {
+                "celldesigner:name": null,
+                "celldesigner:reactionType": null,
+                "celldesigner:baseReactants": {
+                  "celldesigner:baseReactant": [
+                    {
+                      "@species": null,
+                      "@alias": null
+                    }
+                  ]
+                },
+                "celldesigner:baseProducts": {
+                  "celldesigner:baseProduct": {
+                    "@species": null,
+                    "@alias": null
+                  }
+                },
+                "celldesigner:listOfReactantLinks": {
+                  "celldesigner:reactantLink": {
+                    "@reactant": null,
+                    "@alias": null,
+                    "@targetLineIndex": null,
+                    "celldesigner:connectScheme": {
+                      "@connectPolicy": null,
+                      "celldesigner:listOfLineDirection": {
+                        "celldesigner:lineDirection": {
+                          "@index": null,
+                          "@value": null
+                        }
+                      }
+                    },
+                    "celldesigner:line": {
+                      "@width": null,
+                      "@color": null,
+                      "@type": null
+                    }
+                  }
+                },
+                "celldesigner:listOfProductLinks": {
+                  "celldesigner:productLink": [
+                    {
+                      "@product": null,
+                      "@alias": null,
+                      "@targetLineIndex": null,
+                      "celldesigner:connectScheme": {
+                        "@connectPolicy": null,
+                        "celldesigner:listOfLineDirection": {
+                          "celldesigner:lineDirection": [
+                            {
+                              "@index": null,
+                              "@value": null
+                            }
+                          ]
+                        }
+                      },
+                      "celldesigner:editPoints": null,
+                      "celldesigner:line": {
+                        "@width": null,
+                        "@color": null,
+                        "@type": null
+                      }
+                    }
+                  ]
+                },
+                "celldesigner:connectScheme": {
+                  "@connectPolicy": null,
+                  "celldesigner:listOfLineDirection": {
+                    "celldesigner:lineDirection": [
+                      {
+                        "@arm": null,
+                        "@index": null,
+                        "@value": null
+                      }
+                    ]
+                  }
+                },
+                "celldesigner:editPoints": {
+                  "@num0": null,
+                  "@num1": null,
+                  "@num2": null,
+                  "@tShapeIndex": null,
+                  "#text": null
+                },
+                "celldesigner:line": {
+                  "@width": null,
+                  "@color": null
+                }
+              }
+            },
+            "listOfReactants": {
+              "speciesReference": [
+                {
+                  "@metaid": null,
+                  "@species": null,
+                  "annotation": {
+                    "celldesigner:extension": {
+                      "celldesigner:alias": null
+                    }
+                  }
+                }
+              ]
+            },
+            "listOfProducts": {
+              "speciesReference": [
+                {
+                  "@metaid": null,
+                  "@species": null,
+                  "annotation": {
+                    "celldesigner:extension": {
+                      "celldesigner:alias": null
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}
