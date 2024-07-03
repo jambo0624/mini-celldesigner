@@ -1,0 +1,1645 @@
+{
+    "sbgn": {
+        "@xmlns": "http://sbgn.org/libsbgn/0.2",
+        "map": {
+            "@language": "process description",
+            "glyph": [
+                {
+                    "@class": "process",
+                    "@orientation": "horizontal",
+                    "@id": "pnre2",
+                    "bbox": {
+                        "@w": "10.0",
+                        "@h": "10.0",
+                        "@x": "330.0",
+                        "@y": "1019.5"
+                    },
+                    "port": [
+                        {
+                            "@id": "pnre2.L",
+                            "@x": "330.0",
+                            "@y": "1024.5"
+                        },
+                        {
+                            "@id": "pnre2.R",
+                            "@x": "340.0",
+                            "@y": "1024.5"
+                        }
+                    ]
+                },
+                {
+                    "@class": "process",
+                    "@orientation": "horizontal",
+                    "@id": "pnre4",
+                    "bbox": {
+                        "@w": "10.0",
+                        "@h": "10.0",
+                        "@x": "642.5",
+                        "@y": "1020.0"
+                    },
+                    "port": [
+                        {
+                            "@id": "pnre4.L",
+                            "@x": "642.5",
+                            "@y": "1025.0"
+                        },
+                        {
+                            "@id": "pnre4.R",
+                            "@x": "652.5",
+                            "@y": "1025.0"
+                        }
+                    ]
+                },
+                {
+                    "@class": "process",
+                    "@orientation": "horizontal",
+                    "@id": "pnre5",
+                    "bbox": {
+                        "@w": "10.0",
+                        "@h": "10.0",
+                        "@x": "873.5",
+                        "@y": "1020.5"
+                    },
+                    "port": [
+                        {
+                            "@id": "pnre5.L",
+                            "@x": "873.5",
+                            "@y": "1025.5"
+                        },
+                        {
+                            "@id": "pnre5.R",
+                            "@x": "883.5",
+                            "@y": "1025.5"
+                        }
+                    ]
+                },
+                {
+                    "@class": "process",
+                    "@orientation": "horizontal",
+                    "@id": "pnre7",
+                    "bbox": {
+                        "@w": "10.0",
+                        "@h": "10.0",
+                        "@x": "1155.5",
+                        "@y": "1020.0"
+                    },
+                    "port": [
+                        {
+                            "@id": "pnre7.L",
+                            "@x": "1155.5",
+                            "@y": "1025.0"
+                        },
+                        {
+                            "@id": "pnre7.R",
+                            "@x": "1165.5",
+                            "@y": "1025.0"
+                        }
+                    ]
+                },
+                {
+                    "@class": "process",
+                    "@orientation": "horizontal",
+                    "@id": "pnre8",
+                    "bbox": {
+                        "@w": "10.0",
+                        "@h": "10.0",
+                        "@x": "1276.0",
+                        "@y": "1060.0"
+                    },
+                    "port": [
+                        {
+                            "@id": "pnre8.L",
+                            "@x": "1276.0",
+                            "@y": "1065.0"
+                        },
+                        {
+                            "@id": "pnre8.R",
+                            "@x": "1286.0",
+                            "@y": "1065.0"
+                        }
+                    ]
+                },
+                {
+                    "@class": "process",
+                    "@orientation": "horizontal",
+                    "@id": "pnre9",
+                    "bbox": {
+                        "@w": "10.0",
+                        "@h": "10.0",
+                        "@x": "513.0",
+                        "@y": "873.0"
+                    },
+                    "port": [
+                        {
+                            "@id": "pnre9.L",
+                            "@x": "513.0",
+                            "@y": "878.0"
+                        },
+                        {
+                            "@id": "pnre9.R",
+                            "@x": "523.0",
+                            "@y": "878.0"
+                        }
+                    ]
+                },
+                {
+                    "@class": "process",
+                    "@orientation": "horizontal",
+                    "@id": "pnre10",
+                    "bbox": {
+                        "@w": "10.0",
+                        "@h": "10.0",
+                        "@x": "511.0",
+                        "@y": "618.5"
+                    },
+                    "port": [
+                        {
+                            "@id": "pnre10.L",
+                            "@x": "511.0",
+                            "@y": "623.5"
+                        },
+                        {
+                            "@id": "pnre10.R",
+                            "@x": "521.0",
+                            "@y": "623.5"
+                        }
+                    ]
+                },
+                {
+                    "@class": "process",
+                    "@orientation": "horizontal",
+                    "@id": "pnre11",
+                    "bbox": {
+                        "@w": "10.0",
+                        "@h": "10.0",
+                        "@x": "509.0",
+                        "@y": "398.5"
+                    },
+                    "port": [
+                        {
+                            "@id": "pnre11.L",
+                            "@x": "509.0",
+                            "@y": "403.5"
+                        },
+                        {
+                            "@id": "pnre11.R",
+                            "@x": "519.0",
+                            "@y": "403.5"
+                        }
+                    ]
+                },
+                {
+                    "@class": "process",
+                    "@orientation": "horizontal",
+                    "@id": "pnre12",
+                    "bbox": {
+                        "@w": "10.0",
+                        "@h": "10.0",
+                        "@x": "573.0",
+                        "@y": "233.5"
+                    },
+                    "port": [
+                        {
+                            "@id": "pnre12.L",
+                            "@x": "573.0",
+                            "@y": "238.5"
+                        },
+                        {
+                            "@id": "pnre12.R",
+                            "@x": "583.0",
+                            "@y": "238.5"
+                        }
+                    ]
+                },
+                {
+                    "@class": "process",
+                    "@orientation": "horizontal",
+                    "@id": "pnre13",
+                    "bbox": {
+                        "@w": "10.0",
+                        "@h": "10.0",
+                        "@x": "760.0",
+                        "@y": "181.0"
+                    },
+                    "port": [
+                        {
+                            "@id": "pnre13.L",
+                            "@x": "760.0",
+                            "@y": "186.0"
+                        },
+                        {
+                            "@id": "pnre13.R",
+                            "@x": "770.0",
+                            "@y": "186.0"
+                        }
+                    ]
+                },
+                {
+                    "@class": "process",
+                    "@orientation": "horizontal",
+                    "@id": "pnre14",
+                    "bbox": {
+                        "@w": "10.0",
+                        "@h": "10.0",
+                        "@x": "638.5",
+                        "@y": "99.0"
+                    },
+                    "port": [
+                        {
+                            "@id": "pnre14.L",
+                            "@x": "638.5",
+                            "@y": "104.0"
+                        },
+                        {
+                            "@id": "pnre14.R",
+                            "@x": "648.5",
+                            "@y": "104.0"
+                        }
+                    ]
+                },
+                {
+                    "@class": "process",
+                    "@orientation": "horizontal",
+                    "@id": "pnre15",
+                    "bbox": {
+                        "@w": "10.0",
+                        "@h": "10.0",
+                        "@x": "586.0",
+                        "@y": "359.5"
+                    },
+                    "port": [
+                        {
+                            "@id": "pnre15.L",
+                            "@x": "586.0",
+                            "@y": "364.5"
+                        },
+                        {
+                            "@id": "pnre15.R",
+                            "@x": "596.0",
+                            "@y": "364.5"
+                        }
+                    ]
+                },
+                {
+                    "@class": "process",
+                    "@orientation": "horizontal",
+                    "@id": "pnre16",
+                    "bbox": {
+                        "@w": "10.0",
+                        "@h": "10.0",
+                        "@x": "786.0",
+                        "@y": "224.2"
+                    },
+                    "port": [
+                        {
+                            "@id": "pnre16.L",
+                            "@x": "786.0",
+                            "@y": "229.2"
+                        },
+                        {
+                            "@id": "pnre16.R",
+                            "@x": "796.0",
+                            "@y": "229.2"
+                        }
+                    ]
+                },
+                {
+                    "@class": "process",
+                    "@orientation": "horizontal",
+                    "@id": "pnre17",
+                    "bbox": {
+                        "@w": "10.0",
+                        "@h": "10.0",
+                        "@x": "740.5",
+                        "@y": "721.4"
+                    },
+                    "port": [
+                        {
+                            "@id": "pnre17.L",
+                            "@x": "740.5",
+                            "@y": "726.4"
+                        },
+                        {
+                            "@id": "pnre17.R",
+                            "@x": "750.5",
+                            "@y": "726.4"
+                        }
+                    ]
+                },
+                {
+                    "@class": "process",
+                    "@orientation": "horizontal",
+                    "@id": "pnre18",
+                    "bbox": {
+                        "@w": "10.0",
+                        "@h": "10.0",
+                        "@x": "851.5",
+                        "@y": "741.7"
+                    },
+                    "port": [
+                        {
+                            "@id": "pnre18.L",
+                            "@x": "851.5",
+                            "@y": "746.7"
+                        },
+                        {
+                            "@id": "pnre18.R",
+                            "@x": "861.5",
+                            "@y": "746.7"
+                        }
+                    ]
+                },
+                {
+                    "@class": "process",
+                    "@orientation": "horizontal",
+                    "@id": "pnre20",
+                    "bbox": {
+                        "@w": "10.0",
+                        "@h": "10.0",
+                        "@x": "949.0",
+                        "@y": "438.0"
+                    },
+                    "port": [
+                        {
+                            "@id": "pnre20.L",
+                            "@x": "949.0",
+                            "@y": "443.0"
+                        },
+                        {
+                            "@id": "pnre20.R",
+                            "@x": "959.0",
+                            "@y": "443.0"
+                        }
+                    ]
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa1",
+                    "label": {
+                        "@text": "glc__D_c"
+                    },
+                    "bbox": {
+                        "@w": "70.0",
+                        "@h": "25.0",
+                        "@x": "151.0",
+                        "@y": "1011.5"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa4",
+                    "label": {
+                        "@text": "g6p_c"
+                    },
+                    "bbox": {
+                        "@w": "70.0",
+                        "@h": "25.0",
+                        "@x": "484.0",
+                        "@y": "1012.5"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa5",
+                    "label": {
+                        "@text": "atp_c"
+                    },
+                    "clone": null,
+                    "bbox": {
+                        "@w": "49.0",
+                        "@h": "20.0",
+                        "@x": "198.0",
+                        "@y": "977.5"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa6",
+                    "label": {
+                        "@text": "adp_c"
+                    },
+                    "clone": null,
+                    "bbox": {
+                        "@w": "49.0",
+                        "@h": "20.0",
+                        "@x": "380.0",
+                        "@y": "968.5"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa7",
+                    "label": {
+                        "@text": "h_c"
+                    },
+                    "clone": null,
+                    "bbox": {
+                        "@w": "57.0",
+                        "@h": "34.0",
+                        "@x": "431.5",
+                        "@y": "967.5"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa8",
+                    "label": {
+                        "@text": "f6p_c"
+                    },
+                    "bbox": {
+                        "@w": "70.0",
+                        "@h": "25.0",
+                        "@x": "706.0",
+                        "@y": "1012.5"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa13",
+                    "label": {
+                        "@text": "fdp_c"
+                    },
+                    "bbox": {
+                        "@w": "70.0",
+                        "@h": "25.0",
+                        "@x": "981.0",
+                        "@y": "1013.5"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa14",
+                    "label": {
+                        "@text": "atp_c"
+                    },
+                    "clone": null,
+                    "bbox": {
+                        "@w": "49.0",
+                        "@h": "20.0",
+                        "@x": "761.5",
+                        "@y": "1061.0"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa15",
+                    "label": {
+                        "@text": "adp_c"
+                    },
+                    "clone": null,
+                    "bbox": {
+                        "@w": "49.0",
+                        "@h": "20.0",
+                        "@x": "893.5",
+                        "@y": "1065.0"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa16",
+                    "label": {
+                        "@text": "h_c"
+                    },
+                    "clone": null,
+                    "bbox": {
+                        "@w": "57.0",
+                        "@h": "34.0",
+                        "@x": "958.0",
+                        "@y": "1069.0"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa17",
+                    "label": {
+                        "@text": "g3p_c"
+                    },
+                    "clone": null,
+                    "bbox": {
+                        "@w": "70.0",
+                        "@h": "25.0",
+                        "@x": "1270.0",
+                        "@y": "1011.5"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa18",
+                    "label": {
+                        "@text": "dhap_c"
+                    },
+                    "bbox": {
+                        "@w": "70.0",
+                        "@h": "25.0",
+                        "@x": "1222.0",
+                        "@y": "1093.5"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa19",
+                    "label": {
+                        "@text": "6pgl_c"
+                    },
+                    "bbox": {
+                        "@w": "70.0",
+                        "@h": "25.0",
+                        "@x": "482.0",
+                        "@y": "718.5"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa20",
+                    "label": {
+                        "@text": "nadp_c"
+                    },
+                    "clone": null,
+                    "bbox": {
+                        "@w": "70.0",
+                        "@h": "25.0",
+                        "@x": "428.0",
+                        "@y": "923.5"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa21",
+                    "label": {
+                        "@text": "nadph_c"
+                    },
+                    "clone": null,
+                    "bbox": {
+                        "@w": "70.0",
+                        "@h": "25.0",
+                        "@x": "405.0",
+                        "@y": "814.5"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa22",
+                    "label": {
+                        "@text": "h_c"
+                    },
+                    "clone": null,
+                    "bbox": {
+                        "@w": "57.0",
+                        "@h": "34.0",
+                        "@x": "415.0",
+                        "@y": "766.5"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa23",
+                    "label": {
+                        "@text": "6pgc_c"
+                    },
+                    "bbox": {
+                        "@w": "70.0",
+                        "@h": "25.0",
+                        "@x": "480.0",
+                        "@y": "503.5"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa24",
+                    "label": {
+                        "@text": "h2o_c"
+                    },
+                    "bbox": {
+                        "@w": "70.0",
+                        "@h": "25.0",
+                        "@x": "413.0",
+                        "@y": "659.5"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa25",
+                    "label": {
+                        "@text": "h_c"
+                    },
+                    "clone": null,
+                    "bbox": {
+                        "@w": "57.0",
+                        "@h": "34.0",
+                        "@x": "430.0",
+                        "@y": "548.5"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa26",
+                    "label": {
+                        "@text": "ru5p__D_c"
+                    },
+                    "bbox": {
+                        "@w": "70.0",
+                        "@h": "25.0",
+                        "@x": "478.0",
+                        "@y": "278.5"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa27",
+                    "label": {
+                        "@text": "nadp_c"
+                    },
+                    "clone": null,
+                    "bbox": {
+                        "@w": "70.0",
+                        "@h": "25.0",
+                        "@x": "399.5",
+                        "@y": "452.0"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa28",
+                    "label": {
+                        "@text": "nadph_c"
+                    },
+                    "clone": null,
+                    "bbox": {
+                        "@w": "70.0",
+                        "@h": "25.0",
+                        "@x": "398.5",
+                        "@y": "321.0"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa29",
+                    "label": {
+                        "@text": "co2"
+                    },
+                    "bbox": {
+                        "@w": "70.0",
+                        "@h": "25.0",
+                        "@x": "399.0",
+                        "@y": "357.5"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa30",
+                    "label": {
+                        "@text": "r5p_c"
+                    },
+                    "bbox": {
+                        "@w": "70.0",
+                        "@h": "25.0",
+                        "@x": "608.0",
+                        "@y": "173.5"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa31",
+                    "label": {
+                        "@text": "r1p_c"
+                    },
+                    "bbox": {
+                        "@w": "70.0",
+                        "@h": "25.0",
+                        "@x": "852.0",
+                        "@y": "173.5"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa32",
+                    "label": {
+                        "@text": "prpp_c"
+                    },
+                    "bbox": {
+                        "@w": "70.0",
+                        "@h": "25.0",
+                        "@x": "609.0",
+                        "@y": "9.5"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa33",
+                    "label": {
+                        "@text": "amp_c"
+                    },
+                    "bbox": {
+                        "@w": "49.0",
+                        "@h": "24.0",
+                        "@x": "534.0",
+                        "@y": "67.5"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa34",
+                    "label": {
+                        "@text": "atp_c"
+                    },
+                    "clone": null,
+                    "bbox": {
+                        "@w": "49.0",
+                        "@h": "20.0",
+                        "@x": "548.0",
+                        "@y": "148.5"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa35",
+                    "label": {
+                        "@text": "h_c"
+                    },
+                    "clone": null,
+                    "bbox": {
+                        "@w": "57.0",
+                        "@h": "34.0",
+                        "@x": "527.0",
+                        "@y": "21.5"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa36",
+                    "label": {
+                        "@text": "s7p_c"
+                    },
+                    "bbox": {
+                        "@w": "70.0",
+                        "@h": "25.0",
+                        "@x": "923.0",
+                        "@y": "243.5"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa37",
+                    "label": {
+                        "@text": "g3p_c"
+                    },
+                    "clone": null,
+                    "bbox": {
+                        "@w": "70.0",
+                        "@h": "25.0",
+                        "@x": "814.0",
+                        "@y": "354.5"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa38",
+                    "label": {
+                        "@text": "xu5p__D_c"
+                    },
+                    "bbox": {
+                        "@w": "78.0",
+                        "@h": "25.0",
+                        "@x": "630.0",
+                        "@y": "425.5"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa39",
+                    "label": {
+                        "@text": "e4p_c"
+                    },
+                    "clone": null,
+                    "bbox": {
+                        "@w": "70.0",
+                        "@h": "25.0",
+                        "@x": "569.0",
+                        "@y": "596.5"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa40",
+                    "label": {
+                        "@text": "e4p_c"
+                    },
+                    "clone": null,
+                    "bbox": {
+                        "@w": "70.0",
+                        "@h": "25.0",
+                        "@x": "922.6667",
+                        "@y": "732.6667"
+                    }
+                },
+                {
+                    "@class": "simple chemical",
+                    "@id": "sa43",
+                    "label": {
+                        "@text": "x"
+                    },
+                    "bbox": {
+                        "@w": "70.0",
+                        "@h": "25.0",
+                        "@x": "915.0",
+                        "@y": "617.5"
+                    }
+                }
+            ],
+            "arc": [
+                {
+                    "@class": "consumption",
+                    "@id": "re2-react0",
+                    "@source": "sa1",
+                    "@target": "pnre2.L",
+                    "start": {
+                        "@x": "186.0",
+                        "@y": "1024.0"
+                    },
+                    "end": {
+                        "@x": "330.0",
+                        "@y": "1024.5"
+                    }
+                },
+                {
+                    "@class": "production",
+                    "@id": "re2-product0",
+                    "@source": "pnre2.R",
+                    "@target": "sa4",
+                    "start": {
+                        "@x": "340.0",
+                        "@y": "1024.5"
+                    },
+                    "end": {
+                        "@x": "484.0",
+                        "@y": "1025.0"
+                    }
+                },
+                {
+                    "@class": "consumption",
+                    "@id": "re2-addReact1",
+                    "@source": "sa5",
+                    "@target": "pnre2.L",
+                    "start": {
+                        "@x": "222.5",
+                        "@y": "997.5"
+                    },
+                    "end": {
+                        "@x": "330.0",
+                        "@y": "1024.5"
+                    }
+                },
+                {
+                    "@class": "production",
+                    "@id": "re2-addProduct1",
+                    "@source": "pnre2.R",
+                    "@target": "sa6",
+                    "start": {
+                        "@x": "340.0",
+                        "@y": "1024.5"
+                    },
+                    "end": {
+                        "@x": "404.5",
+                        "@y": "988.5"
+                    }
+                },
+                {
+                    "@class": "production",
+                    "@id": "re2-addProduct2",
+                    "@source": "pnre2.R",
+                    "@target": "sa7",
+                    "start": {
+                        "@x": "340.0",
+                        "@y": "1024.5"
+                    },
+                    "end": {
+                        "@x": "444.29404",
+                        "@y": "991.0056"
+                    }
+                },
+                {
+                    "@class": "consumption",
+                    "@id": "re4-react0",
+                    "@source": "sa4",
+                    "@target": "pnre4.L",
+                    "start": {
+                        "@x": "554.0",
+                        "@y": "1025.0"
+                    },
+                    "end": {
+                        "@x": "642.5",
+                        "@y": "1025.0"
+                    }
+                },
+                {
+                    "@class": "production",
+                    "@id": "re4-product0",
+                    "@source": "pnre4.R",
+                    "@target": "sa8",
+                    "start": {
+                        "@x": "652.5",
+                        "@y": "1025.0"
+                    },
+                    "end": {
+                        "@x": "741.0",
+                        "@y": "1025.0"
+                    }
+                },
+                {
+                    "@class": "consumption",
+                    "@id": "re5-react0",
+                    "@source": "sa8",
+                    "@target": "pnre5.L",
+                    "start": {
+                        "@x": "741.0",
+                        "@y": "1025.0"
+                    },
+                    "end": {
+                        "@x": "873.5",
+                        "@y": "1025.5"
+                    }
+                },
+                {
+                    "@class": "production",
+                    "@id": "re5-product0",
+                    "@source": "pnre5.R",
+                    "@target": "sa13",
+                    "start": {
+                        "@x": "883.5",
+                        "@y": "1025.5"
+                    },
+                    "end": {
+                        "@x": "1016.0",
+                        "@y": "1026.0"
+                    }
+                },
+                {
+                    "@class": "consumption",
+                    "@id": "re5-addReact1",
+                    "@source": "sa14",
+                    "@target": "pnre5.L",
+                    "start": {
+                        "@x": "786.0",
+                        "@y": "1071.0"
+                    },
+                    "end": {
+                        "@x": "873.5",
+                        "@y": "1025.5"
+                    }
+                },
+                {
+                    "@class": "production",
+                    "@id": "re5-addProduct1",
+                    "@source": "pnre5.R",
+                    "@target": "sa15",
+                    "start": {
+                        "@x": "883.5",
+                        "@y": "1025.5"
+                    },
+                    "end": {
+                        "@x": "918.0",
+                        "@y": "1075.0"
+                    }
+                },
+                {
+                    "@class": "production",
+                    "@id": "re5-addProduct2",
+                    "@source": "pnre5.R",
+                    "@target": "sa16",
+                    "start": {
+                        "@x": "883.5",
+                        "@y": "1025.5"
+                    },
+                    "end": {
+                        "@x": "986.5",
+                        "@y": "1086.0"
+                    }
+                },
+                {
+                    "@class": "consumption",
+                    "@id": "re7-react0",
+                    "@source": "sa13",
+                    "@target": "pnre7.L",
+                    "start": {
+                        "@x": "1016.0",
+                        "@y": "1026.0"
+                    },
+                    "end": {
+                        "@x": "1155.5",
+                        "@y": "1025.0"
+                    }
+                },
+                {
+                    "@class": "production",
+                    "@id": "re7-product0",
+                    "@source": "pnre7.R",
+                    "@target": "sa17",
+                    "start": {
+                        "@x": "1165.5",
+                        "@y": "1025.0"
+                    },
+                    "end": {
+                        "@x": "1305.0",
+                        "@y": "1024.0"
+                    }
+                },
+                {
+                    "@class": "production",
+                    "@id": "re7-addProduct1",
+                    "@source": "pnre7.R",
+                    "@target": "sa18",
+                    "start": {
+                        "@x": "1165.5",
+                        "@y": "1025.0"
+                    },
+                    "end": {
+                        "@x": "1257.0",
+                        "@y": "1106.0"
+                    }
+                },
+                {
+                    "@class": "consumption",
+                    "@id": "re8-react0",
+                    "@source": "sa18",
+                    "@target": "pnre8.L",
+                    "start": {
+                        "@x": "1257.0",
+                        "@y": "1106.0"
+                    },
+                    "end": {
+                        "@x": "1276.0",
+                        "@y": "1065.0"
+                    }
+                },
+                {
+                    "@class": "production",
+                    "@id": "re8-product0",
+                    "@source": "pnre8.R",
+                    "@target": "sa17",
+                    "start": {
+                        "@x": "1286.0",
+                        "@y": "1065.0"
+                    },
+                    "end": {
+                        "@x": "1305.0",
+                        "@y": "1024.0"
+                    }
+                },
+                {
+                    "@class": "consumption",
+                    "@id": "re9-react0",
+                    "@source": "sa4",
+                    "@target": "pnre9.R",
+                    "start": {
+                        "@x": "519.0",
+                        "@y": "1025.0"
+                    },
+                    "end": {
+                        "@x": "523.0",
+                        "@y": "878.0"
+                    }
+                },
+                {
+                    "@class": "production",
+                    "@id": "re9-product0",
+                    "@source": "pnre9.L",
+                    "@target": "sa19",
+                    "start": {
+                        "@x": "513.0",
+                        "@y": "878.0"
+                    },
+                    "end": {
+                        "@x": "517.0",
+                        "@y": "731.0"
+                    }
+                },
+                {
+                    "@class": "consumption",
+                    "@id": "re9-addReact1",
+                    "@source": "sa20",
+                    "@target": "pnre9.R",
+                    "start": {
+                        "@x": "463.0",
+                        "@y": "936.0"
+                    },
+                    "end": {
+                        "@x": "523.0",
+                        "@y": "878.0"
+                    }
+                },
+                {
+                    "@class": "production",
+                    "@id": "re9-addProduct1",
+                    "@source": "pnre9.L",
+                    "@target": "sa21",
+                    "start": {
+                        "@x": "513.0",
+                        "@y": "878.0"
+                    },
+                    "end": {
+                        "@x": "472.3358",
+                        "@y": "831.78357"
+                    }
+                },
+                {
+                    "@class": "production",
+                    "@id": "re9-addProduct2",
+                    "@source": "pnre9.L",
+                    "@target": "sa22",
+                    "start": {
+                        "@x": "513.0",
+                        "@y": "878.0"
+                    },
+                    "end": {
+                        "@x": "459.20596",
+                        "@y": "790.0056"
+                    }
+                },
+                {
+                    "@class": "consumption",
+                    "@id": "re10-react0",
+                    "@source": "sa19",
+                    "@target": "pnre10.R",
+                    "start": {
+                        "@x": "517.0",
+                        "@y": "731.0"
+                    },
+                    "end": {
+                        "@x": "521.0",
+                        "@y": "623.5"
+                    }
+                },
+                {
+                    "@class": "production",
+                    "@id": "re10-product0",
+                    "@source": "pnre10.L",
+                    "@target": "sa23",
+                    "start": {
+                        "@x": "511.0",
+                        "@y": "623.5"
+                    },
+                    "end": {
+                        "@x": "515.0",
+                        "@y": "516.0"
+                    }
+                },
+                {
+                    "@class": "consumption",
+                    "@id": "re10-addReact1",
+                    "@source": "sa24",
+                    "@target": "pnre10.R",
+                    "start": {
+                        "@x": "480.3358",
+                        "@y": "667.21643"
+                    },
+                    "end": {
+                        "@x": "521.0",
+                        "@y": "623.5"
+                    }
+                },
+                {
+                    "@class": "production",
+                    "@id": "re10-addProduct1",
+                    "@source": "pnre10.L",
+                    "@target": "sa25",
+                    "start": {
+                        "@x": "511.0",
+                        "@y": "623.5"
+                    },
+                    "end": {
+                        "@x": "474.20596",
+                        "@y": "572.0056"
+                    }
+                },
+                {
+                    "@class": "consumption",
+                    "@id": "re11-react0",
+                    "@source": "sa23",
+                    "@target": "pnre11.R",
+                    "start": {
+                        "@x": "515.0",
+                        "@y": "516.0"
+                    },
+                    "end": {
+                        "@x": "519.0",
+                        "@y": "403.5"
+                    }
+                },
+                {
+                    "@class": "production",
+                    "@id": "re11-product0",
+                    "@source": "pnre11.L",
+                    "@target": "sa26",
+                    "start": {
+                        "@x": "509.0",
+                        "@y": "403.5"
+                    },
+                    "end": {
+                        "@x": "513.0",
+                        "@y": "291.0"
+                    }
+                },
+                {
+                    "@class": "consumption",
+                    "@id": "re11-addReact1",
+                    "@source": "sa27",
+                    "@target": "pnre11.R",
+                    "start": {
+                        "@x": "466.8358",
+                        "@y": "459.71646"
+                    },
+                    "end": {
+                        "@x": "519.0",
+                        "@y": "403.5"
+                    }
+                },
+                {
+                    "@class": "production",
+                    "@id": "re11-addProduct1",
+                    "@source": "pnre11.L",
+                    "@target": "sa29",
+                    "start": {
+                        "@x": "509.0",
+                        "@y": "403.5"
+                    },
+                    "end": {
+                        "@x": "466.3358",
+                        "@y": "365.21646"
+                    }
+                },
+                {
+                    "@class": "production",
+                    "@id": "re11-addProduct2",
+                    "@source": "pnre11.L",
+                    "@target": "sa28",
+                    "start": {
+                        "@x": "509.0",
+                        "@y": "403.5"
+                    },
+                    "end": {
+                        "@x": "458.24875",
+                        "@y": "324.66116"
+                    }
+                },
+                {
+                    "@class": "consumption",
+                    "@id": "re12-react0",
+                    "@source": "sa26",
+                    "@target": "pnre12.L",
+                    "start": {
+                        "@x": "513.0",
+                        "@y": "291.0"
+                    },
+                    "end": {
+                        "@x": "573.0",
+                        "@y": "238.5"
+                    }
+                },
+                {
+                    "@class": "production",
+                    "@id": "re12-product0",
+                    "@source": "pnre12.R",
+                    "@target": "sa30",
+                    "start": {
+                        "@x": "583.0",
+                        "@y": "238.5"
+                    },
+                    "end": {
+                        "@x": "643.0",
+                        "@y": "186.0"
+                    }
+                },
+                {
+                    "@class": "consumption",
+                    "@id": "re13-react0",
+                    "@source": "sa30",
+                    "@target": "pnre13.L",
+                    "start": {
+                        "@x": "643.0",
+                        "@y": "186.0"
+                    },
+                    "end": {
+                        "@x": "760.0",
+                        "@y": "186.0"
+                    }
+                },
+                {
+                    "@class": "production",
+                    "@id": "re13-product0",
+                    "@source": "pnre13.R",
+                    "@target": "sa31",
+                    "start": {
+                        "@x": "770.0",
+                        "@y": "186.0"
+                    },
+                    "end": {
+                        "@x": "887.0",
+                        "@y": "186.0"
+                    }
+                },
+                {
+                    "@class": "consumption",
+                    "@id": "re14-react0",
+                    "@source": "sa30",
+                    "@target": "pnre14.L",
+                    "start": {
+                        "@x": "643.0",
+                        "@y": "186.0"
+                    },
+                    "end": {
+                        "@x": "638.5",
+                        "@y": "104.0"
+                    }
+                },
+                {
+                    "@class": "production",
+                    "@id": "re14-product0",
+                    "@source": "pnre14.R",
+                    "@target": "sa32",
+                    "start": {
+                        "@x": "648.5",
+                        "@y": "104.0"
+                    },
+                    "end": {
+                        "@x": "644.0",
+                        "@y": "22.0"
+                    }
+                },
+                {
+                    "@class": "consumption",
+                    "@id": "re14-addReact1",
+                    "@source": "sa34",
+                    "@target": "pnre14.L",
+                    "start": {
+                        "@x": "595.1351",
+                        "@y": "154.67317"
+                    },
+                    "end": {
+                        "@x": "638.5",
+                        "@y": "104.0"
+                    }
+                },
+                {
+                    "@class": "production",
+                    "@id": "re14-addProduct1",
+                    "@source": "pnre14.R",
+                    "@target": "sa35",
+                    "start": {
+                        "@x": "648.5",
+                        "@y": "104.0"
+                    },
+                    "end": {
+                        "@x": "571.20593",
+                        "@y": "31.99438"
+                    }
+                },
+                {
+                    "@class": "production",
+                    "@id": "re14-addProduct2",
+                    "@source": "pnre14.R",
+                    "@target": "sa33",
+                    "start": {
+                        "@x": "648.5",
+                        "@y": "104.0"
+                    },
+                    "end": {
+                        "@x": "558.5",
+                        "@y": "79.5"
+                    }
+                },
+                {
+                    "@class": "consumption",
+                    "@id": "re15-react0",
+                    "@source": "sa26",
+                    "@target": "pnre15.L",
+                    "start": {
+                        "@x": "513.0",
+                        "@y": "291.0"
+                    },
+                    "end": {
+                        "@x": "586.0",
+                        "@y": "364.5"
+                    }
+                },
+                {
+                    "@class": "production",
+                    "@id": "re15-product0",
+                    "@source": "pnre15.R",
+                    "@target": "sa38",
+                    "start": {
+                        "@x": "596.0",
+                        "@y": "364.5"
+                    },
+                    "end": {
+                        "@x": "669.0",
+                        "@y": "438.0"
+                    }
+                },
+                {
+                    "@class": "consumption",
+                    "@id": "re16-react0",
+                    "@source": "sa36",
+                    "@target": "pnre16.R",
+                    "start": {
+                        "@x": "925.66425",
+                        "@y": "260.78354"
+                    },
+                    "end": {
+                        "@x": "796.0",
+                        "@y": "229.2"
+                    }
+                },
+                {
+                    "@class": "production",
+                    "@id": "re16-product0",
+                    "@source": "pnre16.L",
+                    "@target": "sa30",
+                    "start": {
+                        "@x": "786.0",
+                        "@y": "229.2"
+                    },
+                    "end": {
+                        "@x": "656.3939",
+                        "@y": "197.5485"
+                    }
+                },
+                {
+                    "@class": "consumption",
+                    "@id": "re16-addReact1",
+                    "@source": "sa37",
+                    "@target": "pnre16.R",
+                    "start": {
+                        "@x": "849.0",
+                        "@y": "354.5"
+                    },
+                    "end": {
+                        "@x": "796.0",
+                        "@y": "229.2"
+                    }
+                },
+                {
+                    "@class": "production",
+                    "@id": "re16-addProduct1",
+                    "@source": "pnre16.L",
+                    "@target": "sa38",
+                    "start": {
+                        "@x": "786.0",
+                        "@y": "229.2"
+                    },
+                    "end": {
+                        "@x": "696.57715",
+                        "@y": "429.16116"
+                    }
+                },
+                {
+                    "@class": "consumption",
+                    "@id": "re17-react0",
+                    "@source": "sa8",
+                    "@target": "pnre17.R",
+                    "start": {
+                        "@x": "741.0",
+                        "@y": "1025.0"
+                    },
+                    "end": {
+                        "@x": "750.5",
+                        "@y": "726.4"
+                    }
+                },
+                {
+                    "@class": "production",
+                    "@id": "re17-product0",
+                    "@source": "pnre17.L",
+                    "@target": "sa38",
+                    "start": {
+                        "@x": "740.5",
+                        "@y": "726.4"
+                    },
+                    "next": {
+                        "@x": "750.0",
+                        "@y": "440.0"
+                    },
+                    "end": {
+                        "@x": "705.0313",
+                        "@y": "442.78354"
+                    }
+                },
+                {
+                    "@class": "consumption",
+                    "@id": "re17-addReact1",
+                    "@source": "sa37",
+                    "@target": "pnre17.R",
+                    "start": {
+                        "@x": "835.6061",
+                        "@y": "378.5485"
+                    },
+                    "end": {
+                        "@x": "750.5",
+                        "@y": "726.4"
+                    }
+                },
+                {
+                    "@class": "production",
+                    "@id": "re17-addProduct1",
+                    "@source": "pnre17.L",
+                    "@target": "sa39",
+                    "start": {
+                        "@x": "740.5",
+                        "@y": "726.4"
+                    },
+                    "end": {
+                        "@x": "636.33575",
+                        "@y": "604.21643"
+                    }
+                },
+                {
+                    "@class": "consumption",
+                    "@id": "re18-react0",
+                    "@source": "sa8",
+                    "@target": "pnre18.R",
+                    "start": {
+                        "@x": "765.7487",
+                        "@y": "1016.1612"
+                    },
+                    "end": {
+                        "@x": "861.5",
+                        "@y": "746.7"
+                    }
+                },
+                {
+                    "@class": "production",
+                    "@id": "re18-product0",
+                    "@source": "pnre18.L",
+                    "@target": "sa36",
+                    "start": {
+                        "@x": "851.5",
+                        "@y": "746.7"
+                    },
+                    "next": {
+                        "@x": "950.0",
+                        "@y": "480.0"
+                    },
+                    "end": {
+                        "@x": "958.0",
+                        "@y": "268.5"
+                    }
+                },
+                {
+                    "@class": "consumption",
+                    "@id": "re18-addReact1",
+                    "@source": "sa40",
+                    "@target": "pnre18.R",
+                    "start": {
+                        "@x": "922.6667",
+                        "@y": "745.1667"
+                    },
+                    "end": {
+                        "@x": "861.5",
+                        "@y": "746.7"
+                    }
+                },
+                {
+                    "@class": "production",
+                    "@id": "re18-addProduct1",
+                    "@source": "pnre18.L",
+                    "@target": "sa37",
+                    "start": {
+                        "@x": "851.5",
+                        "@y": "746.7"
+                    },
+                    "end": {
+                        "@x": "862.3939",
+                        "@y": "378.5485"
+                    }
+                },
+                {
+                    "@class": "consumption",
+                    "@id": "re20-react0",
+                    "@source": "sa43",
+                    "@target": "pnre20.L",
+                    "start": {
+                        "@x": "950.0",
+                        "@y": "630.0"
+                    },
+                    "end": {
+                        "@x": "949.0",
+                        "@y": "443.0"
+                    }
+                },
+                {
+                    "@class": "production",
+                    "@id": "re20-product0",
+                    "@source": "pnre20.R",
+                    "@target": "sa36",
+                    "start": {
+                        "@x": "959.0",
+                        "@y": "443.0"
+                    },
+                    "end": {
+                        "@x": "958.0",
+                        "@y": "256.0"
+                    }
+                }
+            ]
+        }
+    }
+}
