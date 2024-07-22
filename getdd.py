@@ -13,7 +13,7 @@ def save_json_data(data, file_path):
 
 
 # Load your original JSON data
-data = load_json_data('SBML_origin_quarter_3.json')
+data = load_json_data('SBML_new_PPP_6.json')
 
 
 # Create nodes and edges
@@ -41,4 +41,4 @@ cytoscape_data = [{
 ]
 
 # Save the new JSON data
-save_json_data(cytoscape_data, 'escher-SBML_origin_quarter_3.json')
+save_json_data(cytoscape_data, 'escher-SBML_new_PPP_6.json')

@@ -44,12 +44,11 @@ def create_nodes(species_aliases, positions, species):
 
 
 # Load your original JSON data
-data = load_json_data('output.json')
+data = load_json_data('SBML_origin_quarter.json')
 
 
 # Extract necessary components
-species_aliases = data['sbml']['model']['annotation']['celldesigner:extension']['celldesigner:listOfSpeciesAliases'][
-    'celldesigner:speciesAlias']
+species_aliases = data['sbml']['model']['layout:listOfLayouts']['layout:layout']['layout:listOfSpeciesGlyphs']['layout:speciesGlyph']
 reactions = data['sbml']['model']['listOfReactions']['reaction']
 species = data['sbml']['model']['listOfSpecies']['species']
 
@@ -57,10 +56,10 @@ print(len(species), 'species')
 print(len(reactions), 'reactions')
 print(len(species_aliases), 'species_aliases')
 # Extract positions
-positions = extract_positions(species_aliases)
+# positions = extract_positions(species_aliases)
 
 # Create nodes and edges
-nodes = create_nodes(species_aliases, positions, species)
+# nodes = create_nodes(species_aliases, positions, species)
 
 
 # Save the new JSON data
