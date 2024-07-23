@@ -1,0 +1,3926 @@
+[
+    {
+        "map_name": "NN_main_map",
+        "map_id": "NN_main_map",
+        "map_description": "",
+        "homepage": "https://escher.github.io",
+        "schema": "https://escher.github.io/escher/jsonschema/1-0-0#"
+    },
+    {
+        "reactions": {
+            "DCT": {
+                "name": "DCT",
+                "bigg_id": "DCT",
+                "reversibility": true,
+                "metabolites": [
+                    {
+                        "bigg_id": "L_dpchrm[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "56dihindlcrbxlt[c]",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 20074.999999999985,
+                "label_y": 19549.99999999998,
+                "segments": {
+                    "DCT_0-0": {
+                        "from_node_id": "DCT_0-0-start",
+                        "to_node_id": "DCT_0-0-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_1-sa4846-0": {
+                        "from_node_id": "sa4846",
+                        "to_node_id": "node_1-sa4846-0",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_1-sa4846-1": {
+                        "from_node_id": "node_1-sa4846-1-start",
+                        "to_node_id": "node_1-sa4846-1-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_1-sa4846-2": {
+                        "from_node_id": "node_1-sa4846-2",
+                        "to_node_id": "DCT_0-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_2-sa4908-0": {
+                        "from_node_id": "DCT_0-0-end",
+                        "to_node_id": "node_2-sa4908-0",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_2-sa4908-1": {
+                        "from_node_id": "node_2-sa4908-1",
+                        "to_node_id": "sa4908",
+                        "b1": null,
+                        "b2": null
+                    }
+                }
+            },
+            "DOPACCL": {
+                "name": "DOPACCL",
+                "bigg_id": "DOPACCL",
+                "reversibility": false,
+                "metabolites": [
+                    {
+                        "bigg_id": "CE5276[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "CE5665[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "h[c]",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 12126.066080877496,
+                "label_y": 26018.996496515352,
+                "segments": {
+                    "node_4-sa4766-0": {
+                        "from_node_id": "sa4766",
+                        "to_node_id": "DOPACCL_3-mid",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_5-sa4807-0": {
+                        "from_node_id": "DOPACCL_3-mid",
+                        "to_node_id": "sa4807",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_6-sa4806-0": {
+                        "from_node_id": "DOPACCL_3-mid",
+                        "to_node_id": "sa4806",
+                        "b1": null,
+                        "b2": null
+                    }
+                }
+            },
+            "NTD1": {
+                "name": "NTD1",
+                "bigg_id": "NTD1",
+                "reversibility": false,
+                "metabolites": [
+                    {
+                        "bigg_id": "dump[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "h2o[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "duri[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "pi[c]",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 17090.0,
+                "label_y": 19880.0,
+                "segments": {
+                    "NTD1_7-0": {
+                        "from_node_id": "NTD1_7-0-start",
+                        "to_node_id": "NTD1_7-0-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_8-sa5504-0": {
+                        "from_node_id": "sa5504",
+                        "to_node_id": "NTD1_7-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_9-sa5510-0": {
+                        "from_node_id": "sa5510",
+                        "to_node_id": "NTD1_7-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_10-sa5512-0": {
+                        "from_node_id": "NTD1_7-0-end",
+                        "to_node_id": "sa5512",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_11-sa5509-0": {
+                        "from_node_id": "NTD1_7-0-end",
+                        "to_node_id": "sa5509",
+                        "b1": null,
+                        "b2": null
+                    }
+                }
+            },
+            "HMR_0654": {
+                "name": "HMR_0654",
+                "bigg_id": "HMR_0654",
+                "reversibility": false,
+                "metabolites": [
+                    {
+                        "bigg_id": "M02686[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "amet[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "ahcys[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "h[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "M02758[c]",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 22569.999999999993,
+                "label_y": 19429.999999999993,
+                "segments": {
+                    "node_13-sa5288-0": {
+                        "from_node_id": "sa5288",
+                        "to_node_id": "node_13-sa5288-0",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_13-sa5288-0-extra": {
+                        "from_node_id": "node_13-sa5288-0-extra",
+                        "to_node_id": "HMR_0654_12-mid",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_13-sa5288-1": {
+                        "from_node_id": "node_13-sa5288-1-start",
+                        "to_node_id": "node_13-sa5288-1-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_13-sa5288-2": {
+                        "from_node_id": "node_13-sa5288-2",
+                        "to_node_id": "HMR_0654_12-mid",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_14-sa5409-0": {
+                        "from_node_id": "sa5409",
+                        "to_node_id": "HMR_0654_12-mid",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_15-sa5315-0-extra": {
+                        "from_node_id": "node_15-sa5315-0-extra",
+                        "to_node_id": "HMR_0654_12-mid",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_15-sa5315-0": {
+                        "from_node_id": "HMR_0654_12-mid",
+                        "to_node_id": "node_15-sa5315-0",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_15-sa5315-1": {
+                        "from_node_id": "node_15-sa5315-1-start",
+                        "to_node_id": "node_15-sa5315-1-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_15-sa5315-2": {
+                        "from_node_id": "node_15-sa5315-2-start",
+                        "to_node_id": "node_15-sa5315-2-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_15-sa5315-3": {
+                        "from_node_id": "node_15-sa5315-3",
+                        "to_node_id": "sa5315",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_16-sa5289-0": {
+                        "from_node_id": "HMR_0654_12-mid",
+                        "to_node_id": "sa5289",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_17-sa5290-0": {
+                        "from_node_id": "HMR_0654_12-mid",
+                        "to_node_id": "sa5290",
+                        "b1": null,
+                        "b2": null
+                    }
+                }
+            },
+            "re6024": {
+                "name": "GACMTRc",
+                "bigg_id": "GACMTRc",
+                "reversibility": true,
+                "metabolites": [
+                    {
+                        "bigg_id": "amet[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "gudac[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "ahcys[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "h[c]",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 18637.499999999993,
+                "label_y": 18589.999999999993,
+                "segments": {
+                    "node_19-sa5409-0": {
+                        "from_node_id": "sa5409",
+                        "to_node_id": "node_19-sa5409-0",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_19-sa5409-0-extra": {
+                        "from_node_id": "node_19-sa5409-0-extra",
+                        "to_node_id": "re6024_18-mid",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_19-sa5409-1": {
+                        "from_node_id": "node_19-sa5409-1-start",
+                        "to_node_id": "node_19-sa5409-1-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_19-sa5409-2": {
+                        "from_node_id": "node_19-sa5409-2-start",
+                        "to_node_id": "node_19-sa5409-2-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_19-sa5409-3": {
+                        "from_node_id": "node_19-sa5409-3",
+                        "to_node_id": "re6024_18-mid",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_20-sa17348-0": {
+                        "from_node_id": "sa17348",
+                        "to_node_id": "re6024_18-mid",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_21-sa5315-0": {
+                        "from_node_id": "re6024_18-mid",
+                        "to_node_id": "sa5315",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_22-sa17351-0": {
+                        "from_node_id": "re6024_18-mid",
+                        "to_node_id": "sa17351",
+                        "b1": null,
+                        "b2": null
+                    }
+                }
+            },
+            "URIDK3": {
+                "name": "URIDK3",
+                "bigg_id": "URIDK3",
+                "reversibility": true,
+                "metabolites": [
+                    {
+                        "bigg_id": "dump[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "atp[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "dudp[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "adp[c]",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 15725.0,
+                "label_y": 19880.0,
+                "segments": {
+                    "URIDK3_23-0": {
+                        "from_node_id": "URIDK3_23-0-start",
+                        "to_node_id": "URIDK3_23-0-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_24-sa5504-0": {
+                        "from_node_id": "sa5504",
+                        "to_node_id": "URIDK3_23-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_25-sa6940-0": {
+                        "from_node_id": "sa6940",
+                        "to_node_id": "URIDK3_23-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_26-sa6933-0": {
+                        "from_node_id": "URIDK3_23-0-end",
+                        "to_node_id": "sa6933",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_27-sa6929-0": {
+                        "from_node_id": "URIDK3_23-0-end",
+                        "to_node_id": "sa6929",
+                        "b1": null,
+                        "b2": null
+                    }
+                }
+            },
+            "re6141": {
+                "name": "r0097",
+                "bigg_id": "r0097",
+                "reversibility": false,
+                "metabolites": [
+                    {
+                        "bigg_id": "ac[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "atp[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "h[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "HC01672[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "ppi[c]",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 19935.0,
+                "label_y": 18360.0,
+                "segments": {
+                    "re6141_28-0": {
+                        "from_node_id": "re6141_28-0-start",
+                        "to_node_id": "re6141_28-0-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_29-sa6289-0": {
+                        "from_node_id": "sa6289",
+                        "to_node_id": "re6141_28-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_30-sa17799-0": {
+                        "from_node_id": "sa17799",
+                        "to_node_id": "re6141_28-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_31-sa17798-0": {
+                        "from_node_id": "sa17798",
+                        "to_node_id": "re6141_28-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_32-sa17792-0": {
+                        "from_node_id": "re6141_28-0-end",
+                        "to_node_id": "sa17792",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_33-sa17795-0": {
+                        "from_node_id": "re6141_28-0-end",
+                        "to_node_id": "sa17795",
+                        "b1": null,
+                        "b2": null
+                    }
+                }
+            },
+            "DOPACHRMISO": {
+                "name": "DOPACHRMISO",
+                "bigg_id": "DOPACHRMISO",
+                "reversibility": false,
+                "metabolites": [
+                    {
+                        "bigg_id": "2c23dh56dhoxin[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "o2[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "L_dpchrm[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "h2o[c]",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 19326.25,
+                "label_y": 19100.0,
+                "segments": {
+                    "DOPACHRMISO_34-0": {
+                        "from_node_id": "DOPACHRMISO_34-0-start",
+                        "to_node_id": "DOPACHRMISO_34-0-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_35-sa4876-0": {
+                        "from_node_id": "sa4876",
+                        "to_node_id": "DOPACHRMISO_34-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_36-sa4907-0": {
+                        "from_node_id": "sa4907",
+                        "to_node_id": "DOPACHRMISO_34-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_37-sa4846-0": {
+                        "from_node_id": "DOPACHRMISO_34-0-end",
+                        "to_node_id": "sa4846",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_38-sa4906-0": {
+                        "from_node_id": "DOPACHRMISO_34-0-end",
+                        "to_node_id": "sa4906",
+                        "b1": null,
+                        "b2": null
+                    }
+                }
+            },
+            "UAG2EMAi": {
+                "name": "UAG2EMAi",
+                "bigg_id": "UAG2EMAi",
+                "reversibility": false,
+                "metabolites": [
+                    {
+                        "bigg_id": "uacgam[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "h2o[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "acmana[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "h[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "udp[c]",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 13460.0,
+                "label_y": 18520.0,
+                "segments": {
+                    "UAG2EMAi_39-0": {
+                        "from_node_id": "UAG2EMAi_39-0-start",
+                        "to_node_id": "UAG2EMAi_39-0-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_40-sa12466-0": {
+                        "from_node_id": "sa12466",
+                        "to_node_id": "UAG2EMAi_39-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_41-sa12465-0": {
+                        "from_node_id": "sa12465",
+                        "to_node_id": "UAG2EMAi_39-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_42-sa12463-0": {
+                        "from_node_id": "UAG2EMAi_39-0-end",
+                        "to_node_id": "sa12463",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_43-sa12464-0": {
+                        "from_node_id": "UAG2EMAi_39-0-end",
+                        "to_node_id": "sa12464",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_44-sa12462-0": {
+                        "from_node_id": "UAG2EMAi_39-0-end",
+                        "to_node_id": "sa12462",
+                        "b1": null,
+                        "b2": null
+                    }
+                }
+            },
+            "re6064": {
+                "name": "RE0908C",
+                "bigg_id": "RE0908C",
+                "reversibility": true,
+                "metabolites": [
+                    {
+                        "bigg_id": "CE2870[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "h2o[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "CE2866[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "h[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "so4[c]",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 17085.0,
+                "label_y": 19070.0,
+                "segments": {
+                    "re6064_45-0": {
+                        "from_node_id": "re6064_45-0-start",
+                        "to_node_id": "re6064_45-0-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_46-sa17519-0": {
+                        "from_node_id": "sa17519",
+                        "to_node_id": "re6064_45-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_47-sa17520-0": {
+                        "from_node_id": "sa17520",
+                        "to_node_id": "re6064_45-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_48-sa17516-0": {
+                        "from_node_id": "re6064_45-0-end",
+                        "to_node_id": "sa17516",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_49-sa17523-0": {
+                        "from_node_id": "re6064_45-0-end",
+                        "to_node_id": "sa17523",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_50-sa17524-0": {
+                        "from_node_id": "re6064_45-0-end",
+                        "to_node_id": "sa17524",
+                        "b1": null,
+                        "b2": null
+                    }
+                }
+            },
+            "re5192": {
+                "name": "FAS80COA_L",
+                "bigg_id": "FAS80COA_L",
+                "reversibility": false,
+                "metabolites": [
+                    {
+                        "bigg_id": "accoa[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "malcoa[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "occoa[c]",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 12285.000000000002,
+                "label_y": 24319.999999999993,
+                "segments": {
+                    "re5192_51-0": {
+                        "from_node_id": "re5192_51-0-start",
+                        "to_node_id": "re5192_51-0-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "re5192_51-1": {
+                        "from_node_id": "re5192_51-1-start",
+                        "to_node_id": "re5192_51-1-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "re5192_51-2": {
+                        "from_node_id": "re5192_51-2-start",
+                        "to_node_id": "re5192_51-2-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "re5192_51-3": {
+                        "from_node_id": "re5192_51-3-start",
+                        "to_node_id": "re5192_51-3-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "re5192_51-4": {
+                        "from_node_id": "re5192_51-4-start",
+                        "to_node_id": "re5192_51-4-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_52-sa5060-0": {
+                        "from_node_id": "sa5060",
+                        "to_node_id": "re5192_51-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_53-sa12345-0": {
+                        "from_node_id": "sa12345",
+                        "to_node_id": "re5192_51-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_54-sa9784-0": {
+                        "from_node_id": "re5192_51-4-end",
+                        "to_node_id": "sa9784",
+                        "b1": null,
+                        "b2": null
+                    }
+                }
+            },
+            "HMR_0657": {
+                "name": "HMR_0657",
+                "bigg_id": "HMR_0657",
+                "reversibility": false,
+                "metabolites": [
+                    {
+                        "bigg_id": "M02758[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "amet[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "ahcys[c]",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 21575.0,
+                "label_y": 19550.000000000004,
+                "segments": {
+                    "HMR_0657_55-0": {
+                        "from_node_id": "HMR_0657_55-0-start",
+                        "to_node_id": "HMR_0657_55-0-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "HMR_0657_55-1": {
+                        "from_node_id": "HMR_0657_55-1-start",
+                        "to_node_id": "HMR_0657_55-1-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_56-sa5290-0": {
+                        "from_node_id": "sa5290",
+                        "to_node_id": "HMR_0657_55-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_57-sa5409-0": {
+                        "from_node_id": "sa5409",
+                        "to_node_id": "HMR_0657_55-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_58-sa5315-0": {
+                        "from_node_id": "HMR_0657_55-1-end",
+                        "to_node_id": "node_58-sa5315-0",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_58-sa5315-1": {
+                        "from_node_id": "node_58-sa5315-1",
+                        "to_node_id": "sa5315",
+                        "b1": null,
+                        "b2": null
+                    }
+                }
+            },
+            "NADQNOXR": {
+                "name": "NADQNOXR",
+                "bigg_id": "NADQNOXR",
+                "reversibility": false,
+                "metabolites": [
+                    {
+                        "bigg_id": "23dh1i56dio[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "CE5665[c]",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 13402.696380571218,
+                "label_y": 26019.07057953648,
+                "segments": {
+                    "node_60-sa4843-0": {
+                        "from_node_id": "sa4843",
+                        "to_node_id": "NADQNOXR_59-mid",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_61-sa4807-0": {
+                        "from_node_id": "NADQNOXR_59-mid",
+                        "to_node_id": "sa4807",
+                        "b1": null,
+                        "b2": null
+                    }
+                }
+            },
+            "PAFS": {
+                "name": "PAFS",
+                "bigg_id": "PAFS",
+                "reversibility": false,
+                "metabolites": [
+                    {
+                        "bigg_id": "accoa[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "ak2lgchol_hs[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "paf_hs[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "coa[c]",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 13598.5,
+                "label_y": 23440.0,
+                "segments": {
+                    "PAFS_62-0": {
+                        "from_node_id": "PAFS_62-0-start",
+                        "to_node_id": "PAFS_62-0-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_63-sa5060-0": {
+                        "from_node_id": "sa5060",
+                        "to_node_id": "PAFS_62-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_64-sa13401-0": {
+                        "from_node_id": "sa13401",
+                        "to_node_id": "PAFS_62-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_65-sa13400-0": {
+                        "from_node_id": "PAFS_62-0-end",
+                        "to_node_id": "sa13400",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_66-sa18888-0": {
+                        "from_node_id": "PAFS_62-0-end",
+                        "to_node_id": "sa18888",
+                        "b1": null,
+                        "b2": null
+                    }
+                }
+            },
+            "LACROX": {
+                "name": "LACROX",
+                "bigg_id": "LACROX",
+                "reversibility": false,
+                "metabolites": [
+                    {
+                        "bigg_id": "CE5665[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "23dh1i56dio[c]",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 13402.696380571218,
+                "label_y": 26019.07057953648,
+                "segments": {
+                    "node_68-sa4807-0": {
+                        "from_node_id": "sa4807",
+                        "to_node_id": "LACROX_67-mid",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_69-sa4843-0": {
+                        "from_node_id": "LACROX_67-mid",
+                        "to_node_id": "sa4843",
+                        "b1": null,
+                        "b2": null
+                    }
+                }
+            },
+            "RE2526C": {
+                "name": "RE2526C",
+                "bigg_id": "RE2526C",
+                "reversibility": true,
+                "metabolites": [
+                    {
+                        "bigg_id": "CE4888[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "nadph[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "h[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "CE5665[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "nadp[c]",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 12611.196293988018,
+                "label_y": 25609.074658602563,
+                "segments": {
+                    "node_71-sa4844-0": {
+                        "from_node_id": "sa4844",
+                        "to_node_id": "RE2526C_70-mid",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_72-sa6524-0": {
+                        "from_node_id": "sa6524",
+                        "to_node_id": "RE2526C_70-mid",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_73-sa6520-0": {
+                        "from_node_id": "sa6520",
+                        "to_node_id": "RE2526C_70-mid",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_74-sa4807-0": {
+                        "from_node_id": "RE2526C_70-mid",
+                        "to_node_id": "sa4807",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_75-sa6521-0": {
+                        "from_node_id": "RE2526C_70-mid",
+                        "to_node_id": "sa6521",
+                        "b1": null,
+                        "b2": null
+                    }
+                }
+            },
+            "r0789": {
+                "name": "r0789",
+                "bigg_id": "r0789",
+                "reversibility": true,
+                "metabolites": [
+                    {
+                        "bigg_id": "HC01842[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "amet[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "ahcys[c]",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 18679.249999999985,
+                "label_y": 18590.0,
+                "segments": {
+                    "node_77-sa5408-0": {
+                        "from_node_id": "sa5408",
+                        "to_node_id": "r0789_76-mid",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_78-sa5409-0": {
+                        "from_node_id": "sa5409",
+                        "to_node_id": "node_78-sa5409-0",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_78-sa5409-0-extra": {
+                        "from_node_id": "node_78-sa5409-0-extra",
+                        "to_node_id": "r0789_76-mid",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_78-sa5409-1": {
+                        "from_node_id": "node_78-sa5409-1-start",
+                        "to_node_id": "node_78-sa5409-1-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_78-sa5409-2": {
+                        "from_node_id": "node_78-sa5409-2-start",
+                        "to_node_id": "node_78-sa5409-2-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_78-sa5409-3": {
+                        "from_node_id": "node_78-sa5409-3-start",
+                        "to_node_id": "node_78-sa5409-3-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_78-sa5409-4": {
+                        "from_node_id": "node_78-sa5409-4",
+                        "to_node_id": "r0789_76-mid",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_79-sa5315-0": {
+                        "from_node_id": "r0789_76-mid",
+                        "to_node_id": "sa5315",
+                        "b1": null,
+                        "b2": null
+                    }
+                }
+            },
+            "DOPACHRMDC": {
+                "name": "DOPACHRMDC",
+                "bigg_id": "DOPACHRMDC",
+                "reversibility": false,
+                "metabolites": [
+                    {
+                        "bigg_id": "L_dpchrm[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "h[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "CE4888[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "co2[c]",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 18369.000000000007,
+                "label_y": 19100.0,
+                "segments": {
+                    "node_81-sa4846-0": {
+                        "from_node_id": "sa4846",
+                        "to_node_id": "DOPACHRMDC_80-mid",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_82-sa4947-0": {
+                        "from_node_id": "sa4947",
+                        "to_node_id": "DOPACHRMDC_80-mid",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_83-sa4844-0-extra": {
+                        "from_node_id": "node_83-sa4844-0-extra",
+                        "to_node_id": "DOPACHRMDC_80-mid",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_83-sa4844-0": {
+                        "from_node_id": "DOPACHRMDC_80-mid",
+                        "to_node_id": "node_83-sa4844-0",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_83-sa4844-1": {
+                        "from_node_id": "node_83-sa4844-1-start",
+                        "to_node_id": "node_83-sa4844-1-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_83-sa4844-2": {
+                        "from_node_id": "node_83-sa4844-2-start",
+                        "to_node_id": "node_83-sa4844-2-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_83-sa4844-3": {
+                        "from_node_id": "node_83-sa4844-3-start",
+                        "to_node_id": "node_83-sa4844-3-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_83-sa4844-4": {
+                        "from_node_id": "node_83-sa4844-4-start",
+                        "to_node_id": "node_83-sa4844-4-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_83-sa4844-5": {
+                        "from_node_id": "node_83-sa4844-5-start",
+                        "to_node_id": "node_83-sa4844-5-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_83-sa4844-6": {
+                        "from_node_id": "node_83-sa4844-6-start",
+                        "to_node_id": "node_83-sa4844-6-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_83-sa4844-7": {
+                        "from_node_id": "node_83-sa4844-7",
+                        "to_node_id": "sa4844",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_84-sa4946-0": {
+                        "from_node_id": "DOPACHRMDC_80-mid",
+                        "to_node_id": "sa4946",
+                        "b1": null,
+                        "b2": null
+                    }
+                }
+            },
+            "HMR_0653": {
+                "name": "HMR_0653",
+                "bigg_id": "HMR_0653",
+                "reversibility": false,
+                "metabolites": [
+                    {
+                        "bigg_id": "pe_hs[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "amet[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "ahcys[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "h[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "M02686[c]",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 16950.500000000044,
+                "label_y": 18590.0,
+                "segments": {
+                    "node_86-sa9967-0": {
+                        "from_node_id": "sa9967",
+                        "to_node_id": "node_86-sa9967-0",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_86-sa9967-0-extra": {
+                        "from_node_id": "node_86-sa9967-0-extra",
+                        "to_node_id": "HMR_0653_85-mid",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_86-sa9967-1": {
+                        "from_node_id": "node_86-sa9967-1-start",
+                        "to_node_id": "node_86-sa9967-1-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_86-sa9967-2": {
+                        "from_node_id": "node_86-sa9967-2-start",
+                        "to_node_id": "node_86-sa9967-2-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_86-sa9967-3": {
+                        "from_node_id": "node_86-sa9967-3",
+                        "to_node_id": "HMR_0653_85-mid",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_87-sa5409-0": {
+                        "from_node_id": "sa5409",
+                        "to_node_id": "node_87-sa5409-0",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_87-sa5409-0-extra": {
+                        "from_node_id": "node_87-sa5409-0-extra",
+                        "to_node_id": "HMR_0653_85-mid",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_87-sa5409-1": {
+                        "from_node_id": "node_87-sa5409-1-start",
+                        "to_node_id": "node_87-sa5409-1-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_87-sa5409-2": {
+                        "from_node_id": "node_87-sa5409-2",
+                        "to_node_id": "HMR_0653_85-mid",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_88-sa5315-0": {
+                        "from_node_id": "HMR_0653_85-mid",
+                        "to_node_id": "sa5315",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_89-sa5287-0": {
+                        "from_node_id": "HMR_0653_85-mid",
+                        "to_node_id": "sa5287",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_90-sa5288-0": {
+                        "from_node_id": "HMR_0653_85-mid",
+                        "to_node_id": "sa5288",
+                        "b1": null,
+                        "b2": null
+                    }
+                }
+            },
+            "RE3201C": {
+                "name": "RE3201C",
+                "bigg_id": "RE3201C",
+                "reversibility": false,
+                "metabolites": [
+                    {
+                        "bigg_id": "56dihindlcrbxlt[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "o2[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "CE1562[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "h2o2[c]",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 21504.742746012955,
+                "label_y": 19144.907211942736,
+                "segments": {
+                    "node_92-sa4908-0": {
+                        "from_node_id": "sa4908",
+                        "to_node_id": "RE3201C_91-mid",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_93-sa4871-0": {
+                        "from_node_id": "sa4871",
+                        "to_node_id": "RE3201C_91-mid",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_94-sa4918-0": {
+                        "from_node_id": "RE3201C_91-mid",
+                        "to_node_id": "sa4918",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_95-sa4919-0": {
+                        "from_node_id": "RE3201C_91-mid",
+                        "to_node_id": "sa4919",
+                        "b1": null,
+                        "b2": null
+                    }
+                }
+            },
+            "re5920": {
+                "name": "TYRDHINDOX",
+                "bigg_id": "TYRDHINDOX",
+                "reversibility": false,
+                "metabolites": [
+                    {
+                        "bigg_id": "CE4888[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "o2[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "ind56qn[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "h2o[c]",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 13536.25,
+                "label_y": 25200.0,
+                "segments": {
+                    "re5920_96-0": {
+                        "from_node_id": "re5920_96-0-start",
+                        "to_node_id": "re5920_96-0-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_97-sa4844-0": {
+                        "from_node_id": "sa4844",
+                        "to_node_id": "re5920_96-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_98-sa16868-0": {
+                        "from_node_id": "sa16868",
+                        "to_node_id": "re5920_96-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_99-sa4942-0": {
+                        "from_node_id": "re5920_96-0-end",
+                        "to_node_id": "sa4942",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_100-sa16871-0": {
+                        "from_node_id": "re5920_96-0-end",
+                        "to_node_id": "sa16871",
+                        "b1": null,
+                        "b2": null
+                    }
+                }
+            },
+            "NADPQNOXR": {
+                "name": "NADPQNOXR",
+                "bigg_id": "NADPQNOXR",
+                "reversibility": false,
+                "metabolites": [
+                    {
+                        "bigg_id": "23dh1i56dio[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "CE5665[c]",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 13402.696380571218,
+                "label_y": 26019.07057953648,
+                "segments": {
+                    "node_102-sa4843-0": {
+                        "from_node_id": "sa4843",
+                        "to_node_id": "NADPQNOXR_101-mid",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_103-sa4807-0": {
+                        "from_node_id": "NADPQNOXR_101-mid",
+                        "to_node_id": "sa4807",
+                        "b1": null,
+                        "b2": null
+                    }
+                }
+            },
+            "RE3198C": {
+                "name": "RE3198C",
+                "bigg_id": "RE3198C",
+                "reversibility": true,
+                "metabolites": [
+                    {
+                        "bigg_id": "L_dpchrm[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "h[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "nadh[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "2c23dh56dhoxin[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "nad[c]",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 19326.25,
+                "label_y": 19100.0,
+                "segments": {
+                    "RE3198C_104-0": {
+                        "from_node_id": "RE3198C_104-0-start",
+                        "to_node_id": "RE3198C_104-0-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_105-sa4846-0": {
+                        "from_node_id": "sa4846",
+                        "to_node_id": "RE3198C_104-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_106-sa4870-0": {
+                        "from_node_id": "sa4870",
+                        "to_node_id": "RE3198C_104-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_107-sa4869-0": {
+                        "from_node_id": "sa4869",
+                        "to_node_id": "RE3198C_104-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_108-sa4876-0": {
+                        "from_node_id": "RE3198C_104-0-end",
+                        "to_node_id": "sa4876",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_109-sa4868-0": {
+                        "from_node_id": "RE3198C_104-0-end",
+                        "to_node_id": "sa4868",
+                        "b1": null,
+                        "b2": null
+                    }
+                }
+            },
+            "re6428": {
+                "name": "PAFH",
+                "bigg_id": "PAFH",
+                "reversibility": false,
+                "metabolites": [
+                    {
+                        "bigg_id": "paf_hs[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "h2o[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "ac[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "ak2lgchol_hs[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "h[c]",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 13598.499999999996,
+                "label_y": 23440.0,
+                "segments": {
+                    "re6428_110-0": {
+                        "from_node_id": "re6428_110-0-start",
+                        "to_node_id": "re6428_110-0-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_111-sa13400-0": {
+                        "from_node_id": "sa13400",
+                        "to_node_id": "re6428_110-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_112-sa18762-0": {
+                        "from_node_id": "sa18762",
+                        "to_node_id": "re6428_110-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_113-sa6289-0": {
+                        "from_node_id": "re6428_110-0-end",
+                        "to_node_id": "node_113-sa6289-0",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_113-sa6289-1": {
+                        "from_node_id": "node_113-sa6289-1-start",
+                        "to_node_id": "node_113-sa6289-1-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_113-sa6289-2": {
+                        "from_node_id": "node_113-sa6289-2-start",
+                        "to_node_id": "node_113-sa6289-2-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_113-sa6289-3": {
+                        "from_node_id": "node_113-sa6289-3-start",
+                        "to_node_id": "node_113-sa6289-3-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_113-sa6289-4": {
+                        "from_node_id": "node_113-sa6289-4-start",
+                        "to_node_id": "node_113-sa6289-4-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_113-sa6289-5": {
+                        "from_node_id": "node_113-sa6289-5-start",
+                        "to_node_id": "node_113-sa6289-5-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_113-sa6289-6": {
+                        "from_node_id": "node_113-sa6289-6",
+                        "to_node_id": "sa6289",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_114-sa13401-0": {
+                        "from_node_id": "re6428_110-0-end",
+                        "to_node_id": "sa13401",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_115-sa18766-0": {
+                        "from_node_id": "re6428_110-0-end",
+                        "to_node_id": "sa18766",
+                        "b1": null,
+                        "b2": null
+                    }
+                }
+            },
+            "NDP8": {
+                "name": "NDP8",
+                "bigg_id": "NDP8",
+                "reversibility": false,
+                "metabolites": [
+                    {
+                        "bigg_id": "dudp[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "h2o[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "dump[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "h[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "pi[c]",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 15725.0,
+                "label_y": 19880.0,
+                "segments": {
+                    "NDP8_116-0": {
+                        "from_node_id": "NDP8_116-0-start",
+                        "to_node_id": "NDP8_116-0-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_117-sa6933-0": {
+                        "from_node_id": "sa6933",
+                        "to_node_id": "NDP8_116-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_118-sa6934-0": {
+                        "from_node_id": "sa6934",
+                        "to_node_id": "NDP8_116-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_119-sa5504-0": {
+                        "from_node_id": "NDP8_116-0-end",
+                        "to_node_id": "sa5504",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_120-sa6942-0": {
+                        "from_node_id": "NDP8_116-0-end",
+                        "to_node_id": "sa6942",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_121-sa6943-0": {
+                        "from_node_id": "NDP8_116-0-end",
+                        "to_node_id": "sa6943",
+                        "b1": null,
+                        "b2": null
+                    }
+                }
+            },
+            "re6850": {
+                "name": "PACCOAL",
+                "bigg_id": "PACCOAL",
+                "reversibility": false,
+                "metabolites": [
+                    {
+                        "bigg_id": "pac[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "coa[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "atp[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "phaccoa[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "amp[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "ppi[c]",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 18035.0,
+                "label_y": 18090.0,
+                "segments": {
+                    "re6850_122-0": {
+                        "from_node_id": "re6850_122-0-start",
+                        "to_node_id": "re6850_122-0-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_123-sa20594-0": {
+                        "from_node_id": "sa20594",
+                        "to_node_id": "re6850_122-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_124-sa20591-0": {
+                        "from_node_id": "sa20591",
+                        "to_node_id": "re6850_122-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_125-sa20590-0": {
+                        "from_node_id": "sa20590",
+                        "to_node_id": "re6850_122-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_126-sa19963-0": {
+                        "from_node_id": "re6850_122-0-end",
+                        "to_node_id": "sa19963",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_127-sa20593-0": {
+                        "from_node_id": "re6850_122-0-end",
+                        "to_node_id": "sa20593",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_128-sa20595-0": {
+                        "from_node_id": "re6850_122-0-end",
+                        "to_node_id": "sa20595",
+                        "b1": null,
+                        "b2": null
+                    }
+                }
+            },
+            "ACCOAC": {
+                "name": "ACCOAC",
+                "bigg_id": "ACCOAC",
+                "reversibility": false,
+                "metabolites": [
+                    {
+                        "bigg_id": "accoa[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "atp[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "malcoa[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "adp[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "pi[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "h[c]",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 13330.0,
+                "label_y": 24415.0,
+                "segments": {
+                    "ACCOAC_129-0": {
+                        "from_node_id": "ACCOAC_129-0-start",
+                        "to_node_id": "ACCOAC_129-0-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_130-sa5060-0": {
+                        "from_node_id": "sa5060",
+                        "to_node_id": "ACCOAC_129-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_131-sa5234-0": {
+                        "from_node_id": "sa5234",
+                        "to_node_id": "ACCOAC_129-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_132-sa12345-0": {
+                        "from_node_id": "ACCOAC_129-0-end",
+                        "to_node_id": "sa12345",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_133-sa5231-0": {
+                        "from_node_id": "ACCOAC_129-0-end",
+                        "to_node_id": "sa5231",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_134-sa5233-0": {
+                        "from_node_id": "ACCOAC_129-0-end",
+                        "to_node_id": "sa5233",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_135-sa5230-0": {
+                        "from_node_id": "ACCOAC_129-0-end",
+                        "to_node_id": "sa5230",
+                        "b1": null,
+                        "b2": null
+                    }
+                }
+            },
+            "re6687": {
+                "name": "PHACGLYc",
+                "bigg_id": "PHACGLYc",
+                "reversibility": false,
+                "metabolites": [
+                    {
+                        "bigg_id": "gly[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "phaccoa[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "phacgly[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "coa[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "h[c]",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 17480.0,
+                "label_y": 17646.75,
+                "segments": {
+                    "re6687_136-0": {
+                        "from_node_id": "re6687_136-0-start",
+                        "to_node_id": "re6687_136-0-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_137-sa5293-0": {
+                        "from_node_id": "sa5293",
+                        "to_node_id": "re6687_136-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_138-sa19963-0": {
+                        "from_node_id": "sa19963",
+                        "to_node_id": "re6687_136-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_139-sa19961-0": {
+                        "from_node_id": "re6687_136-0-end",
+                        "to_node_id": "sa19961",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_140-sa19964-0": {
+                        "from_node_id": "re6687_136-0-end",
+                        "to_node_id": "sa19964",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_141-sa19965-0": {
+                        "from_node_id": "re6687_136-0-end",
+                        "to_node_id": "sa19965",
+                        "b1": null,
+                        "b2": null
+                    }
+                }
+            },
+            "re5396": {
+                "name": "GLYGLYCNc",
+                "bigg_id": "GLYGLYCNc",
+                "reversibility": true,
+                "metabolites": [
+                    {
+                        "bigg_id": "glygly[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "h2o[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "gly[c]",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 17531.0,
+                "label_y": 17820.0,
+                "segments": {
+                    "re5396_142-0": {
+                        "from_node_id": "re5396_142-0-start",
+                        "to_node_id": "re5396_142-0-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_143-sa15108-0": {
+                        "from_node_id": "sa15108",
+                        "to_node_id": "re5396_142-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_144-sa15110-0": {
+                        "from_node_id": "sa15110",
+                        "to_node_id": "re5396_142-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_145-sa5293-0": {
+                        "from_node_id": "re5396_142-0-end",
+                        "to_node_id": "sa5293",
+                        "b1": null,
+                        "b2": null
+                    }
+                }
+            },
+            "r0788": {
+                "name": "r0788",
+                "bigg_id": "r0788",
+                "reversibility": true,
+                "metabolites": [
+                    {
+                        "bigg_id": "HC00718[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "amet[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "HC01842[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "h[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "ahcys[c]",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 22339.999999999985,
+                "label_y": 19745.000000000004,
+                "segments": {
+                    "r0788_146-0": {
+                        "from_node_id": "r0788_146-0-start",
+                        "to_node_id": "r0788_146-0-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "r0788_146-1": {
+                        "from_node_id": "r0788_146-1-start",
+                        "to_node_id": "r0788_146-1-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "r0788_146-2": {
+                        "from_node_id": "r0788_146-2-start",
+                        "to_node_id": "r0788_146-2-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "r0788_146-3": {
+                        "from_node_id": "r0788_146-3-start",
+                        "to_node_id": "r0788_146-3-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_147-sa5416-0": {
+                        "from_node_id": "sa5416",
+                        "to_node_id": "r0788_146-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_148-sa5409-0": {
+                        "from_node_id": "sa5409",
+                        "to_node_id": "r0788_146-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_149-sa5408-0": {
+                        "from_node_id": "r0788_146-3-end",
+                        "to_node_id": "node_149-sa5408-0",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_149-sa5408-1": {
+                        "from_node_id": "node_149-sa5408-1",
+                        "to_node_id": "sa5408",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_150-sa5410-0": {
+                        "from_node_id": "r0788_146-3-end",
+                        "to_node_id": "sa5410",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_151-sa5315-0": {
+                        "from_node_id": "r0788_146-3-end",
+                        "to_node_id": "sa5315",
+                        "b1": null,
+                        "b2": null
+                    }
+                }
+            },
+            "DACT": {
+                "name": "DACT",
+                "bigg_id": "DACT",
+                "reversibility": true,
+                "metabolites": [
+                    {
+                        "bigg_id": "23dh1i56dio[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "CE4888[c]",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 14199.999999999996,
+                "label_y": 25603.749999999993,
+                "segments": {
+                    "DACT_152-0": {
+                        "from_node_id": "DACT_152-0-start",
+                        "to_node_id": "DACT_152-0-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_153-sa4843-0": {
+                        "from_node_id": "sa4843",
+                        "to_node_id": "DACT_152-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_154-sa4844-0": {
+                        "from_node_id": "DACT_152-0-end",
+                        "to_node_id": "node_154-sa4844-0",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_154-sa4844-1": {
+                        "from_node_id": "node_154-sa4844-1",
+                        "to_node_id": "sa4844",
+                        "b1": null,
+                        "b2": null
+                    }
+                }
+            },
+            "re6140": {
+                "name": "r0068",
+                "bigg_id": "r0068",
+                "reversibility": false,
+                "metabolites": [
+                    {
+                        "bigg_id": "HC01672[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "coa[c]",
+                        "coefficient": -1
+                    },
+                    {
+                        "bigg_id": "amp[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "h[c]",
+                        "coefficient": 1
+                    },
+                    {
+                        "bigg_id": "accoa[c]",
+                        "coefficient": 1
+                    }
+                ],
+                "label_x": 19440.0,
+                "label_y": 18045.0,
+                "segments": {
+                    "re6140_155-0": {
+                        "from_node_id": "re6140_155-0-start",
+                        "to_node_id": "re6140_155-0-end",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_156-sa17792-0": {
+                        "from_node_id": "sa17792",
+                        "to_node_id": "re6140_155-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_157-sa17796-0": {
+                        "from_node_id": "sa17796",
+                        "to_node_id": "re6140_155-0-start",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_158-sa17793-0": {
+                        "from_node_id": "re6140_155-0-end",
+                        "to_node_id": "sa17793",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_159-sa17800-0": {
+                        "from_node_id": "re6140_155-0-end",
+                        "to_node_id": "sa17800",
+                        "b1": null,
+                        "b2": null
+                    },
+                    "node_160-sa17794-0": {
+                        "from_node_id": "re6140_155-0-end",
+                        "to_node_id": "sa17794",
+                        "b1": null,
+                        "b2": null
+                    }
+                }
+            }
+        },
+        "nodes": {
+            "sa12465": {
+                "bigg_id": "h2o[c]",
+                "name": "h2o[c]",
+                "node_type": "metabolite",
+                "x": 13400.0,
+                "y": 18910.0,
+                "label_x": 13400.0,
+                "label_y": 18910.0,
+                "node_is_primary": false
+            },
+            "sa17524": {
+                "bigg_id": "so4[c]",
+                "name": "so4[c]",
+                "node_type": "metabolite",
+                "x": 16740.0,
+                "y": 19110.0,
+                "label_x": 16740.0,
+                "label_y": 19110.0,
+                "node_is_primary": false
+            },
+            "sa5510": {
+                "bigg_id": "h2o[c]",
+                "name": "h2o[c]",
+                "node_type": "metabolite",
+                "x": 16610.0,
+                "y": 19810.0,
+                "label_x": 16610.0,
+                "label_y": 19810.0,
+                "node_is_primary": false
+            },
+            "sa5409": {
+                "bigg_id": "amet[c]",
+                "name": "amet[c]",
+                "node_type": "metabolite",
+                "x": 22570.0,
+                "y": 19940.0,
+                "label_x": 22570.0,
+                "label_y": 19940.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa13401": {
+                "bigg_id": "ak2lgchol_hs[c]",
+                "name": "ak2lgchol_hs[c]",
+                "node_type": "metabolite",
+                "x": 13180.0,
+                "y": 23440.0,
+                "label_x": 13180.0,
+                "label_y": 23440.0,
+                "node_is_primary": false
+            },
+            "sa5288": {
+                "bigg_id": "M02686[c]",
+                "name": "M02686[c]",
+                "node_type": "metabolite",
+                "x": 17450.0,
+                "y": 18790.0,
+                "label_x": 17450.0,
+                "label_y": 18790.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa9967": {
+                "bigg_id": "pe_hs[c]",
+                "name": "pe_hs[c]",
+                "node_type": "metabolite",
+                "x": 12480.0,
+                "y": 18630.0,
+                "label_x": 12480.0,
+                "label_y": 18630.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa4807": {
+                "bigg_id": "CE5665[c]",
+                "name": "CE5665[c]",
+                "node_type": "metabolite",
+                "x": 12612.39258798071,
+                "y": 26018.149318803014,
+                "label_x": 12612.39258798071,
+                "label_y": 26018.149318803014,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa9784": {
+                "bigg_id": "occoa[c]",
+                "name": "occoa[c]",
+                "node_type": "metabolite",
+                "x": 14920.0,
+                "y": 25290.0,
+                "label_x": 14920.0,
+                "label_y": 25290.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa5233": {
+                "bigg_id": "pi[c]",
+                "name": "pi[c]",
+                "node_type": "metabolite",
+                "x": 13240.0,
+                "y": 24780.0,
+                "label_x": 13240.0,
+                "label_y": 24780.0,
+                "node_is_primary": false
+            },
+            "sa5289": {
+                "bigg_id": "h[c]",
+                "name": "h[c]",
+                "node_type": "metabolite",
+                "x": 22590.0,
+                "y": 19210.0,
+                "label_x": 22590.0,
+                "label_y": 19210.0,
+                "node_is_primary": false
+            },
+            "sa18762": {
+                "bigg_id": "h2o[c]",
+                "name": "h2o[c]",
+                "node_type": "metabolite",
+                "x": 14190.0,
+                "y": 23410.0,
+                "label_x": 14190.0,
+                "label_y": 23410.0,
+                "node_is_primary": false
+            },
+            "sa17800": {
+                "bigg_id": "h[c]",
+                "name": "h[c]",
+                "node_type": "metabolite",
+                "x": 19520.0,
+                "y": 17830.0,
+                "label_x": 19520.0,
+                "label_y": 17830.0,
+                "node_is_primary": false
+            },
+            "sa4868": {
+                "bigg_id": "nad[c]",
+                "name": "nad[c]",
+                "node_type": "metabolite",
+                "x": 19720.0,
+                "y": 19150.0,
+                "label_x": 19720.0,
+                "label_y": 19150.0,
+                "node_is_primary": false
+            },
+            "sa6524": {
+                "bigg_id": "nadph[c]",
+                "name": "nadph[c]",
+                "node_type": "metabolite",
+                "x": 12650.0,
+                "y": 25280.0,
+                "label_x": 12650.0,
+                "label_y": 25280.0,
+                "node_is_primary": false
+            },
+            "sa12466": {
+                "bigg_id": "uacgam[c]",
+                "name": "uacgam[c]",
+                "node_type": "metabolite",
+                "x": 13460.0,
+                "y": 18990.0,
+                "label_x": 13460.0,
+                "label_y": 18990.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa13400": {
+                "bigg_id": "paf_hs[c]",
+                "name": "paf_hs[c]",
+                "node_type": "metabolite",
+                "x": 14260.0,
+                "y": 23440.0,
+                "label_x": 14260.0,
+                "label_y": 23440.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa6934": {
+                "bigg_id": "h2o[c]",
+                "name": "h2o[c]",
+                "node_type": "metabolite",
+                "x": 15170.0,
+                "y": 19840.0,
+                "label_x": 15170.0,
+                "label_y": 19840.0,
+                "node_is_primary": false
+            },
+            "sa20590": {
+                "bigg_id": "atp[c]",
+                "name": "atp[c]",
+                "node_type": "metabolite",
+                "x": 18510.0,
+                "y": 18050.0,
+                "label_x": 18510.0,
+                "label_y": 18050.0,
+                "node_is_primary": false
+            },
+            "sa4876": {
+                "bigg_id": "2c23dh56dhoxin[c]",
+                "name": "2c23dh56dhoxin[c]",
+                "node_type": "metabolite",
+                "x": 19880.0,
+                "y": 19100.0,
+                "label_x": 19880.0,
+                "label_y": 19100.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa6940": {
+                "bigg_id": "atp[c]",
+                "name": "atp[c]",
+                "node_type": "metabolite",
+                "x": 16100.0,
+                "y": 19920.0,
+                "label_x": 16100.0,
+                "label_y": 19920.0,
+                "node_is_primary": false
+            },
+            "sa5290": {
+                "bigg_id": "M02758[c]",
+                "name": "M02758[c]",
+                "node_type": "metabolite",
+                "x": 22570.0,
+                "y": 19150.0,
+                "label_x": 22570.0,
+                "label_y": 19150.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa17793": {
+                "bigg_id": "amp[c]",
+                "name": "amp[c]",
+                "node_type": "metabolite",
+                "x": 19440.0,
+                "y": 17730.0,
+                "label_x": 19440.0,
+                "label_y": 17730.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa4908": {
+                "bigg_id": "56dihindlcrbxlt[c]",
+                "name": "56dihindlcrbxlt[c]",
+                "node_type": "metabolite",
+                "x": 20970.0,
+                "y": 19150.0,
+                "label_x": 20970.0,
+                "label_y": 19150.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa6521": {
+                "bigg_id": "nadp[c]",
+                "name": "nadp[c]",
+                "node_type": "metabolite",
+                "x": 12680.0,
+                "y": 25880.0,
+                "label_x": 12680.0,
+                "label_y": 25880.0,
+                "node_is_primary": false
+            },
+            "sa20594": {
+                "bigg_id": "pac[c]",
+                "name": "pac[c]",
+                "node_type": "metabolite",
+                "x": 18590.0,
+                "y": 18090.0,
+                "label_x": 18590.0,
+                "label_y": 18090.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa17794": {
+                "bigg_id": "accoa[c]",
+                "name": "accoa[c]",
+                "node_type": "metabolite",
+                "x": 19490.0,
+                "y": 17780.0,
+                "label_x": 19490.0,
+                "label_y": 17780.0,
+                "node_is_primary": false
+            },
+            "sa4919": {
+                "bigg_id": "h2o2[c]",
+                "name": "h2o2[c]",
+                "node_type": "metabolite",
+                "x": 21940.0,
+                "y": 19110.0,
+                "label_x": 21940.0,
+                "label_y": 19110.0,
+                "node_is_primary": false
+            },
+            "sa5060": {
+                "bigg_id": "accoa[c]",
+                "name": "accoa[c]",
+                "node_type": "metabolite",
+                "x": 13330.0,
+                "y": 23950.0,
+                "label_x": 13330.0,
+                "label_y": 23950.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa17577": {
+                "bigg_id": "ump[c]",
+                "name": "ump[c]",
+                "node_type": "metabolite",
+                "x": 14980.0,
+                "y": 19850.0,
+                "label_x": 14980.0,
+                "label_y": 19850.0,
+                "node_is_primary": false
+            },
+            "sa12462": {
+                "bigg_id": "udp[c]",
+                "name": "udp[c]",
+                "node_type": "metabolite",
+                "x": 13410.0,
+                "y": 18130.0,
+                "label_x": 13410.0,
+                "label_y": 18130.0,
+                "node_is_primary": false
+            },
+            "sa5293": {
+                "bigg_id": "gly[c]",
+                "name": "gly[c]",
+                "node_type": "metabolite",
+                "x": 16970.0,
+                "y": 17820.0,
+                "label_x": 16970.0,
+                "label_y": 17820.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa4907": {
+                "bigg_id": "o2[c]",
+                "name": "o2[c]",
+                "node_type": "metabolite",
+                "x": 19720.0,
+                "y": 19060.0,
+                "label_x": 19720.0,
+                "label_y": 19060.0,
+                "node_is_primary": false
+            },
+            "sa4906": {
+                "bigg_id": "h2o[c]",
+                "name": "h2o[c]",
+                "node_type": "metabolite",
+                "x": 18890.0,
+                "y": 19060.0,
+                "label_x": 18890.0,
+                "label_y": 19060.0,
+                "node_is_primary": false
+            },
+            "sa5315": {
+                "bigg_id": "ahcys[c]",
+                "name": "ahcys[c]",
+                "node_type": "metabolite",
+                "x": 17990.0,
+                "y": 18590.0,
+                "label_x": 17990.0,
+                "label_y": 18590.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa4918": {
+                "bigg_id": "CE1562[c]",
+                "name": "CE1562[c]",
+                "node_type": "metabolite",
+                "x": 22020.0,
+                "y": 19140.0,
+                "label_x": 22020.0,
+                "label_y": 19140.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa1527": {
+                "bigg_id": ".",
+                "name": ".",
+                "node_type": "metabolite",
+                "x": 39760.0,
+                "y": 21240.0,
+                "label_x": 39760.0,
+                "label_y": 21240.0,
+                "node_is_primary": false
+            },
+            "sa19963": {
+                "bigg_id": "phaccoa[c]",
+                "name": "phaccoa[c]",
+                "node_type": "metabolite",
+                "x": 17480.0,
+                "y": 18090.0,
+                "label_x": 17480.0,
+                "label_y": 18090.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa4946": {
+                "bigg_id": "co2[c]",
+                "name": "co2[c]",
+                "node_type": "metabolite",
+                "x": 18070.0,
+                "y": 19070.0,
+                "label_x": 18070.0,
+                "label_y": 19070.0,
+                "node_is_primary": false
+            },
+            "sa6942": {
+                "bigg_id": "h[c]",
+                "name": "h[c]",
+                "node_type": "metabolite",
+                "x": 16040.0,
+                "y": 19800.0,
+                "label_x": 16040.0,
+                "label_y": 19800.0,
+                "node_is_primary": false
+            },
+            "sa17825": {
+                "bigg_id": ".",
+                "name": ".",
+                "node_type": "metabolite",
+                "x": 39760.0,
+                "y": 21150.0,
+                "label_x": 39760.0,
+                "label_y": 21150.0,
+                "node_is_primary": false
+            },
+            "sa12345": {
+                "bigg_id": "malcoa[c]",
+                "name": "malcoa[c]",
+                "node_type": "metabolite",
+                "x": 13330.0,
+                "y": 24880.0,
+                "label_x": 13330.0,
+                "label_y": 24880.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa18700": {
+                "bigg_id": "atp[c]",
+                "name": "atp[c]",
+                "node_type": "metabolite",
+                "x": 14970.0,
+                "y": 19920.0,
+                "label_x": 14970.0,
+                "label_y": 19920.0,
+                "node_is_primary": false
+            },
+            "sa4947": {
+                "bigg_id": "h[c]",
+                "name": "h[c]",
+                "node_type": "metabolite",
+                "x": 18700.0,
+                "y": 19060.0,
+                "label_x": 18700.0,
+                "label_y": 19060.0,
+                "node_is_primary": false
+            },
+            "sa17799": {
+                "bigg_id": "atp[c]",
+                "name": "atp[c]",
+                "node_type": "metabolite",
+                "x": 20340.0,
+                "y": 18330.0,
+                "label_x": 20340.0,
+                "label_y": 18330.0,
+                "node_is_primary": false
+            },
+            "sa5234": {
+                "bigg_id": "atp[c]",
+                "name": "atp[c]",
+                "node_type": "metabolite",
+                "x": 13380.0,
+                "y": 24040.0,
+                "label_x": 13380.0,
+                "label_y": 24040.0,
+                "node_is_primary": false
+            },
+            "sa12464": {
+                "bigg_id": "h[c]",
+                "name": "h[c]",
+                "node_type": "metabolite",
+                "x": 13390.0,
+                "y": 18180.0,
+                "label_x": 13390.0,
+                "label_y": 18180.0,
+                "node_is_primary": false
+            },
+            "sa19964": {
+                "bigg_id": "coa[c]",
+                "name": "coa[c]",
+                "node_type": "metabolite",
+                "x": 17540.0,
+                "y": 17290.0,
+                "label_x": 17540.0,
+                "label_y": 17290.0,
+                "node_is_primary": false
+            },
+            "sa15110": {
+                "bigg_id": "h2o[c]",
+                "name": "h2o[c]",
+                "node_type": "metabolite",
+                "x": 17920.0,
+                "y": 17790.0,
+                "label_x": 17920.0,
+                "label_y": 17790.0,
+                "node_is_primary": false
+            },
+            "sa16871": {
+                "bigg_id": "h2o[c]",
+                "name": "h2o[c]",
+                "node_type": "metabolite",
+                "x": 14360.0,
+                "y": 25160.0,
+                "label_x": 14360.0,
+                "label_y": 25160.0,
+                "node_is_primary": false
+            },
+            "sa4870": {
+                "bigg_id": "h[c]",
+                "name": "h[c]",
+                "node_type": "metabolite",
+                "x": 18940.0,
+                "y": 19170.0,
+                "label_x": 18940.0,
+                "label_y": 19170.0,
+                "node_is_primary": false
+            },
+            "sa5504": {
+                "bigg_id": "dump[c]",
+                "name": "dump[c]",
+                "node_type": "metabolite",
+                "x": 16390.0,
+                "y": 19880.0,
+                "label_x": 16390.0,
+                "label_y": 19880.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa18766": {
+                "bigg_id": "h[c]",
+                "name": "h[c]",
+                "node_type": "metabolite",
+                "x": 13380.0,
+                "y": 23400.0,
+                "label_x": 13380.0,
+                "label_y": 23400.0,
+                "node_is_primary": false
+            },
+            "sa16868": {
+                "bigg_id": "o2[c]",
+                "name": "o2[c]",
+                "node_type": "metabolite",
+                "x": 12730.0,
+                "y": 25170.0,
+                "label_x": 12730.0,
+                "label_y": 25170.0,
+                "node_is_primary": false
+            },
+            "sa4766": {
+                "bigg_id": "CE5276[c]",
+                "name": "CE5276[c]",
+                "node_type": "metabolite",
+                "x": 11550.0,
+                "y": 26020.0,
+                "label_x": 11550.0,
+                "label_y": 26020.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa5230": {
+                "bigg_id": "h[c]",
+                "name": "h[c]",
+                "node_type": "metabolite",
+                "x": 13370.0,
+                "y": 24750.0,
+                "label_x": 13370.0,
+                "label_y": 24750.0,
+                "node_is_primary": false
+            },
+            "sa4843": {
+                "bigg_id": "23dh1i56dio[c]",
+                "name": "23dh1i56dio[c]",
+                "node_type": "metabolite",
+                "x": 14200.0,
+                "y": 26020.0,
+                "label_x": 14200.0,
+                "label_y": 26020.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa17348": {
+                "bigg_id": "gudac[c]",
+                "name": "gudac[c]",
+                "node_type": "metabolite",
+                "x": 18900.0,
+                "y": 18440.0,
+                "label_x": 18900.0,
+                "label_y": 18440.0,
+                "node_is_primary": false
+            },
+            "sa17792": {
+                "bigg_id": "HC01672[c]",
+                "name": "HC01672[c]",
+                "node_type": "metabolite",
+                "x": 19440.0,
+                "y": 18360.0,
+                "label_x": 19440.0,
+                "label_y": 18360.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa15108": {
+                "bigg_id": "glygly[c]",
+                "name": "glygly[c]",
+                "node_type": "metabolite",
+                "x": 18000.0,
+                "y": 17820.0,
+                "label_x": 18000.0,
+                "label_y": 17820.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa4844": {
+                "bigg_id": "CE4888[c]",
+                "name": "CE4888[c]",
+                "node_type": "metabolite",
+                "x": 12610.0,
+                "y": 25200.0,
+                "label_x": 12610.0,
+                "label_y": 25200.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa17575": {
+                "bigg_id": "h[c]",
+                "name": "h[c]",
+                "node_type": "metabolite",
+                "x": 14920.0,
+                "y": 19830.0,
+                "label_x": 14920.0,
+                "label_y": 19830.0,
+                "node_is_primary": false
+            },
+            "sa17516": {
+                "bigg_id": "CE2866[c]",
+                "name": "CE2866[c]",
+                "node_type": "metabolite",
+                "x": 16660.0,
+                "y": 19070.0,
+                "label_x": 16660.0,
+                "label_y": 19070.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa19965": {
+                "bigg_id": "h[c]",
+                "name": "h[c]",
+                "node_type": "metabolite",
+                "x": 17570.0,
+                "y": 17340.0,
+                "label_x": 17570.0,
+                "label_y": 17340.0,
+                "node_is_primary": false
+            },
+            "sa4806": {
+                "bigg_id": "h[c]",
+                "name": "h[c]",
+                "node_type": "metabolite",
+                "x": 12581.14258798071,
+                "y": 25980.899318803014,
+                "label_x": 12581.14258798071,
+                "label_y": 25980.899318803014,
+                "node_is_primary": false
+            },
+            "sa5416": {
+                "bigg_id": "HC00718[c]",
+                "name": "HC00718[c]",
+                "node_type": "metabolite",
+                "x": 21680.0,
+                "y": 19940.0,
+                "label_x": 21680.0,
+                "label_y": 19940.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa6929": {
+                "bigg_id": "adp[c]",
+                "name": "adp[c]",
+                "node_type": "metabolite",
+                "x": 15170.0,
+                "y": 19910.0,
+                "label_x": 15170.0,
+                "label_y": 19910.0,
+                "node_is_primary": false
+            },
+            "sa5287": {
+                "bigg_id": "h[c]",
+                "name": "h[c]",
+                "node_type": "metabolite",
+                "x": 17690.0,
+                "y": 18550.0,
+                "label_x": 17690.0,
+                "label_y": 18550.0,
+                "node_is_primary": false
+            },
+            "sa5512": {
+                "bigg_id": "duri[c]",
+                "name": "duri[c]",
+                "node_type": "metabolite",
+                "x": 17790.0,
+                "y": 19880.0,
+                "label_x": 17790.0,
+                "label_y": 19880.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa17798": {
+                "bigg_id": "h[c]",
+                "name": "h[c]",
+                "node_type": "metabolite",
+                "x": 20280.0,
+                "y": 18290.0,
+                "label_x": 20280.0,
+                "label_y": 18290.0,
+                "node_is_primary": false
+            },
+            "sa17523": {
+                "bigg_id": "h[c]",
+                "name": "h[c]",
+                "node_type": "metabolite",
+                "x": 16790.0,
+                "y": 19150.0,
+                "label_x": 16790.0,
+                "label_y": 19150.0,
+                "node_is_primary": false
+            },
+            "sa6943": {
+                "bigg_id": "pi[c]",
+                "name": "pi[c]",
+                "node_type": "metabolite",
+                "x": 16090.0,
+                "y": 19830.0,
+                "label_x": 16090.0,
+                "label_y": 19830.0,
+                "node_is_primary": false
+            },
+            "sa5509": {
+                "bigg_id": "pi[c]",
+                "name": "pi[c]",
+                "node_type": "metabolite",
+                "x": 17710.0,
+                "y": 19830.0,
+                "label_x": 17710.0,
+                "label_y": 19830.0,
+                "node_is_primary": false
+            },
+            "sa5231": {
+                "bigg_id": "adp[c]",
+                "name": "adp[c]",
+                "node_type": "metabolite",
+                "x": 13280.0,
+                "y": 24820.0,
+                "label_x": 13280.0,
+                "label_y": 24820.0,
+                "node_is_primary": false
+            },
+            "sa17351": {
+                "bigg_id": "h[c]",
+                "name": "h[c]",
+                "node_type": "metabolite",
+                "x": 18190.0,
+                "y": 18550.0,
+                "label_x": 18190.0,
+                "label_y": 18550.0,
+                "node_is_primary": false
+            },
+            "sa12463": {
+                "bigg_id": "acmana[c]",
+                "name": "acmana[c]",
+                "node_type": "metabolite",
+                "x": 13460.0,
+                "y": 18050.0,
+                "label_x": 13460.0,
+                "label_y": 18050.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa6520": {
+                "bigg_id": "h[c]",
+                "name": "h[c]",
+                "node_type": "metabolite",
+                "x": 12680.0,
+                "y": 25340.0,
+                "label_x": 12680.0,
+                "label_y": 25340.0,
+                "node_is_primary": false
+            },
+            "sa6933": {
+                "bigg_id": "dudp[c]",
+                "name": "dudp[c]",
+                "node_type": "metabolite",
+                "x": 15060.0,
+                "y": 19880.0,
+                "label_x": 15060.0,
+                "label_y": 19880.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa17519": {
+                "bigg_id": "CE2870[c]",
+                "name": "CE2870[c]",
+                "node_type": "metabolite",
+                "x": 17510.0,
+                "y": 19070.0,
+                "label_x": 17510.0,
+                "label_y": 19070.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa17795": {
+                "bigg_id": "ppi[c]",
+                "name": "ppi[c]",
+                "node_type": "metabolite",
+                "x": 19540.0,
+                "y": 18330.0,
+                "label_x": 19540.0,
+                "label_y": 18330.0,
+                "node_is_primary": false
+            },
+            "sa4869": {
+                "bigg_id": "nadh[c]",
+                "name": "nadh[c]",
+                "node_type": "metabolite",
+                "x": 18890.0,
+                "y": 19140.0,
+                "label_x": 18890.0,
+                "label_y": 19140.0,
+                "node_is_primary": false
+            },
+            "sa5408": {
+                "bigg_id": "HC01842[c]",
+                "name": "HC01842[c]",
+                "node_type": "metabolite",
+                "x": 18900.0,
+                "y": 18770.0,
+                "label_x": 18900.0,
+                "label_y": 18770.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa4942": {
+                "bigg_id": "ind56qn[c]",
+                "name": "ind56qn[c]",
+                "node_type": "metabolite",
+                "x": 14480.0,
+                "y": 25200.0,
+                "label_x": 14480.0,
+                "label_y": 25200.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa4871": {
+                "bigg_id": "o2[c]",
+                "name": "o2[c]",
+                "node_type": "metabolite",
+                "x": 21060.0,
+                "y": 19120.0,
+                "label_x": 21060.0,
+                "label_y": 19120.0,
+                "node_is_primary": false
+            },
+            "sa20593": {
+                "bigg_id": "amp[c]",
+                "name": "amp[c]",
+                "node_type": "metabolite",
+                "x": 17570.0,
+                "y": 18050.0,
+                "label_x": 17570.0,
+                "label_y": 18050.0,
+                "node_is_primary": false
+            },
+            "sa4846": {
+                "bigg_id": "L_dpchrm[c]",
+                "name": "L_dpchrm[c]",
+                "node_type": "metabolite",
+                "x": 18790.0,
+                "y": 19100.0,
+                "label_x": 18790.0,
+                "label_y": 19100.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa18888": {
+                "bigg_id": "coa[c]",
+                "name": "coa[c]",
+                "node_type": "metabolite",
+                "x": 14180.0,
+                "y": 23490.0,
+                "label_x": 14180.0,
+                "label_y": 23490.0,
+                "node_is_primary": false
+            },
+            "sa5307": {
+                "bigg_id": "h2o[c]",
+                "name": "h2o[c]",
+                "node_type": "metabolite",
+                "x": 16910.0,
+                "y": 17740.0,
+                "label_x": 16910.0,
+                "label_y": 17740.0,
+                "node_is_primary": false
+            },
+            "sa20595": {
+                "bigg_id": "ppi[c]",
+                "name": "ppi[c]",
+                "node_type": "metabolite",
+                "x": 17650.0,
+                "y": 18010.0,
+                "label_x": 17650.0,
+                "label_y": 18010.0,
+                "node_is_primary": false
+            },
+            "sa17796": {
+                "bigg_id": "coa[c]",
+                "name": "coa[c]",
+                "node_type": "metabolite",
+                "x": 19490.0,
+                "y": 18290.0,
+                "label_x": 19490.0,
+                "label_y": 18290.0,
+                "node_is_primary": false
+            },
+            "sa6289": {
+                "bigg_id": "ac[c]",
+                "name": "ac[c]",
+                "node_type": "metabolite",
+                "x": 20430.0,
+                "y": 18360.0,
+                "label_x": 20430.0,
+                "label_y": 18360.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa17520": {
+                "bigg_id": "h2o[c]",
+                "name": "h2o[c]",
+                "node_type": "metabolite",
+                "x": 17420.0,
+                "y": 19110.0,
+                "label_x": 17420.0,
+                "label_y": 19110.0,
+                "node_is_primary": false
+            },
+            "sa5410": {
+                "bigg_id": "h[c]",
+                "name": "h[c]",
+                "node_type": "metabolite",
+                "x": 19260.0,
+                "y": 18550.0,
+                "label_x": 19260.0,
+                "label_y": 18550.0,
+                "node_is_primary": false
+            },
+            "sa19961": {
+                "bigg_id": "phacgly[c]",
+                "name": "phacgly[c]",
+                "node_type": "metabolite",
+                "x": 17480.0,
+                "y": 17230.0,
+                "label_x": 17480.0,
+                "label_y": 17230.0,
+                "node_is_primary": false,
+                "is_primary": true
+            },
+            "sa20591": {
+                "bigg_id": "coa[c]",
+                "name": "coa[c]",
+                "node_type": "metabolite",
+                "x": 18430.0,
+                "y": 18010.0,
+                "label_x": 18430.0,
+                "label_y": 18010.0,
+                "node_is_primary": false
+            },
+            "DCT_0-0-start": {
+                "node_type": "multimarker",
+                "x": 20070.999999999985,
+                "y": 19549.99999999998
+            },
+            "DCT_0-0-end": {
+                "node_type": "multimarker",
+                "x": 20078.999999999985,
+                "y": 19549.99999999998
+            },
+            "DCT_0-mid": {
+                "node_type": "midmarker",
+                "x": 20074.999999999985,
+                "y": 19549.99999999998
+            },
+            "node_1-sa4846-0": {
+                "node_type": "multimarker",
+                "x": 19179.999999999996,
+                "y": 19549.999999999978
+            },
+            "node_1-sa4846-1-start": {
+                "node_type": "multimarker",
+                "x": 19179.999999999996,
+                "y": 19549.999999999978
+            },
+            "node_1-sa4846-1-end": {
+                "node_type": "multimarker",
+                "x": 19180.0,
+                "y": 19099.99999999999
+            },
+            "node_1-sa4846-2": {
+                "node_type": "multimarker",
+                "x": 19180.0,
+                "y": 19099.99999999999
+            },
+            "node_2-sa4908-0": {
+                "node_type": "multimarker",
+                "x": 20969.999999999978,
+                "y": 19549.999999999985
+            },
+            "node_2-sa4908-1": {
+                "node_type": "multimarker",
+                "x": 20969.999999999978,
+                "y": 19549.999999999985
+            },
+            "DOPACCL_3-mid": {
+                "node_type": "midmarker",
+                "x": 12126.066080877496,
+                "y": 26018.996496515352
+            },
+            "NTD1_7-0-start": {
+                "node_type": "multimarker",
+                "x": 16957.0,
+                "y": 19880.0
+            },
+            "NTD1_7-0-end": {
+                "node_type": "multimarker",
+                "x": 17223.0,
+                "y": 19880.0
+            },
+            "NTD1_7-mid": {
+                "node_type": "midmarker",
+                "x": 17090.0,
+                "y": 19880.0
+            },
+            "HMR_0654_12-mid": {
+                "node_type": "midmarker",
+                "x": 22569.999999999993,
+                "y": 19429.999999999993
+            },
+            "node_13-sa5288-0": {
+                "node_type": "multimarker",
+                "x": 17990.0,
+                "y": 19550.0
+            },
+            "node_13-sa5288-0-extra": {
+                "node_type": "multimarker",
+                "x": 22569.999999999996,
+                "y": 19549.999999999996
+            },
+            "node_13-sa5288-1-start": {
+                "node_type": "multimarker",
+                "x": 17990.0,
+                "y": 19550.0
+            },
+            "node_13-sa5288-1-end": {
+                "node_type": "multimarker",
+                "x": 17990.00000000001,
+                "y": 18790.0
+            },
+            "node_13-sa5288-2": {
+                "node_type": "multimarker",
+                "x": 17990.00000000001,
+                "y": 18790.0
+            },
+            "node_15-sa5315-0-extra": {
+                "node_type": "multimarker",
+                "x": 22569.999999999993,
+                "y": 19309.999999999993
+            },
+            "node_15-sa5315-0": {
+                "node_type": "multimarker",
+                "x": 22569.999999999993,
+                "y": 19149.999999999993
+            },
+            "node_15-sa5315-1-start": {
+                "node_type": "multimarker",
+                "x": 22569.999999999993,
+                "y": 19149.999999999993
+            },
+            "node_15-sa5315-1-end": {
+                "node_type": "multimarker",
+                "x": 22569.99999999998,
+                "y": 19549.999999999993
+            },
+            "node_15-sa5315-2-start": {
+                "node_type": "multimarker",
+                "x": 22569.99999999998,
+                "y": 19549.999999999993
+            },
+            "node_15-sa5315-2-end": {
+                "node_type": "multimarker",
+                "x": 17989.99999999998,
+                "y": 19549.999999999996
+            },
+            "node_15-sa5315-3": {
+                "node_type": "multimarker",
+                "x": 17989.99999999998,
+                "y": 19549.999999999996
+            },
+            "re6024_18-mid": {
+                "node_type": "midmarker",
+                "x": 18637.499999999993,
+                "y": 18589.999999999993
+            },
+            "node_19-sa5409-0": {
+                "node_type": "multimarker",
+                "x": 20579.999999999993,
+                "y": 18590.000000000033
+            },
+            "node_19-sa5409-0-extra": {
+                "node_type": "multimarker",
+                "x": 18899.99999999999,
+                "y": 18589.999999999993
+            },
+            "node_19-sa5409-1-start": {
+                "node_type": "multimarker",
+                "x": 20579.999999999993,
+                "y": 18590.000000000033
+            },
+            "node_19-sa5409-1-end": {
+                "node_type": "multimarker",
+                "x": 20580.0,
+                "y": 19550.000000000007
+            },
+            "node_19-sa5409-2-start": {
+                "node_type": "multimarker",
+                "x": 20580.0,
+                "y": 19550.000000000007
+            },
+            "node_19-sa5409-2-end": {
+                "node_type": "multimarker",
+                "x": 22569.999999999993,
+                "y": 19550.00000000001
+            },
+            "node_19-sa5409-3": {
+                "node_type": "multimarker",
+                "x": 22569.999999999993,
+                "y": 19550.00000000001
+            },
+            "URIDK3_23-0-start": {
+                "node_type": "multimarker",
+                "x": 15851.0,
+                "y": 19880.0
+            },
+            "URIDK3_23-0-end": {
+                "node_type": "multimarker",
+                "x": 15599.0,
+                "y": 19880.0
+            },
+            "URIDK3_23-mid": {
+                "node_type": "midmarker",
+                "x": 15725.0,
+                "y": 19880.0
+            },
+            "re6141_28-0-start": {
+                "node_type": "multimarker",
+                "x": 20027.0,
+                "y": 18360.0
+            },
+            "re6141_28-0-end": {
+                "node_type": "multimarker",
+                "x": 19843.0,
+                "y": 18360.0
+            },
+            "re6141_28-mid": {
+                "node_type": "midmarker",
+                "x": 19935.0,
+                "y": 18360.0
+            },
+            "DOPACHRMISO_34-0-start": {
+                "node_type": "multimarker",
+                "x": 19425.1,
+                "y": 19100.0
+            },
+            "DOPACHRMISO_34-0-end": {
+                "node_type": "multimarker",
+                "x": 19227.4,
+                "y": 19100.0
+            },
+            "DOPACHRMISO_34-mid": {
+                "node_type": "midmarker",
+                "x": 19326.25,
+                "y": 19100.0
+            },
+            "UAG2EMAi_39-0-start": {
+                "node_type": "multimarker",
+                "x": 13460.0,
+                "y": 18611.5
+            },
+            "UAG2EMAi_39-0-end": {
+                "node_type": "multimarker",
+                "x": 13460.0,
+                "y": 18428.5
+            },
+            "UAG2EMAi_39-mid": {
+                "node_type": "midmarker",
+                "x": 13460.0,
+                "y": 18520.0
+            },
+            "re6064_45-0-start": {
+                "node_type": "multimarker",
+                "x": 17163.0,
+                "y": 19070.0
+            },
+            "re6064_45-0-end": {
+                "node_type": "multimarker",
+                "x": 17007.0,
+                "y": 19070.0
+            },
+            "re6064_45-mid": {
+                "node_type": "midmarker",
+                "x": 17085.0,
+                "y": 19070.0
+            },
+            "re5192_51-0-start": {
+                "node_type": "multimarker",
+                "x": 13329.999999999995,
+                "y": 24319.999999999985
+            },
+            "re5192_51-0-end": {
+                "node_type": "multimarker",
+                "x": 11240.00000000001,
+                "y": 24320.000000000004
+            },
+            "re5192_51-mid": {
+                "node_type": "midmarker",
+                "x": 12285.000000000002,
+                "y": 24319.999999999993
+            },
+            "re5192_51-1-start": {
+                "node_type": "multimarker",
+                "x": 11240.00000000001,
+                "y": 24320.000000000004
+            },
+            "re5192_51-1-end": {
+                "node_type": "multimarker",
+                "x": 11240.000000000013,
+                "y": 26419.999999999993
+            },
+            "re5192_51-2-start": {
+                "node_type": "multimarker",
+                "x": 11240.000000000013,
+                "y": 26419.999999999993
+            },
+            "re5192_51-2-end": {
+                "node_type": "multimarker",
+                "x": 16520.000000000007,
+                "y": 26419.999999999996
+            },
+            "re5192_51-3-start": {
+                "node_type": "multimarker",
+                "x": 16520.000000000007,
+                "y": 26419.999999999996
+            },
+            "re5192_51-3-end": {
+                "node_type": "multimarker",
+                "x": 16520.00000000002,
+                "y": 25290.0
+            },
+            "re5192_51-4-start": {
+                "node_type": "multimarker",
+                "x": 16520.00000000002,
+                "y": 25290.0
+            },
+            "re5192_51-4-end": {
+                "node_type": "multimarker",
+                "x": 15733.50000000001,
+                "y": 25290.0
+            },
+            "HMR_0657_55-0-start": {
+                "node_type": "multimarker",
+                "x": 22570.0,
+                "y": 19550.000000000004
+            },
+            "HMR_0657_55-0-end": {
+                "node_type": "multimarker",
+                "x": 20579.999999999996,
+                "y": 19550.000000000004
+            },
+            "HMR_0657_55-mid": {
+                "node_type": "midmarker",
+                "x": 21575.0,
+                "y": 19550.000000000004
+            },
+            "HMR_0657_55-1-start": {
+                "node_type": "multimarker",
+                "x": 20579.999999999996,
+                "y": 19550.000000000004
+            },
+            "HMR_0657_55-1-end": {
+                "node_type": "multimarker",
+                "x": 20580.0,
+                "y": 19066.000000000004
+            },
+            "node_58-sa5315-0": {
+                "node_type": "multimarker",
+                "x": 20580.0,
+                "y": 18590.000000000004
+            },
+            "node_58-sa5315-1": {
+                "node_type": "multimarker",
+                "x": 20580.0,
+                "y": 18590.000000000004
+            },
+            "NADQNOXR_59-mid": {
+                "node_type": "midmarker",
+                "x": 13402.696380571218,
+                "y": 26019.07057953648
+            },
+            "PAFS_62-0-start": {
+                "node_type": "multimarker",
+                "x": 13330.0,
+                "y": 23440.0
+            },
+            "PAFS_62-0-end": {
+                "node_type": "multimarker",
+                "x": 13867.0,
+                "y": 23440.0
+            },
+            "PAFS_62-mid": {
+                "node_type": "midmarker",
+                "x": 13598.5,
+                "y": 23440.0
+            },
+            "LACROX_67-mid": {
+                "node_type": "midmarker",
+                "x": 13402.696380571218,
+                "y": 26019.07057953648
+            },
+            "RE2526C_70-mid": {
+                "node_type": "midmarker",
+                "x": 12611.196293988018,
+                "y": 25609.074658602563
+            },
+            "r0789_76-mid": {
+                "node_type": "midmarker",
+                "x": 18679.249999999985,
+                "y": 18590.0
+            },
+            "node_78-sa5409-0": {
+                "node_type": "multimarker",
+                "x": 20580.000000000007,
+                "y": 18590.000000000004
+            },
+            "node_78-sa5409-0-extra": {
+                "node_type": "multimarker",
+                "x": 18899.99999999998,
+                "y": 18589.999999999996
+            },
+            "node_78-sa5409-1-start": {
+                "node_type": "multimarker",
+                "x": 20580.000000000007,
+                "y": 18590.000000000004
+            },
+            "node_78-sa5409-1-end": {
+                "node_type": "multimarker",
+                "x": 20580.0,
+                "y": 19549.999999999993
+            },
+            "node_78-sa5409-2-start": {
+                "node_type": "multimarker",
+                "x": 20580.0,
+                "y": 19549.999999999993
+            },
+            "node_78-sa5409-2-end": {
+                "node_type": "multimarker",
+                "x": 22339.999999999993,
+                "y": 19549.999999999993
+            },
+            "node_78-sa5409-3-start": {
+                "node_type": "multimarker",
+                "x": 22339.999999999993,
+                "y": 19549.999999999993
+            },
+            "node_78-sa5409-3-end": {
+                "node_type": "multimarker",
+                "x": 22339.999999999993,
+                "y": 19939.99999999999
+            },
+            "node_78-sa5409-4": {
+                "node_type": "multimarker",
+                "x": 22339.999999999993,
+                "y": 19939.99999999999
+            },
+            "DOPACHRMDC_80-mid": {
+                "node_type": "midmarker",
+                "x": 18369.000000000007,
+                "y": 19100.0
+            },
+            "node_83-sa4844-0-extra": {
+                "node_type": "multimarker",
+                "x": 18293.200000000008,
+                "y": 19099.999999999996
+            },
+            "node_83-sa4844-0": {
+                "node_type": "multimarker",
+                "x": 17990.00000000001,
+                "y": 19099.999999999996
+            },
+            "node_83-sa4844-1-start": {
+                "node_type": "multimarker",
+                "x": 17990.00000000001,
+                "y": 19099.999999999996
+            },
+            "node_83-sa4844-1-end": {
+                "node_type": "multimarker",
+                "x": 17990.000000000007,
+                "y": 19549.999999999978
+            },
+            "node_83-sa4844-2-start": {
+                "node_type": "multimarker",
+                "x": 17990.000000000007,
+                "y": 19549.999999999978
+            },
+            "node_83-sa4844-2-end": {
+                "node_type": "multimarker",
+                "x": 16520.000000000022,
+                "y": 19549.999999999978
+            },
+            "node_83-sa4844-3-start": {
+                "node_type": "multimarker",
+                "x": 16520.000000000022,
+                "y": 19549.999999999978
+            },
+            "node_83-sa4844-3-end": {
+                "node_type": "multimarker",
+                "x": 16520.000000000036,
+                "y": 19739.99999999997
+            },
+            "node_83-sa4844-4-start": {
+                "node_type": "multimarker",
+                "x": 16520.000000000036,
+                "y": 19739.99999999997
+            },
+            "node_83-sa4844-4-end": {
+                "node_type": "multimarker",
+                "x": 11240.00000000003,
+                "y": 19739.999999999978
+            },
+            "node_83-sa4844-5-start": {
+                "node_type": "multimarker",
+                "x": 11240.00000000003,
+                "y": 19739.999999999978
+            },
+            "node_83-sa4844-5-end": {
+                "node_type": "multimarker",
+                "x": 11240.000000000031,
+                "y": 25039.999999999996
+            },
+            "node_83-sa4844-6-start": {
+                "node_type": "multimarker",
+                "x": 11240.000000000031,
+                "y": 25039.999999999996
+            },
+            "node_83-sa4844-6-end": {
+                "node_type": "multimarker",
+                "x": 12610.00000000003,
+                "y": 25039.999999999993
+            },
+            "node_83-sa4844-7": {
+                "node_type": "multimarker",
+                "x": 12610.00000000003,
+                "y": 25039.999999999993
+            },
+            "HMR_0653_85-mid": {
+                "node_type": "midmarker",
+                "x": 16950.500000000044,
+                "y": 18590.0
+            },
+            "node_86-sa9967-0": {
+                "node_type": "multimarker",
+                "x": 16520.000000000076,
+                "y": 19740.000000000022
+            },
+            "node_86-sa9967-0-extra": {
+                "node_type": "multimarker",
+                "x": 16520.000000000065,
+                "y": 18590.000000000004
+            },
+            "node_86-sa9967-1-start": {
+                "node_type": "multimarker",
+                "x": 16520.000000000076,
+                "y": 19740.000000000022
+            },
+            "node_86-sa9967-1-end": {
+                "node_type": "multimarker",
+                "x": 11239.999999999982,
+                "y": 19740.000000000025
+            },
+            "node_86-sa9967-2-start": {
+                "node_type": "multimarker",
+                "x": 11239.999999999982,
+                "y": 19740.000000000025
+            },
+            "node_86-sa9967-2-end": {
+                "node_type": "multimarker",
+                "x": 11239.999999999984,
+                "y": 18630.000000000004
+            },
+            "node_86-sa9967-3": {
+                "node_type": "multimarker",
+                "x": 11239.999999999984,
+                "y": 18630.000000000004
+            },
+            "node_87-sa5409-0": {
+                "node_type": "multimarker",
+                "x": 16520.000000000065,
+                "y": 19549.99999999999
+            },
+            "node_87-sa5409-0-extra": {
+                "node_type": "multimarker",
+                "x": 16520.000000000065,
+                "y": 18590.000000000004
+            },
+            "node_87-sa5409-1-start": {
+                "node_type": "multimarker",
+                "x": 16520.000000000065,
+                "y": 19549.99999999999
+            },
+            "node_87-sa5409-1-end": {
+                "node_type": "multimarker",
+                "x": 22570.000000000007,
+                "y": 19550.000000000007
+            },
+            "node_87-sa5409-2": {
+                "node_type": "multimarker",
+                "x": 22570.000000000007,
+                "y": 19550.000000000007
+            },
+            "RE3201C_91-mid": {
+                "node_type": "midmarker",
+                "x": 21504.742746012955,
+                "y": 19144.907211942736
+            },
+            "re5920_96-0-start": {
+                "node_type": "multimarker",
+                "x": 13358.0,
+                "y": 25200.0
+            },
+            "re5920_96-0-end": {
+                "node_type": "multimarker",
+                "x": 13714.5,
+                "y": 25200.0
+            },
+            "re5920_96-mid": {
+                "node_type": "midmarker",
+                "x": 13536.25,
+                "y": 25200.0
+            },
+            "NADPQNOXR_101-mid": {
+                "node_type": "midmarker",
+                "x": 13402.696380571218,
+                "y": 26019.07057953648
+            },
+            "RE3198C_104-0-start": {
+                "node_type": "multimarker",
+                "x": 19227.4,
+                "y": 19100.0
+            },
+            "RE3198C_104-0-end": {
+                "node_type": "multimarker",
+                "x": 19425.1,
+                "y": 19100.0
+            },
+            "RE3198C_104-mid": {
+                "node_type": "midmarker",
+                "x": 19326.25,
+                "y": 19100.0
+            },
+            "re6428_110-0-start": {
+                "node_type": "multimarker",
+                "x": 13866.999999999998,
+                "y": 23440.0
+            },
+            "re6428_110-0-end": {
+                "node_type": "multimarker",
+                "x": 13329.999999999996,
+                "y": 23440.0
+            },
+            "re6428_110-mid": {
+                "node_type": "midmarker",
+                "x": 13598.499999999996,
+                "y": 23440.0
+            },
+            "node_113-sa6289-0": {
+                "node_type": "multimarker",
+                "x": 13329.999999999985,
+                "y": 23610.000000000004
+            },
+            "node_113-sa6289-1-start": {
+                "node_type": "multimarker",
+                "x": 13329.999999999985,
+                "y": 23610.000000000004
+            },
+            "node_113-sa6289-1-end": {
+                "node_type": "multimarker",
+                "x": 11239.999999999993,
+                "y": 23610.000000000004
+            },
+            "node_113-sa6289-2-start": {
+                "node_type": "multimarker",
+                "x": 11239.999999999993,
+                "y": 23610.000000000004
+            },
+            "node_113-sa6289-2-end": {
+                "node_type": "multimarker",
+                "x": 11239.999999999996,
+                "y": 17800.0
+            },
+            "node_113-sa6289-3-start": {
+                "node_type": "multimarker",
+                "x": 11239.999999999996,
+                "y": 17800.0
+            },
+            "node_113-sa6289-3-end": {
+                "node_type": "multimarker",
+                "x": 12509.999999999996,
+                "y": 17800.0
+            },
+            "node_113-sa6289-4-start": {
+                "node_type": "multimarker",
+                "x": 12509.999999999996,
+                "y": 17800.0
+            },
+            "node_113-sa6289-4-end": {
+                "node_type": "multimarker",
+                "x": 12509.999999999996,
+                "y": 17140.000000000004
+            },
+            "node_113-sa6289-5-start": {
+                "node_type": "multimarker",
+                "x": 12509.999999999996,
+                "y": 17140.000000000004
+            },
+            "node_113-sa6289-5-end": {
+                "node_type": "multimarker",
+                "x": 20430.0,
+                "y": 17140.000000000007
+            },
+            "node_113-sa6289-6": {
+                "node_type": "multimarker",
+                "x": 20430.0,
+                "y": 17140.000000000007
+            },
+            "NDP8_116-0-start": {
+                "node_type": "multimarker",
+                "x": 15599.0,
+                "y": 19880.0
+            },
+            "NDP8_116-0-end": {
+                "node_type": "multimarker",
+                "x": 15851.0,
+                "y": 19880.0
+            },
+            "NDP8_116-mid": {
+                "node_type": "midmarker",
+                "x": 15725.0,
+                "y": 19880.0
+            },
+            "re6850_122-0-start": {
+                "node_type": "multimarker",
+                "x": 18139.0,
+                "y": 18090.0
+            },
+            "re6850_122-0-end": {
+                "node_type": "multimarker",
+                "x": 17931.0,
+                "y": 18090.0
+            },
+            "re6850_122-mid": {
+                "node_type": "midmarker",
+                "x": 18035.0,
+                "y": 18090.0
+            },
+            "ACCOAC_129-0-start": {
+                "node_type": "multimarker",
+                "x": 13330.0,
+                "y": 24324.5
+            },
+            "ACCOAC_129-0-end": {
+                "node_type": "multimarker",
+                "x": 13330.0,
+                "y": 24505.5
+            },
+            "ACCOAC_129-mid": {
+                "node_type": "midmarker",
+                "x": 13330.0,
+                "y": 24415.0
+            },
+            "re6687_136-0-start": {
+                "node_type": "multimarker",
+                "x": 17480.0,
+                "y": 17820.0
+            },
+            "re6687_136-0-end": {
+                "node_type": "multimarker",
+                "x": 17480.0,
+                "y": 17473.5
+            },
+            "re6687_136-mid": {
+                "node_type": "midmarker",
+                "x": 17480.0,
+                "y": 17646.75
+            },
+            "re5396_142-0-start": {
+                "node_type": "multimarker",
+                "x": 17581.0,
+                "y": 17820.0
+            },
+            "re5396_142-0-end": {
+                "node_type": "multimarker",
+                "x": 17481.0,
+                "y": 17820.0
+            },
+            "re5396_142-mid": {
+                "node_type": "midmarker",
+                "x": 17531.0,
+                "y": 17820.0
+            },
+            "r0788_146-0-start": {
+                "node_type": "multimarker",
+                "x": 22339.999999999993,
+                "y": 19940.0
+            },
+            "r0788_146-0-end": {
+                "node_type": "multimarker",
+                "x": 22339.99999999998,
+                "y": 19550.000000000007
+            },
+            "r0788_146-mid": {
+                "node_type": "midmarker",
+                "x": 22339.999999999985,
+                "y": 19745.000000000004
+            },
+            "r0788_146-1-start": {
+                "node_type": "multimarker",
+                "x": 22339.99999999998,
+                "y": 19550.000000000007
+            },
+            "r0788_146-1-end": {
+                "node_type": "multimarker",
+                "x": 20579.999999999996,
+                "y": 19550.00000000001
+            },
+            "r0788_146-2-start": {
+                "node_type": "multimarker",
+                "x": 20579.999999999996,
+                "y": 19550.00000000001
+            },
+            "r0788_146-2-end": {
+                "node_type": "multimarker",
+                "x": 20579.99999999999,
+                "y": 18590.00000000001
+            },
+            "r0788_146-3-start": {
+                "node_type": "multimarker",
+                "x": 20579.99999999999,
+                "y": 18590.00000000001
+            },
+            "r0788_146-3-end": {
+                "node_type": "multimarker",
+                "x": 19571.999999999993,
+                "y": 18590.00000000001
+            },
+            "node_149-sa5408-0": {
+                "node_type": "multimarker",
+                "x": 18899.999999999993,
+                "y": 18590.00000000001
+            },
+            "node_149-sa5408-1": {
+                "node_type": "multimarker",
+                "x": 18899.999999999993,
+                "y": 18590.00000000001
+            },
+            "DACT_152-0-start": {
+                "node_type": "multimarker",
+                "x": 14199.999999999996,
+                "y": 25607.749999999993
+            },
+            "DACT_152-0-end": {
+                "node_type": "multimarker",
+                "x": 14199.999999999996,
+                "y": 25599.749999999993
+            },
+            "DACT_152-mid": {
+                "node_type": "midmarker",
+                "x": 14199.999999999996,
+                "y": 25603.749999999993
+            },
+            "node_154-sa4844-0": {
+                "node_type": "multimarker",
+                "x": 14199.99999999999,
+                "y": 25199.999999999985
+            },
+            "node_154-sa4844-1": {
+                "node_type": "multimarker",
+                "x": 14199.99999999999,
+                "y": 25199.999999999985
+            },
+            "re6140_155-0-start": {
+                "node_type": "multimarker",
+                "x": 19440.0,
+                "y": 18105.5
+            },
+            "re6140_155-0-end": {
+                "node_type": "multimarker",
+                "x": 19440.0,
+                "y": 17984.5
+            },
+            "re6140_155-mid": {
+                "node_type": "midmarker",
+                "x": 19440.0,
+                "y": 18045.0
+            }
+        },
+        "text_labels": {},
+        "canvas": {
+            "x": 0,
+            "y": 0,
+            "width": 47215.0,
+            "height": 48855.0
+        }
+    }
+]

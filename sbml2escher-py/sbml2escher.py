@@ -1,5 +1,8 @@
 import json
 
+input_file_path = 'SBML_origin_quarter_2.json'
+output_file_path = 'sbml2escher_SBML_origin_quarter_2.json'
+
 def load_json_data(file_path):
     with open(file_path, 'r') as file:
         return json.load(file)
@@ -52,9 +55,8 @@ def mid_node(start, end, reaction_layout_id, reaction, nodes):
     reaction['label_y'] = mid_node['y']
     return mid_id
 
-
 # Load your original JSON data
-data = load_json_data('SBML_new_PPP_6.json')
+data = load_json_data(input_file_path)
 
 # map basic information
 model = data['sbml']['model']
@@ -122,29 +124,23 @@ listOfReactionGlyphs = layoutRoot['layout:listOfReactionGlyphs']['layout:reactio
 for reactionGlyph in listOfReactionGlyphs:
     reaction = edges[reactionGlyph['@layout:reaction']]
     segments = {}
-    reaction_seg_start_node = None
-    reaction_seg_end_node = None
+    reaction_seg_start_node_id = None
+    reaction_seg_end_node_id = None
     listOfReactionSegments = reactionGlyph['layout:curve']['layout:listOfCurveSegments']['layout:curveSegment']
     reaction_layout_id = reactionGlyph['@layout:id']
     if isinstance(listOfReactionSegments, dict):
         listOfReactionSegments = [listOfReactionSegments]
     # add the segments of reaction
     for index, curveSegmentItem in enumerate(listOfReactionSegments):
-        if len(listOfReactionSegments) == 1:
-            curveSegment = curveSegmentItem
-            segmentId = f"{reaction_layout_id}-{index}"
-            start = curveSegment['layout:start']
-            end = curveSegment['layout:end']
-
+        curveSegment = curveSegmentItem
+        segmentId = f"{reaction_layout_id}-{index}"
+        start = curveSegment['layout:start']
+        end = curveSegment['layout:end']
+        if len(listOfReactionSegments) == 1 and (abs(float(start['@layout:x']) - float(end['@layout:x'])) and abs(float(start['@layout:y']) - float(end['@layout:y']))):
             mid_id = mid_node(start, end, reaction_layout_id, reaction, nodes)
-            reaction_seg_start_node = mid_id
-            reaction_seg_end_node = mid_id
+            reaction_seg_start_node_id = mid_id
+            reaction_seg_end_node_id = mid_id
         else:
-            curveSegment = curveSegmentItem
-            segmentId = f"{reaction_layout_id}-{index}"
-
-            start = curveSegment['layout:start']
-            end = curveSegment['layout:end']
             start_id = f"{reaction_layout_id}-{index}-start"
             end_id = f"{reaction_layout_id}-{index}-end"
             nodes[start_id] = {
@@ -167,11 +163,11 @@ for reactionGlyph in listOfReactionGlyphs:
             if index == 0:
                 mid_node(start, end, reaction_layout_id, reaction, nodes)
                 # sign the start node, for the connection of the metabolites
-                reaction_seg_start_node = start_id
+                reaction_seg_start_node_id = start_id
 
             if index == len(listOfReactionSegments) - 1:
                 # sign the end node, for the connection of the metabolites
-                reaction_seg_end_node = end_id
+                reaction_seg_end_node_id = end_id
 
     listOfCurveSegments = reactionGlyph['layout:listOfSpeciesReferenceGlyphs']['layout:speciesReferenceGlyph']
 
@@ -179,20 +175,24 @@ for reactionGlyph in listOfReactionGlyphs:
         segmentId = curveSegment['@layout:id']
         role = curveSegment['@layout:role']
         mato_speciesGlyph = curveSegment['@layout:speciesGlyph']
-        start_node = reaction_seg_start_node
-        end_node = reaction_seg_end_node
+        start_node_id = reaction_seg_start_node_id
+        end_node_id = reaction_seg_end_node_id
 
         _listOfCurveSegments = curveSegment['layout:curve']['layout:listOfCurveSegments']["layout:curveSegment"]
         if isinstance(_listOfCurveSegments, dict):
             _listOfCurveSegments = [_listOfCurveSegments]
 
+        prev_end_node = None
         lenOfCurveSegments = len(_listOfCurveSegments)
         for index, _curveSegment in enumerate(_listOfCurveSegments):
             start_x = float(_curveSegment['layout:start']['@layout:x'])
             start_y = float(_curveSegment['layout:start']['@layout:y'])
             end_x = float(_curveSegment['layout:end']['@layout:x'])
             end_y = float(_curveSegment['layout:end']['@layout:y'])
-
+            prev_start_node = _curveSegment['layout:start']
+            prev_end_node = _curveSegment['layout:end']
+            start_seg_id_extra = None
+            end_seg_id_extra = None
             if role == 'substrate' or role == 'sidesubstrate':
                 # mark the primary metabolites
                 if role == 'substrate':
@@ -202,7 +202,7 @@ for reactionGlyph in listOfReactionGlyphs:
                 if index == 0 and lenOfCurveSegments == 1:
                     segments[seg_id] = {
                         'from_node_id': mato_speciesGlyph,
-                        'to_node_id': start_node,
+                        'to_node_id': start_node_id,
                         'b1': None,
                         'b2': None,
                     }
@@ -214,8 +214,35 @@ for reactionGlyph in listOfReactionGlyphs:
                     }
 
                     segments[seg_id] = {
+                        'from_node_id': mato_speciesGlyph,
+                        'to_node_id': seg_id,
+                        'b1': None,
+                        'b2': None,
+                    }
+                    
+                    if start_x != nodes[start_node_id]['x'] or start_y != nodes[start_node_id]['y']:
+                        start_seg_id_extra = f"{segmentId}-{mato_speciesGlyph}-{index}-extra"
+                        nodes[start_seg_id_extra] = {
+                            'node_type': 'multimarker',
+                            'x': start_x,
+                            'y': start_y,
+                        }
+                        segments[start_seg_id_extra] = {
+                            'from_node_id': start_seg_id_extra,
+                            'to_node_id': start_node_id,
+                            'b1': None,
+                            'b2': None,
+                        }
+                elif index == lenOfCurveSegments - 1:
+                    nodes[seg_id] = {
+                        'node_type': 'multimarker',
+                        'x': start_x,
+                        'y': start_y,
+                    }
+
+                    segments[seg_id] = {
                         'from_node_id': seg_id,
-                        'to_node_id': start_node,
+                        'to_node_id': start_seg_id_extra or start_node_id,
                         'b1': None,
                         'b2': None,
                     }
@@ -245,14 +272,42 @@ for reactionGlyph in listOfReactionGlyphs:
                 if role == 'product':
                     nodes[mato_speciesGlyph]['is_primary'] = True
 
-                seg_id =  f"{segmentId}{mato_speciesGlyph}{index}"
+                seg_id =  f"{segmentId}-{mato_speciesGlyph}-{index}"
                 if index == lenOfCurveSegments - 1 and lenOfCurveSegments == 1:
                     segments[seg_id] = {
-                        'from_node_id': end_node,
+                        'from_node_id': end_node_id,
                         'to_node_id': mato_speciesGlyph,
                         'b1': None,
                         'b2': None,
                     }
+                elif index == 0:
+                    if start_x != nodes[end_node_id]['x'] or start_y != nodes[end_node_id]['y']:
+                        end_seg_id_extra = f"{segmentId}-{mato_speciesGlyph}-{index}-extra"
+                        nodes[end_seg_id_extra] = {
+                            'node_type': 'multimarker',
+                            'x': start_x,
+                            'y': start_y,
+                        }
+                        segments[end_seg_id_extra] = {
+                            'from_node_id': end_seg_id_extra,
+                            'to_node_id': end_node_id,
+                            'b1': None,
+                            'b2': None,
+                        }
+
+                    nodes[seg_id] = {
+                        'node_type': 'multimarker',
+                        'x': end_x,
+                        'y': end_y,
+                    }
+
+                    segments[seg_id] = {
+                        'from_node_id': end_node_id,
+                        'to_node_id': seg_id,
+                        'b1': None,
+                        'b2': None,
+                    }
+
                 elif index == lenOfCurveSegments - 1:
                     nodes[seg_id] = {
                         'node_type': 'multimarker',
@@ -262,7 +317,7 @@ for reactionGlyph in listOfReactionGlyphs:
 
                     segments[seg_id] = {
                         'from_node_id': seg_id,
-                        'to_node_id': start_node,
+                        'to_node_id': mato_speciesGlyph,
                         'b1': None,
                         'b2': None,
                     }
@@ -281,8 +336,8 @@ for reactionGlyph in listOfReactionGlyphs:
                         'y': end_y,
                     }
                     segments[seg_id] = {
-                        'from_node_id': end_seg_id,
-                        'to_node_id': start_seg_id,
+                        'from_node_id': start_seg_id,
+                        'to_node_id': end_seg_id,
                         'b1': None,
                         'b2': None,
                     }
@@ -314,4 +369,6 @@ cytoscape_data = [{
 ]
 
 # Save the new JSON data
-save_json_data(cytoscape_data, 'sbml2escher.json')
+save_json_data(cytoscape_data, output_file_path)
+
+print(f"转换成功，结果已保存到 {output_file_path}")
