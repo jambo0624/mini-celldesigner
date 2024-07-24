@@ -196,16 +196,37 @@ for reactionGlyph in listOfReactionGlyphs:
             if role == 'substrate' or role == 'sidesubstrate':
                 # mark the primary metabolites
                 if role == 'substrate':
-                    nodes[mato_speciesGlyph]['is_primary'] = True
+                    nodes[mato_speciesGlyph]['node_is_primary'] = True
 
                 seg_id =  f"{segmentId}-{mato_speciesGlyph}-{index}"
                 if index == 0 and lenOfCurveSegments == 1:
-                    segments[seg_id] = {
-                        'from_node_id': mato_speciesGlyph,
-                        'to_node_id': start_node_id,
-                        'b1': None,
-                        'b2': None,
-                    }
+                    if start_x != nodes[start_node_id]['x'] or start_y != nodes[start_node_id]['y']:
+                        start_seg_id_extra = f"{segmentId}-{mato_speciesGlyph}-{index}-extra"
+                        nodes[start_seg_id_extra] = {
+                            'node_type': 'multimarker',
+                            'x': start_x,
+                            'y': start_y,
+                        }
+                        segments[start_seg_id_extra] = {
+                            'from_node_id': start_seg_id_extra,
+                            'to_node_id': start_node_id,
+                            'b1': None,
+                            'b2': None,
+                        }
+                        segments[seg_id] = {
+                            'from_node_id': mato_speciesGlyph,
+                            'to_node_id': start_seg_id_extra,
+                            'b1': None,
+                            'b2': None,
+                        }
+                    else:
+                        segments[seg_id] = {
+                            'from_node_id': mato_speciesGlyph,
+                            'to_node_id': start_node_id,
+                            'b1': None,
+                            'b2': None,
+                        }
+
                 elif index == 0:
                     nodes[seg_id] = {
                         'node_type': 'multimarker',
@@ -270,16 +291,36 @@ for reactionGlyph in listOfReactionGlyphs:
             elif role == 'product' or role == 'sideproduct':
                 # mark the primary metabolites
                 if role == 'product':
-                    nodes[mato_speciesGlyph]['is_primary'] = True
+                    nodes[mato_speciesGlyph]['node_is_primary'] = True
 
                 seg_id =  f"{segmentId}-{mato_speciesGlyph}-{index}"
                 if index == lenOfCurveSegments - 1 and lenOfCurveSegments == 1:
-                    segments[seg_id] = {
-                        'from_node_id': end_node_id,
-                        'to_node_id': mato_speciesGlyph,
-                        'b1': None,
-                        'b2': None,
-                    }
+                    if start_x != nodes[end_node_id]['x'] or start_y != nodes[end_node_id]['y']:
+                        end_seg_id_extra = f"{segmentId}-{mato_speciesGlyph}-{index}-extra"
+                        nodes[end_seg_id_extra] = {
+                            'node_type': 'multimarker',
+                            'x': start_x,
+                            'y': start_y,
+                        }
+                        segments[end_seg_id_extra] = {
+                            'from_node_id': end_node_id,
+                            'to_node_id': end_seg_id_extra,
+                            'b1': None,
+                            'b2': None,
+                        }
+                        segments[seg_id] = {
+                            'from_node_id': end_seg_id_extra,
+                            'to_node_id': mato_speciesGlyph,
+                            'b1': None,
+                            'b2': None,
+                        }
+                    else:
+                        segments[seg_id] = {
+                            'from_node_id': end_node_id,
+                            'to_node_id': mato_speciesGlyph,
+                            'b1': None,
+                            'b2': None,
+                        }
                 elif index == 0:
                     if start_x != nodes[end_node_id]['x'] or start_y != nodes[end_node_id]['y']:
                         end_seg_id_extra = f"{segmentId}-{mato_speciesGlyph}-{index}-extra"
