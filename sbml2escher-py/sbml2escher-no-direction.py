@@ -7,7 +7,6 @@ def load_json_data(file_path):
     with open(file_path, 'r') as file:
         return json.load(file)
 
-
 def save_json_data(data, file_path):
     with open(file_path, 'w') as file:
         json.dump(data, file, indent=4)
@@ -56,24 +55,36 @@ def mid_node(start, end, reaction_layout_id, reaction, nodes):
     return mid_id
 
 # check if a point is on a segment
-def is_point_on_segment(px, py, x1, y1, x2, y2):
+def is_point_on_segment(px, py, x1, y1, x2, y2, seg_id):
     # calculate the cross product to determine if the point is on the segment
     cross_product = (py - y1) * (x2 - x1) - (px - x1) * (y2 - y1)
+    # because of the floating point error, we use 1e-6 as the threshold
     if abs(cross_product) > 1e-6:
         return False
 
-    # check if the point is within the x range
-    if px < min(x1, x2) or px > max(x1, x2):
+    # check if the point is within the x range, the range is extended by 1 to avoid the floating point error
+    if px < min(x1, x2) - 1 or px > max(x1, x2) + 1:
         return False
 
-    # check if the point is within the y range
-    if py < min(y1, y2) or py > max(y1, y2):
+    # check if the point is within the y range, the range is extended by 1 to avoid the floating point error
+    if py < min(y1, y2) - 1 or py > max(y1, y2) + 1:
         return False
 
     return True
 
 # delete the target segment and insert new node and segments
-def update_segments_with_node(segments, nodes, start_x, start_y, new_node_id, for_not_found_node_id, tt=None):
+def update_segments_with_node(segments, nodes, start_x, start_y, extra_node_id, for_not_found_node_id, seg_id_for_debug=None):
+    """
+
+    :param segments: all segments in the single reaction
+    :param nodes: all nodes in the model
+    :param start_x: current x position
+    :param start_y: current y position
+    :param extra_node_id: current node id, which is not the same as the start/end node id
+    :param for_not_found_node_id: start/end node id, for the not found situation
+    :param seg_id_for_debug: current segment id, for the debug
+    :return: None
+    """
     segment_to_remove = None
     from_node_id = None
     to_node_id = None
@@ -82,20 +93,18 @@ def update_segments_with_node(segments, nodes, start_x, start_y, new_node_id, fo
     for seg_id, segment in segments.items():
         from_node = nodes[segment['from_node_id']]
         to_node = nodes[segment['to_node_id']]
-        # if tt == 're6450_5380--node_5387-sa18879-0':
-        #     print(seg_id, segment['from_node_id'], from_node['x'], from_node['y'], segment['to_node_id'], to_node['x'], to_node['y'])
-        if is_point_on_segment(start_x, start_y, from_node['x'], from_node['y'], to_node['x'], to_node['y']):
+        if is_point_on_segment(start_x, start_y, from_node['x'], from_node['y'], to_node['x'], to_node['y'], seg_id):
             segment_to_remove = seg_id
             from_node_id = segment['from_node_id']
             to_node_id = segment['to_node_id']
             break
 
+    # if no segment is found, create a new segment from the target(start/end) node to the current node
     if segment_to_remove is None:
-        if tt == 're6450_5380--node_5387-sa18879-0':
-            print("No segment found containing the point.", tt)
-        segments[new_node_id] = {
+        print("No segment found containing the point.", seg_id_for_debug)
+        segments[extra_node_id] = {
             'from_node_id': for_not_found_node_id,
-            'to_node_id': new_node_id,
+            'to_node_id': extra_node_id,
             'b1': None,
             'b2': None,
         }
@@ -106,17 +115,16 @@ def update_segments_with_node(segments, nodes, start_x, start_y, new_node_id, fo
     del segments[segment_to_remove]
 
     # create two new segments
-    new_segment_1_id = f"{new_node_id}-left"
-    new_segment_2_id = f"{new_node_id}-right"
+    new_segment_1_id = f"{extra_node_id}-left"
+    new_segment_2_id = f"{extra_node_id}-right"
     segments[new_segment_1_id] = {
         'from_node_id': from_node_id,
-        'to_node_id': new_node_id,
+        'to_node_id': extra_node_id,
         'b1': None,
         'b2': None,
     }
-
     segments[new_segment_2_id] = {
-        'from_node_id': new_node_id,
+        'from_node_id': extra_node_id,
         'to_node_id': to_node_id,
         'b1': None,
         'b2': None,
@@ -301,10 +309,8 @@ for reactionGlyph in listOfReactionGlyphs:
                             'y': start_y,
                         }
 
-                        if reaction_layout_id == 're6450_5380':
-                            print(start_x, start_y, nodes[start_node_id]['x'], nodes[start_node_id]['y'], '============')
-                        tt = f"{reaction_layout_id}--{seg_id}"
-                        update_segments_with_node(segments, nodes, start_x, start_y, start_seg_id_extra, start_node_id, tt)
+                        seg_id_for_debug = f"{reaction_layout_id}--{seg_id}"
+                        update_segments_with_node(segments, nodes, start_x, start_y, start_seg_id_extra, start_node_id, seg_id_for_debug)
 
                         segments[seg_id] = {
                             'from_node_id': start_seg_id_extra,
@@ -370,12 +376,8 @@ for reactionGlyph in listOfReactionGlyphs:
                             'y': start_y,
                         }
 
-                        tt = f"{reaction_layout_id}--{seg_id}"
-                        if reaction_layout_id == 're6450_5380':
-                            print(end_seg_id_extra, end_node_id, tt)
-                            # for node_id, node in segments.items():
-                            #     print(node_id, node)
-                        update_segments_with_node(segments, nodes, start_x, start_y, end_seg_id_extra, end_node_id, tt)
+                        seg_id_for_debug = f"{reaction_layout_id}--{seg_id}"
+                        update_segments_with_node(segments, nodes, start_x, start_y, end_seg_id_extra, end_node_id, seg_id_for_debug)
 
                         segments[seg_id] = {
                             'from_node_id': end_seg_id_extra,
@@ -453,4 +455,4 @@ cytoscape_data = [{
 # Save the new JSON data
 save_json_data(cytoscape_data, output_file_path)
 
-print(f"转换成功，结果已保存到 {output_file_path}")
+print(f"convert success, and save to {output_file_path}")
