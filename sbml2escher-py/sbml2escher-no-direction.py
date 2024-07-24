@@ -217,68 +217,36 @@ for reactionGlyph in listOfReactionGlyphs:
                     nodes[mato_speciesGlyph]['node_is_primary'] = True
 
                 seg_id =  f"{segmentId}-{mato_speciesGlyph}-{index}"
-                if index == 0 and lenOfCurveSegments == 1:
-                    if start_x != nodes[start_node_id]['x'] or start_y != nodes[start_node_id]['y']:
-                        start_seg_id_extra = f"{segmentId}-{mato_speciesGlyph}-{index}-extra"
-                        nodes[start_seg_id_extra] = {
-                            'node_type': 'multimarker',
-                            'x': start_x,
-                            'y': start_y,
-                        }
-                        segments[start_seg_id_extra] = {
-                            'from_node_id': start_node_id,
-                            'to_node_id': start_seg_id_extra,
-                            'b1': None,
-                            'b2': None,
-                        }
-                        segments[seg_id] = {
-                            'from_node_id':  start_seg_id_extra,
-                            'to_node_id': mato_speciesGlyph,
-                            'b1': None,
-                            'b2': None,
-                        }
-                    else:
-                        segments[seg_id] = {
-                            'from_node_id': start_node_id,
-                            'to_node_id': mato_speciesGlyph,
-                            'b1': None,
-                            'b2': None,
-                        }
-                elif index == 0:
-                    if start_x != nodes[start_node_id]['x'] or start_y != nodes[start_node_id]['y']:
-                        start_seg_id_extra = f"{segmentId}-{mato_speciesGlyph}-{index}-extra"
-                        nodes[start_seg_id_extra] = {
-                            'node_type': 'multimarker',
-                            'x': start_x,
-                            'y': start_y,
-                        }
-                        segments[start_seg_id_extra] = {
-                            'from_node_id': start_node_id,
-                            'to_node_id': start_seg_id_extra,
-                            'b1': None,
-                            'b2': None,
-                        }
+                if index == 0:
+                    if lenOfCurveSegments != 1:
                         nodes[seg_id] = {
                             'node_type': 'multimarker',
                             'x': end_x,
                             'y': end_y,
+                        }
+                    if start_x != nodes[start_node_id]['x'] or start_y != nodes[start_node_id]['y']:
+                        start_seg_id_extra = f"{segmentId}-{mato_speciesGlyph}-{index}-extra"
+                        nodes[start_seg_id_extra] = {
+                            'node_type': 'multimarker',
+                            'x': start_x,
+                            'y': start_y,
+                        }
+                        segments[start_seg_id_extra] = {
+                            'from_node_id': start_node_id,
+                            'to_node_id': start_seg_id_extra,
+                            'b1': None,
+                            'b2': None,
                         }
                         segments[seg_id] = {
                             'from_node_id': start_seg_id_extra,
-                            'to_node_id': seg_id,
+                            'to_node_id': mato_speciesGlyph if lenOfCurveSegments == 1 else seg_id,
                             'b1': None,
                             'b2': None,
                         }
                     else:
-                        nodes[seg_id] = {
-                            'node_type': 'multimarker',
-                            'x': end_x,
-                            'y': end_y,
-                        }
-
                         segments[seg_id] = {
                             'from_node_id': start_node_id,
-                            'to_node_id': seg_id,
+                            'to_node_id': mato_speciesGlyph if lenOfCurveSegments == 1 else seg_id,
                             'b1': None,
                             'b2': None,
                         }
@@ -323,7 +291,13 @@ for reactionGlyph in listOfReactionGlyphs:
                     nodes[mato_speciesGlyph]['node_is_primary'] = True
 
                 seg_id =  f"{segmentId}-{mato_speciesGlyph}-{index}"
-                if index == lenOfCurveSegments - 1 and lenOfCurveSegments == 1:
+                if index == 0:
+                    if lenOfCurveSegments != 1:
+                        nodes[seg_id] = {
+                            'node_type': 'multimarker',
+                            'x': end_x,
+                            'y': end_y,
+                        }
                     if start_x != nodes[end_node_id]['x'] or start_y != nodes[end_node_id]['y']:
                         end_seg_id_extra = f"{segmentId}-{mato_speciesGlyph}-{index}-extra"
                         nodes[end_seg_id_extra] = {
@@ -339,52 +313,14 @@ for reactionGlyph in listOfReactionGlyphs:
                         }
                         segments[seg_id] = {
                             'from_node_id': end_seg_id_extra,
-                            'to_node_id': mato_speciesGlyph,
+                            'to_node_id': mato_speciesGlyph if lenOfCurveSegments == 1 else seg_id,
                             'b1': None,
                             'b2': None,
                         }
                     else:
                         segments[seg_id] = {
                             'from_node_id': end_node_id,
-                            'to_node_id': mato_speciesGlyph,
-                            'b1': None,
-                            'b2': None,
-                        }
-                elif index == 0:
-                    if start_x != nodes[end_node_id]['x'] or start_y != nodes[end_node_id]['y']:
-                        end_seg_id_extra = f"{segmentId}-{mato_speciesGlyph}-{index}-extra"
-                        nodes[end_seg_id_extra] = {
-                            'node_type': 'multimarker',
-                            'x': start_x,
-                            'y': start_y,
-                        }
-                        segments[end_seg_id_extra] = {
-                            'from_node_id': end_node_id,
-                            'to_node_id': end_seg_id_extra,
-                            'b1': None,
-                            'b2': None,
-                        }
-                        nodes[seg_id] = {
-                            'node_type': 'multimarker',
-                            'x': end_x,
-                            'y': end_y,
-                        }
-                        segments[seg_id] = {
-                            'from_node_id': end_seg_id_extra,
-                            'to_node_id': seg_id,
-                            'b1': None,
-                            'b2': None,
-                        }
-                    else:
-                        nodes[seg_id] = {
-                            'node_type': 'multimarker',
-                            'x': end_x,
-                            'y': end_y,
-                        }
-
-                        segments[seg_id] = {
-                            'from_node_id': end_node_id,
-                            'to_node_id': seg_id,
+                            'to_node_id': mato_speciesGlyph if lenOfCurveSegments == 1 else seg_id,
                             'b1': None,
                             'b2': None,
                         }
