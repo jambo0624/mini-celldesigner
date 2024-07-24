@@ -1,7 +1,7 @@
 import json
 
-input_file_path = 'SBML_origin.json'
-output_file_path = 'sbml2escher_SBML_origin.json'
+input_file_path = 'SBML_ReconMap3_Male_Heart.json'
+output_file_path = 'sbml2escher_SBML_ReconMap3_Male_Heart.json'
 
 def load_json_data(file_path):
     with open(file_path, 'r') as file:
@@ -150,6 +150,16 @@ specie2bigg = {}
 for sp in species:
     specie2bigg[sp['@id']] = sp['@name']
 
+# define the list of layouts
+listOfLayouts = model['layout:listOfLayouts']
+# dict or list is better?
+if isinstance(listOfLayouts, dict):
+    listOfLayouts = [listOfLayouts]
+
+layoutRoot = listOfLayouts[0]['layout:layout']
+layout_width = float(layoutRoot['layout:dimensions']['@layout:width'])
+layout_height = float(layoutRoot['layout:dimensions']['@layout:height'])
+
 # create reactions, expect the label position and segments
 reactions = model['listOfReactions']['reaction']
 for reaction in reactions:
@@ -162,17 +172,10 @@ for reaction in reactions:
     edges[reaction_id]['bigg_id'] = reaction_name
     edges[reaction_id]['reversibility'] = reaction_reversible
     edges[reaction_id]['metabolites'] = reaction_metabolites
+    # set the default label position, outside the layout
+    edges[reaction_id]['label_x'] = layout_width + 100
+    edges[reaction_id]['label_y'] = layout_height + 100
 
-
-# define the list of layouts
-listOfLayouts = model['layout:listOfLayouts']
-# dict or list is better?
-if isinstance(listOfLayouts, dict):
-    listOfLayouts = [listOfLayouts]
-
-layoutRoot = listOfLayouts[0]['layout:layout']
-layout_width = float(layoutRoot['layout:dimensions']['@layout:width'])
-layout_height = float(layoutRoot['layout:dimensions']['@layout:height'])
 
 # create nodes, expect the midmarker
 listOfSpeciesGlyphs = layoutRoot['layout:listOfSpeciesGlyphs']['layout:speciesGlyph']
@@ -205,7 +208,14 @@ for reactionGlyph in listOfReactionGlyphs:
     reaction_layout_id = reactionGlyph['@layout:id']
 
     # add the segments of reaction
-    listOfReactionSegments = reactionGlyph['layout:curve']['layout:listOfCurveSegments']['layout:curveSegment']
+    listOfReactionSegments = []
+    if 'layout:curve' in reactionGlyph:
+        layout_curve = reactionGlyph['layout:curve']
+        if layout_curve is not None and 'layout:listOfCurveSegments' in layout_curve:
+            listOfCurveSegments = layout_curve['layout:listOfCurveSegments']
+            if listOfCurveSegments is not None and 'layout:curveSegment' in listOfCurveSegments:
+                listOfReactionSegments = listOfCurveSegments['layout:curveSegment']
+
     if isinstance(listOfReactionSegments, dict):
         listOfReactionSegments = [listOfReactionSegments]
     # retrieve the line segments of reaction to create the segments of edges
@@ -301,7 +311,7 @@ for reactionGlyph in listOfReactionGlyphs:
                             'x': end_x,
                             'y': end_y,
                         }
-                    if start_x != nodes[start_node_id]['x'] or start_y != nodes[start_node_id]['y']:
+                    if start_node_id and (start_x != nodes[start_node_id]['x'] or start_y != nodes[start_node_id]['y']):
                         start_seg_id_extra = f"{segmentId}-{mato_speciesGlyph}-{index}-extra"
                         nodes[start_seg_id_extra] = {
                             'node_type': 'multimarker',
@@ -368,7 +378,7 @@ for reactionGlyph in listOfReactionGlyphs:
                             'y': end_y,
                         }
 
-                    if start_x != nodes[end_node_id]['x'] or start_y != nodes[end_node_id]['y']:
+                    if end_node_id and (start_x != nodes[end_node_id]['x'] or start_y != nodes[end_node_id]['y']):
                         end_seg_id_extra = f"{segmentId}-{mato_speciesGlyph}-{index}-extra"
                         nodes[end_seg_id_extra] = {
                             'node_type': 'multimarker',
