@@ -91,7 +91,8 @@ def update_segments_with_node(segments, nodes, start_x, start_y, new_node_id, fo
             break
 
     if segment_to_remove is None:
-        # print("No segment found containing the point.", tt)
+        if tt == 're6450_5380--node_5387-sa18879-0':
+            print("No segment found containing the point.", tt)
         segments[new_node_id] = {
             'from_node_id': for_not_found_node_id,
             'to_node_id': new_node_id,
@@ -222,11 +223,13 @@ for reactionGlyph in listOfReactionGlyphs:
             'x': end_x,
             'y': end_y,
         }
-        # sign the start node, for the connection of the metabolites
-        reaction_seg_start_node_id = start_id
-        # sign the end node, for the connection of the metabolites
-        reaction_seg_end_node_id = end_id
+
         if index == 0:
+            # sign the start node, for the connection of the metabolites
+            reaction_seg_start_node_id = start_id
+            # sign the end node, for the connection of the metabolites
+            reaction_seg_end_node_id = end_id
+
             # create midmarker for the label of reaction
             mid_id = mid_node(start, end, reaction_layout_id, reaction, nodes)
             mid_left_seg_id = f"{segmentId}-mid-left"
@@ -244,6 +247,9 @@ for reactionGlyph in listOfReactionGlyphs:
                 'b2': None,
             }
         else:
+            if index == len(listOfReactionSegments) - 1:
+                # sign the end node, for the connection of the metabolites
+                reaction_seg_end_node_id = end_id
             segments[segmentId] = {
                 'from_node_id': start_id,
                 'to_node_id': end_id,
@@ -295,6 +301,8 @@ for reactionGlyph in listOfReactionGlyphs:
                             'y': start_y,
                         }
 
+                        if reaction_layout_id == 're6450_5380':
+                            print(start_x, start_y, nodes[start_node_id]['x'], nodes[start_node_id]['y'], '============')
                         tt = f"{reaction_layout_id}--{seg_id}"
                         update_segments_with_node(segments, nodes, start_x, start_y, start_seg_id_extra, start_node_id, tt)
 
@@ -353,6 +361,7 @@ for reactionGlyph in listOfReactionGlyphs:
                             'x': end_x,
                             'y': end_y,
                         }
+
                     if start_x != nodes[end_node_id]['x'] or start_y != nodes[end_node_id]['y']:
                         end_seg_id_extra = f"{segmentId}-{mato_speciesGlyph}-{index}-extra"
                         nodes[end_seg_id_extra] = {
@@ -362,6 +371,10 @@ for reactionGlyph in listOfReactionGlyphs:
                         }
 
                         tt = f"{reaction_layout_id}--{seg_id}"
+                        if reaction_layout_id == 're6450_5380':
+                            print(end_seg_id_extra, end_node_id, tt)
+                            # for node_id, node in segments.items():
+                            #     print(node_id, node)
                         update_segments_with_node(segments, nodes, start_x, start_y, end_seg_id_extra, end_node_id, tt)
 
                         segments[seg_id] = {
