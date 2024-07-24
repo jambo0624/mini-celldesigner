@@ -55,6 +55,11 @@ def mid_node(start, end, reaction_layout_id, reaction, nodes):
     reaction['label_y'] = mid_node['y']
     return mid_id
 
+
+
+
+
+
 # Load your original JSON data
 data = load_json_data(input_file_path)
 
@@ -126,34 +131,57 @@ for reactionGlyph in listOfReactionGlyphs:
     segments = {}
     reaction_seg_start_node_id = None
     reaction_seg_end_node_id = None
-    listOfReactionSegments = reactionGlyph['layout:curve']['layout:listOfCurveSegments']['layout:curveSegment']
     reaction_layout_id = reactionGlyph['@layout:id']
+
+    # add the segments of reaction
+    listOfReactionSegments = reactionGlyph['layout:curve']['layout:listOfCurveSegments']['layout:curveSegment']
     if isinstance(listOfReactionSegments, dict):
         listOfReactionSegments = [listOfReactionSegments]
-    # add the segments of reaction
+    # retrieve the line segments of reaction to create the segments of edges
     for index, curveSegmentItem in enumerate(listOfReactionSegments):
         curveSegment = curveSegmentItem
         segmentId = f"{reaction_layout_id}-{index}"
         start = curveSegment['layout:start']
         end = curveSegment['layout:end']
-        # if the reaction only has one segment, and the start and end are too close, we can use the midmarker
-        if len(listOfReactionSegments) == 1 and (abs(float(start['@layout:x']) - float(end['@layout:x'])) < 10 and abs(float(start['@layout:y']) - float(end['@layout:y'])) < 10):
+        start_x = float(start['@layout:x'])
+        start_y = float(start['@layout:y'])
+        end_x = float(end['@layout:x'])
+        end_y = float(end['@layout:y'])
+
+        start_id = f"{reaction_layout_id}-{index}-start"
+        end_id = f"{reaction_layout_id}-{index}-end"
+        nodes[start_id] = {
+            'node_type': 'multimarker',
+            'x': start_x,
+            'y': start_y,
+        }
+        nodes[end_id] = {
+            'node_type': 'multimarker',
+            'x': end_x,
+            'y': end_y,
+        }
+        # sign the start node, for the connection of the metabolites
+        reaction_seg_start_node_id = start_id
+        # sign the end node, for the connection of the metabolites
+        reaction_seg_end_node_id = end_id
+        if index == 0:
+            # create midmarker for the label of reaction
             mid_id = mid_node(start, end, reaction_layout_id, reaction, nodes)
-            reaction_seg_start_node_id = mid_id
-            reaction_seg_end_node_id = mid_id
+            mid_left_seg_id = f"{segmentId}-mid-left"
+            segments[mid_left_seg_id] = {
+                'from_node_id': start_id,
+                'to_node_id': mid_id,
+                'b1': None,
+                'b2': None,
+            }
+            mid_right_seg_id = f"{segmentId}-mid-right"
+            segments[mid_right_seg_id] = {
+                'from_node_id': mid_id,
+                'to_node_id': end_id,
+                'b1': None,
+                'b2': None,
+            }
         else:
-            start_id = f"{reaction_layout_id}-{index}-start"
-            end_id = f"{reaction_layout_id}-{index}-end"
-            nodes[start_id] = {
-                'node_type': 'multimarker',
-                'x': float(start['@layout:x']),
-                'y': float(start['@layout:y']),
-            }
-            nodes[end_id] = {
-                'node_type': 'multimarker',
-                'x': float(end['@layout:x']),
-                'y': float(end['@layout:y']),
-            }
             segments[segmentId] = {
                 'from_node_id': start_id,
                 'to_node_id': end_id,
@@ -161,17 +189,8 @@ for reactionGlyph in listOfReactionGlyphs:
                 'b2': None,
             }
 
-            if index == 0:
-                mid_node(start, end, reaction_layout_id, reaction, nodes)
-                # sign the start node, for the connection of the metabolites
-                reaction_seg_start_node_id = start_id
-
-            if index == len(listOfReactionSegments) - 1:
-                # sign the end node, for the connection of the metabolites
-                reaction_seg_end_node_id = end_id
-
+    # create the segments of metabolites
     listOfCurveSegments = reactionGlyph['layout:listOfSpeciesReferenceGlyphs']['layout:speciesReferenceGlyph']
-
     for curveSegment in listOfCurveSegments:
         segmentId = curveSegment['@layout:id']
         role = curveSegment['@layout:role']
@@ -179,19 +198,17 @@ for reactionGlyph in listOfReactionGlyphs:
         start_node_id = reaction_seg_start_node_id
         end_node_id = reaction_seg_end_node_id
 
+        # get the list of curve segments in each metabolite
         _listOfCurveSegments = curveSegment['layout:curve']['layout:listOfCurveSegments']["layout:curveSegment"]
         if isinstance(_listOfCurveSegments, dict):
             _listOfCurveSegments = [_listOfCurveSegments]
 
-        prev_end_node = None
         lenOfCurveSegments = len(_listOfCurveSegments)
         for index, _curveSegment in enumerate(_listOfCurveSegments):
             start_x = float(_curveSegment['layout:start']['@layout:x'])
             start_y = float(_curveSegment['layout:start']['@layout:y'])
             end_x = float(_curveSegment['layout:end']['@layout:x'])
             end_y = float(_curveSegment['layout:end']['@layout:y'])
-            prev_start_node = _curveSegment['layout:start']
-            prev_end_node = _curveSegment['layout:end']
             start_seg_id_extra = None
             end_seg_id_extra = None
             if role == 'substrate' or role == 'sidesubstrate':
@@ -209,13 +226,13 @@ for reactionGlyph in listOfReactionGlyphs:
                             'y': start_y,
                         }
                         segments[start_seg_id_extra] = {
-                            'from_node_id': start_seg_id_extra,
-                            'to_node_id': start_node_id,
+                            'from_node_id': start_node_id,
+                            'to_node_id': start_seg_id_extra,
                             'b1': None,
                             'b2': None,
                         }
                         segments[seg_id] = {
-                            'from_node_id':  start_node_id,
+                            'from_node_id':  start_seg_id_extra,
                             'to_node_id': mato_speciesGlyph,
                             'b1': None,
                             'b2': None,
