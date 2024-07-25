@@ -1,7 +1,7 @@
 import json
 
-input_file_path = 'SBML_ReconMap3_Male_Heart.json'
-output_file_path = 'sbml2escher_SBML_ReconMap3_Male_Heart.json'
+input_file_path = 'SBML_new_PPP_6.json'
+output_file_path = 'sbml2escher_SBML_new_PPP_6.json'
 
 def load_json_data(file_path):
     with open(file_path, 'r') as file:

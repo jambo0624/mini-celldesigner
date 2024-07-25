@@ -1,18 +1,21 @@
 import xmltodict
 import json
 
-# 读取 XML 文件
-with open('SBML_ReconMap3_Male_Heart.xml', 'r', encoding='utf-8') as xml_file:
+read_file_path = 'SBML_origin.xml'
+write_file_path = 'SBML_origin.json'
+
+# Read the XML file
+with open(read_file_path, 'r', encoding='utf-8') as xml_file:
     xml_content = xml_file.read()
 
-# 将 XML 转换为字典
+# Convert XML to dictionary
 xml_dict = xmltodict.parse(xml_content)
 
-# 将字典转换为 JSON 格式
+# Convert the dictionary to JSON format
 json_data = json.dumps(xml_dict, indent=4)
 
-# 将 JSON 数据写入文件
-with open('SBML_ReconMap3_Male_Heart.json', 'w', encoding='utf-8') as json_file:
+# Write the JSON data to a file
+with open(write_file_path, 'w', encoding='utf-8') as json_file:
     json_file.write(json_data)
 
-print("转换完成，SBML_ReconMap3_Male_Heart.json 文件。")
+print(f"Conversion completed and saved as {write_file_path} file.")
