@@ -73,7 +73,7 @@ def is_point_on_segment(px, py, x1, y1, x2, y2, seg_id):
     return True
 
 # delete the target segment and insert new node and segments
-def update_segments_with_node(segments, nodes, start_x, start_y, extra_node_id, for_not_found_node_id, seg_id_for_debug=None):
+def update_segments_with_node(is_produce_node, segments, nodes, start_x, start_y, extra_node_id, for_not_found_node_id, seg_id_for_debug=None):
     """
 
     :param segments: all segments in the single reaction
@@ -107,6 +107,11 @@ def update_segments_with_node(segments, nodes, start_x, start_y, extra_node_id, 
             'to_node_id': extra_node_id,
             'b1': None,
             'b2': None,
+        } if is_produce_node else {
+            'from_node_id': extra_node_id,
+            'to_node_id': for_not_found_node_id,
+            'b1': None,
+            'b2': None,
         }
         return
 
@@ -122,10 +127,20 @@ def update_segments_with_node(segments, nodes, start_x, start_y, extra_node_id, 
         'to_node_id': extra_node_id,
         'b1': None,
         'b2': None,
+    } if is_produce_node else {
+        'from_node_id': extra_node_id,
+        'to_node_id': from_node_id,
+        'b1': None,
+        'b2': None,
     }
     segments[new_segment_2_id] = {
         'from_node_id': extra_node_id,
         'to_node_id': to_node_id,
+        'b1': None,
+        'b2': None,
+    } if is_produce_node else {
+        'from_node_id': to_node_id,
+        'to_node_id': extra_node_id,
         'b1': None,
         'b2': None,
     }
@@ -320,18 +335,18 @@ for reactionGlyph in listOfReactionGlyphs:
                         }
 
                         seg_id_for_debug = f"{reaction_layout_id}--{seg_id}"
-                        update_segments_with_node(segments, nodes, start_x, start_y, start_seg_id_extra, start_node_id, seg_id_for_debug)
+                        update_segments_with_node(False, segments, nodes, start_x, start_y, start_seg_id_extra, start_node_id, seg_id_for_debug)
 
                         segments[seg_id] = {
-                            'from_node_id': start_seg_id_extra,
-                            'to_node_id': mato_speciesGlyph if lenOfCurveSegments == 1 else seg_id,
+                            'from_node_id': mato_speciesGlyph if lenOfCurveSegments == 1 else seg_id,
+                            'to_node_id': start_seg_id_extra,
                             'b1': None,
                             'b2': None,
                         }
                     else:
                         segments[seg_id] = {
-                            'from_node_id': start_node_id,
-                            'to_node_id': mato_speciesGlyph if lenOfCurveSegments == 1 else seg_id,
+                            'from_node_id': mato_speciesGlyph if lenOfCurveSegments == 1 else seg_id,
+                            'to_node_id': start_node_id,
                             'b1': None,
                             'b2': None,
                         }
@@ -343,8 +358,8 @@ for reactionGlyph in listOfReactionGlyphs:
                     }
 
                     segments[seg_id] = {
-                        'from_node_id': seg_id,
-                        'to_node_id': mato_speciesGlyph,
+                        'from_node_id': mato_speciesGlyph,
+                        'to_node_id': seg_id,
                         'b1': None,
                         'b2': None,
                     }
@@ -363,8 +378,8 @@ for reactionGlyph in listOfReactionGlyphs:
                         'y': end_y,
                     }
                     segments[seg_id] = {
-                        'from_node_id': start_seg_id,
-                        'to_node_id': end_seg_id,
+                        'from_node_id': end_seg_id,
+                        'to_node_id': start_seg_id,
                         'b1': None,
                         'b2': None,
                     }
@@ -387,7 +402,7 @@ for reactionGlyph in listOfReactionGlyphs:
                         }
 
                         seg_id_for_debug = f"{reaction_layout_id}--{seg_id}"
-                        update_segments_with_node(segments, nodes, start_x, start_y, end_seg_id_extra, end_node_id, seg_id_for_debug)
+                        update_segments_with_node(True, segments, nodes, start_x, start_y, end_seg_id_extra, end_node_id, seg_id_for_debug)
 
                         segments[seg_id] = {
                             'from_node_id': end_seg_id_extra,
