@@ -1,7 +1,7 @@
 import json
 
-input_file_path = 'SBML_origin.json'
-output_file_path = 'sbml2escher_SBML_origin.json'
+input_file_path = 'SBML_new_PPP_6.json'
+output_file_path = 'sbml2escher_SBML_new_PPP_6.json'
 
 
 # Load SBML JSON data
@@ -172,32 +172,21 @@ def process_metabolite(role, index, start_node_id, end_node_id, start_x, start_y
     else:
         print("Unknown role", role)
 
-# Create the midmarker for the label of reaction, return the midmarker id
-def mid_node(start, end, reaction_layout_id, reaction, nodes):
+# Calculate the label position of the reaction
+def set_reaction_label_position(start, end, reaction):
     """
     :param start: start node 
     :param end: end node
-    :param reaction_layout_id: reaction layout id 
     :param reaction: reaction object
-    :param nodes: nodes dict
-    :return: midmarker id
+    :return: None
     """
-    mid_id = f"{reaction_layout_id}-mid"
-    # make the midmarker
+    # calculate the mid node
     mid_node = {
         'x': (float(start['@layout:x']) + float(end['@layout:x'])) / 2,
         'y': (float(start['@layout:y']) + float(end['@layout:y'])) / 2
     }
-    # add the midmarker
-    nodes[mid_id] = {
-        'node_type': 'midmarker',
-        'x': mid_node['x'],
-        'y': mid_node['y'],
-    }
-
     reaction['label_x'] = mid_node['x']
     reaction['label_y'] = mid_node['y']
-    return mid_id
 
 
 # check if a point is on a segment
@@ -363,38 +352,35 @@ for reaction_glyph in list_of_reaction_glyphs:
 
     if isinstance(list_of_reaction_segments, dict):
         list_of_reaction_segments = [list_of_reaction_segments]
+
+    length_of_reaction_segments = len(list_of_reaction_segments)
     # retrieve the line segments of reaction to create the segments of edges
     for index, reaction_segment in enumerate(list_of_reaction_segments):
-        reaction_segment_id = f"{reaction_layout_id}-{index}"
         start = reaction_segment['layout:start']
         end = reaction_segment['layout:end']
         start_x = float(start['@layout:x'])
         start_y = float(start['@layout:y'])
         end_x = float(end['@layout:x'])
         end_y = float(end['@layout:y'])
+        current_reaction_segment_id = f"{reaction_layout_id}-{index}"
+        next_reaction_segment_id = f"{reaction_layout_id}-{index + 1}"
 
-        start_id = f"{reaction_segment_id}-start"
-        end_id = f"{reaction_segment_id}-end"
+        start_id = f"{current_reaction_segment_id}"
         add_multimarker_node(nodes, start_id, start_x, start_y)
-        add_multimarker_node(nodes, end_id, end_x, end_y)
+
+        end_id = f"{next_reaction_segment_id}-end"
+        if index == length_of_reaction_segments - 1:
+            # sign the end node, for the connection of the metabolites
+            reaction_seg_end_node_id = end_id
+            add_multimarker_node(nodes, end_id, end_x, end_y)
 
         if index == 0:
             # sign the start node, for the connection of the metabolites
             reaction_seg_start_node_id = start_id
-            # sign the end node, for the connection of the metabolites
-            reaction_seg_end_node_id = end_id
+            set_reaction_label_position(start, end, reaction)
 
-            # create midmarker for the label of reaction
-            mid_id = mid_node(start, end, reaction_layout_id, reaction, nodes)
-            mid_left_seg_id = f"{reaction_segment_id}-mid-left"
-            add_segment(segments, mid_left_seg_id, start_id, mid_id)
-            mid_right_seg_id = f"{reaction_segment_id}-mid-right"
-            add_segment(segments, mid_right_seg_id, mid_id, end_id)
-        else:
-            if index == len(list_of_reaction_segments) - 1:
-                # sign the end node, for the connection of the metabolites
-                reaction_seg_end_node_id = end_id
-            add_segment(segments, reaction_segment_id, start_id, end_id)
+        to_id = end_id if index == length_of_reaction_segments - 1 else next_reaction_segment_id
+        add_segment(segments, current_reaction_segment_id, start_id, to_id)
 
     # create the segments of metabolites
     list_of_metabolite_curves = reaction_glyph['layout:listOfSpeciesReferenceGlyphs']['layout:speciesReferenceGlyph']
