@@ -17,6 +17,9 @@ def load_json_data(file_path):
 
 # Save escher JSON data
 def save_json_data(data, file_path):
+    if not file_path.endswith('.json'):
+        print(
+            f"Warning: The output file {file_path} does not have a .json extension. It might not be opened correctly by JSON readers.")
     try:
         with open(file_path, 'w') as file:
             json.dump(data, file, indent=4)
