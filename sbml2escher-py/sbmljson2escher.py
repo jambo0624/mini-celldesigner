@@ -1,19 +1,28 @@
 import json
-
-input_file_path = 'SBML_new_PPP_6.json'
-output_file_path = 'sbml2escher_SBML_new_PPP_6.json'
-
+import argparse
+import sys
 
 # Load SBML JSON data
 def load_json_data(file_path):
-    with open(file_path, 'r') as file:
-        return json.load(file)
+    try:
+        with open(file_path, 'r') as file:
+            return json.load(file)
+    except FileNotFoundError:
+        print(f"Error: The file {file_path} was not found.")
+        sys.exit(1)
+    except json.JSONDecodeError:
+        print(f"Error: The file {file_path} is not a valid JSON file.")
+        sys.exit(1)
 
 
 # Save escher JSON data
 def save_json_data(data, file_path):
-    with open(file_path, 'w') as file:
-        json.dump(data, file, indent=4)
+    try:
+        with open(file_path, 'w') as file:
+            json.dump(data, file, indent=4)
+    except Exception as e:
+        print(f"Error: Could not save data to {file_path}. {e}")
+        sys.exit(1)
 
 
 # check if the role is substrate or sidesubstrate
@@ -25,17 +34,20 @@ def is_substrates_metabolite(role):
 def is_products_metabolite(role):
     return role in ('product', 'sideproduct')
 
+
 # check if the role is main metabolite
 def is_main_metabolite(role):
     return role in ('substrate', 'product')
+
 
 # check if the role is valid metabolite
 def is_valid_metabolite(role):
     return role in ('substrate', 'sidesubstrate', 'product', 'sideproduct')
 
-# Get metabolites for a reaction
-def get_metabolite_for_reaction(reaction, specie2bigg):
+
+def get_metabolites_for_reaction(reaction, specie2bigg):
     """
+    Get the metabolites for the reaction
     :param reaction: reaction object
     :param specie2bigg: dict of species id to bigg_id
     :return: metabolites of the reaction, {'bigg_id': str, 'coefficient': int}[]
@@ -78,7 +90,7 @@ def add_multimarker_node(nodes, node_id, x, y, node_type='multimarker'):
 
 
 # add a segment
-def add_segment(segments, segment_id, from_node_id, to_node_id, b1=None, b2=None):
+def put_segment_to_segments(segments, segment_id, from_node_id, to_node_id, b1=None, b2=None):
     segments[segment_id] = {
         'from_node_id': from_node_id,
         'to_node_id': to_node_id,
@@ -86,11 +98,11 @@ def add_segment(segments, segment_id, from_node_id, to_node_id, b1=None, b2=None
         'b2': b2,
     }
 
-# handle the first metabolite segment
-def handle_first_metabolite_segment(is_produce_node, node_in_reaction, start_x, start_y, nodes, segments, mato_species_glyph,
+
+def handle_cant_direct_connect_to_reaction(is_produce_node, node_in_reaction, start_x, start_y, nodes, segments, mato_species_glyph,
                       length_of_metabolite_segments, next_metabolite_segment_id, current_metabolite_segment_id):
     """
-    handle the first metabolite segment
+    Handle the situation that the metabolite can't directly connect to the reaction
     :param is_produce_node: whether the node is a product node
     :param node_in_reaction: the node in the reaction
     :param start_x: the axis x of the start node in the segment
@@ -120,18 +132,17 @@ def handle_first_metabolite_segment(is_produce_node, node_in_reaction, start_x, 
         from_id, to_id = (extra_seg_id, next_node) if is_produce_node else (
             next_node, extra_seg_id)
 
-        add_segment(segments, current_metabolite_segment_id, from_id, to_id)
+        put_segment_to_segments(segments, current_metabolite_segment_id, from_id, to_id)
     else:
         next_node = mato_species_glyph if length_of_metabolite_segments == 1 else next_metabolite_segment_id
         from_id, to_id = (node_in_reaction, next_node) if is_produce_node else (
             next_node, node_in_reaction)
 
-        add_segment(segments, current_metabolite_segment_id, from_id, to_id)
+        put_segment_to_segments(segments, current_metabolite_segment_id, from_id, to_id)
 
 
-# Process the metabolite
 def process_metabolite(role, index, start_node_id, end_node_id, start_x, start_y, nodes, segments, mato_species_glyph,
-                       length_of_metabolite_segments):
+                       length_of_metabolite_segments, metabolite_curve_id):
 
     """
     Process the metabolite
@@ -145,6 +156,7 @@ def process_metabolite(role, index, start_node_id, end_node_id, start_x, start_y
     :param segments: all segments in the single reaction
     :param mato_species_glyph: mato species glyph
     :param length_of_metabolite_segments: length of the metabolite segments
+    :param metabolite_curve_id: metabolite curve id
     :return: None
     """
     metabolite_segment_id = f"{metabolite_curve_id}-{mato_species_glyph}"
@@ -155,26 +167,27 @@ def process_metabolite(role, index, start_node_id, end_node_id, start_x, start_y
         if index == 0:
             _is_produce_node = is_products_metabolite(role)
             _node_in_reaction = end_node_id if _is_produce_node else start_node_id
-            handle_first_metabolite_segment(_is_produce_node, _node_in_reaction, start_x, start_y, nodes, segments, mato_species_glyph,
+            handle_cant_direct_connect_to_reaction(_is_produce_node, _node_in_reaction, start_x, start_y, nodes, segments, mato_species_glyph,
                         length_of_metabolite_segments, next_metabolite_segment_id, current_metabolite_segment_id)
 
         elif index == length_of_metabolite_segments - 1:
             add_multimarker_node(nodes, current_metabolite_segment_id, start_x, start_y)
             from_id, to_id = (current_metabolite_segment_id, mato_species_glyph) if is_products_metabolite(role) else (
                 mato_species_glyph, current_metabolite_segment_id)
-            add_segment(segments, current_metabolite_segment_id, from_id, to_id)
+            put_segment_to_segments(segments, current_metabolite_segment_id, from_id, to_id)
             
         else:
             add_multimarker_node(nodes, current_metabolite_segment_id, start_x, start_y)
             from_id, to_id = (current_metabolite_segment_id, next_metabolite_segment_id) if is_products_metabolite(role) else (
                 next_metabolite_segment_id, current_metabolite_segment_id)
-            add_segment(segments, current_metabolite_segment_id, from_id, to_id)        
+            put_segment_to_segments(segments, current_metabolite_segment_id, from_id, to_id)        
     else:
         print("Unknown role", role)
 
-# Calculate the label position of the reaction
+
 def set_reaction_label_position(start, end, reaction):
     """
+    Calculate and set the label position of the reaction
     :param start: start node 
     :param end: end node
     :param reaction: reaction object
@@ -189,9 +202,9 @@ def set_reaction_label_position(start, end, reaction):
     reaction['label_y'] = mid_node['y']
 
 
-# check if a point is on a segment
 def is_point_on_segment(px, py, x1, y1, x2, y2):
     """
+    Check if a point is on a segment
     :param px: point x 
     :param py: point y
     :param x1: start node x
@@ -218,10 +231,10 @@ def is_point_on_segment(px, py, x1, y1, x2, y2):
     return True
 
 
-# delete the target segment and insert new node and segments
 def update_segments_with_node(is_produce_node, segments, nodes, start_x, start_y, extra_node_id, node_in_reaction_curve,
                               seg_id_for_debug=None):
     """
+    Delete the target segment and insert new node and segments
     :param segments: all segments in the single reaction
     :param nodes: all nodes in the model
     :param start_x: current x position
@@ -254,7 +267,7 @@ def update_segments_with_node(is_produce_node, segments, nodes, start_x, start_y
         """
         _from_node_id, _to_node_id = (node_in_reaction_curve, extra_node_id) if is_produce_node else (
             extra_node_id, node_in_reaction_curve)
-        add_segment(segments, extra_node_id, _from_node_id, _to_node_id)
+        put_segment_to_segments(segments, extra_node_id, _from_node_id, _to_node_id)
         return
 
     # delete the target segment
@@ -263,86 +276,77 @@ def update_segments_with_node(is_produce_node, segments, nodes, start_x, start_y
     # create two new segments
     new_segment_1_id = f"{extra_node_id}-left"
     new_segment_2_id = f"{extra_node_id}-right"
-    add_segment(segments, new_segment_1_id, from_node_id, extra_node_id)
-    add_segment(segments, new_segment_2_id, extra_node_id, to_node_id)
+    put_segment_to_segments(segments, new_segment_1_id, from_node_id, extra_node_id)
+    put_segment_to_segments(segments, new_segment_2_id, extra_node_id, to_node_id)
 
 
-# Load your original JSON data
-data = load_json_data(input_file_path)
+def create_reaction_basic_info(model, specie2bigg, layout_width, layout_height, edges):
+    """
+    Create the basic information of reactions, expect the label position and segments
+    :param model: model object
+    :param specie2bigg: species id to bigg_id, for the convenience of getting bigg_id
+    :param layout_width: layout_width
+    :param layout_height: layout_height
+    :param edges: all edges in the model
+    :return: None
+    """
+    reactions = model['listOfReactions']['reaction']
+    for reaction in reactions:
+        reaction_id = reaction['@id']
+        reaction_name = reaction['@name'] if '@name' in reaction else reaction_id
+        reaction_reversible = reaction['@reversible'] == 'true'
+        reaction_metabolites = get_metabolites_for_reaction(reaction, specie2bigg)
+        edges[reaction_id] = {}
+        edges[reaction_id]['name'] = reaction_name
+        edges[reaction_id]['bigg_id'] = reaction_name
+        edges[reaction_id]['reversibility'] = reaction_reversible
+        edges[reaction_id]['metabolites'] = reaction_metabolites
+        # set the default label position, outside the layout
+        edges[reaction_id]['label_x'] = layout_width + 100
+        edges[reaction_id]['label_y'] = layout_height + 100
 
-# map basic information
-model = data['sbml']['model']
-map_name = model['@id']
-map_id = model['@id']
-map_description = ""
 
-# define nodes and edges
-nodes = {}
-edges = {}
+def create_metabolite_nodes(specie2bigg, layout_root, nodes):
+    """
+    Create the nodes for metabolites, expect the multimarker nodes
+    :param specie2bigg: species id to bigg_id, for the convenience of getting bigg_id
+    :param layout_root: layout root object, contains all layout information
+    :param nodes: all nodes in the model
+    :return: None
+    """
+    list_of_species_glyphs = layout_root['layout:listOfSpeciesGlyphs']['layout:speciesGlyph']
+    for species_glyph in list_of_species_glyphs:
+        layout_id = species_glyph['@layout:id']
+        species_id = species_glyph['@layout:species']
+        position = species_glyph['layout:boundingBox']['layout:position']
+        width = species_glyph['layout:boundingBox']['layout:dimensions']['@layout:width']
+        height = species_glyph['layout:boundingBox']['layout:dimensions']['@layout:height']
+        name = specie2bigg[species_id]
+        nodes[layout_id] = {
+            'bigg_id': name,
+            'name': name,
+            'node_type': 'metabolite',
+            'x': float(position['@layout:x']) + float(width) / 2,
+            'y': float(position['@layout:y']) + float(height) / 2,
+            'label_x': float(position['@layout:x']) + float(width) / 2,
+            'label_y': float(position['@layout:y']) + float(height) / 2,
+            'node_is_primary': False
+        }
 
-# create species2bigg, for the convenience of getting bigg_id
-species = model['listOfSpecies']['species']
-specie2bigg = {}
-for sp in species:
-    specie2bigg[sp['@id']] = sp['@name']
 
-# define the list of layouts
-list_of_layouts = model['layout:listOfLayouts']
-# dict or list is better?
-if isinstance(list_of_layouts, dict):
-    list_of_layouts = [list_of_layouts]
-
-layout_root = list_of_layouts[0]['layout:layout']
-layout_width = float(layout_root['layout:dimensions']['@layout:width'])
-layout_height = float(layout_root['layout:dimensions']['@layout:height'])
-
-# create reactions, expect the label position and segments
-reactions = model['listOfReactions']['reaction']
-for reaction in reactions:
-    reaction_id = reaction['@id']
-    reaction_name = reaction['@name'] if '@name' in reaction else reaction_id
-    reaction_reversible = reaction['@reversible'] == 'true'
-    reaction_metabolites = get_metabolite_for_reaction(reaction, specie2bigg)
-    edges[reaction_id] = {}
-    edges[reaction_id]['name'] = reaction_name
-    edges[reaction_id]['bigg_id'] = reaction_name
-    edges[reaction_id]['reversibility'] = reaction_reversible
-    edges[reaction_id]['metabolites'] = reaction_metabolites
-    # set the default label position, outside the layout
-    edges[reaction_id]['label_x'] = layout_width + 100
-    edges[reaction_id]['label_y'] = layout_height + 100
-
-# create nodes, expect the midmarker
-list_of_species_glyphs = layout_root['layout:listOfSpeciesGlyphs']['layout:speciesGlyph']
-for species_glyph in list_of_species_glyphs:
-    layout_id = species_glyph['@layout:id']
-    species_id = species_glyph['@layout:species']
-    position = species_glyph['layout:boundingBox']['layout:position']
-    width = species_glyph['layout:boundingBox']['layout:dimensions']['@layout:width']
-    height = species_glyph['layout:boundingBox']['layout:dimensions']['@layout:height']
-    name = specie2bigg[species_id]
-    nodes[layout_id] = {
-        'bigg_id': name,
-        'name': name,
-        'node_type': 'metabolite',
-        'x': float(position['@layout:x']) + float(width) / 2,
-        'y': float(position['@layout:y']) + float(height) / 2,
-        'label_x': float(position['@layout:x']) + float(width) / 2,
-        'label_y': float(position['@layout:y']) + float(height) / 2,
-        'node_is_primary': False
-    }
-
-# create the segments of edges
-list_of_reaction_glyphs = layout_root['layout:listOfReactionGlyphs']['layout:reactionGlyph']
-for reaction_glyph in list_of_reaction_glyphs:
-    reaction = edges[reaction_glyph['@layout:reaction']]
-    segments = {}
+def create_reaction_segments(reaction_glyph, reaction_layout_id, nodes, segments, reaction):
+    """
+    Create the segments for a reaction, only the trunk reaction segments
+    :param reaction_glyph: reaction glyph
+    :param reaction_layout_id: reaction layout id
+    :param nodes: all nodes in the model
+    :param segments: all segments in the single reaction
+    :param reaction: current reaction object
+    :return: reaction start node id and reaction end node id, for the connection of the metabolites
+    """
+    list_of_reaction_segments = []
     reaction_seg_start_node_id = None
     reaction_seg_end_node_id = None
-    reaction_layout_id = reaction_glyph['@layout:id']
-
-    # add the segments of reaction
-    list_of_reaction_segments = []
     if 'layout:curve' in reaction_glyph:
         layout_curve = reaction_glyph['layout:curve']
         if layout_curve is not None and 'layout:listOfCurveSegments' in layout_curve:
@@ -380,10 +384,25 @@ for reaction_glyph in list_of_reaction_glyphs:
             set_reaction_label_position(start, end, reaction)
 
         to_id = end_id if index == length_of_reaction_segments - 1 else next_reaction_segment_id
-        add_segment(segments, current_reaction_segment_id, start_id, to_id)
+        put_segment_to_segments(segments, current_reaction_segment_id, start_id, to_id)
 
-    # create the segments of metabolites
-    list_of_metabolite_curves = reaction_glyph['layout:listOfSpeciesReferenceGlyphs']['layout:speciesReferenceGlyph']
+    return reaction_seg_start_node_id, reaction_seg_end_node_id
+
+
+def create_metabolite_segments(reaction_glyph, reaction_layout_id, nodes, segments, reaction_seg_start_node_id,
+                               reaction_seg_end_node_id):
+    """
+    Create the segments for metabolites
+    :param reaction_glyph: reaction glyph
+    :param reaction_layout_id: reaction layout id
+    :param nodes: all nodes in the model
+    :param segments: all segments in the single reaction
+    :param reaction_seg_start_node_id: substart/sidesubstart connect to this node
+    :param reaction_seg_end_node_id: this node connect to product/sideproduct
+    :return: None
+    """
+    list_of_metabolite_curves = reaction_glyph['layout:listOfSpeciesReferenceGlyphs'][
+        'layout:speciesReferenceGlyph']
     for metabolite_curve in list_of_metabolite_curves:
         metabolite_curve_id = f"{reaction_layout_id}-{metabolite_curve['@layout:id']}"
         role = metabolite_curve['@layout:role']
@@ -407,32 +426,112 @@ for reaction_glyph in list_of_reaction_glyphs:
                 nodes[mato_species_glyph]['node_is_primary'] = True
 
             process_metabolite(role, index, start_node_id, end_node_id, start_x, start_y, nodes, segments,
-                               mato_species_glyph, length_of_metabolite_segments)
+                               mato_species_glyph, length_of_metabolite_segments, metabolite_curve_id)
 
-    reaction['segments'] = segments
-    edges[reaction_glyph['@layout:reaction']] = reaction
 
-escher_maps = [{
-    "map_name": map_name,
-    "map_id": map_id,
-    "map_description": map_description,
-    "homepage": "https://escher.github.io",
-    "schema": "https://escher.github.io/escher/jsonschema/1-0-0#"
-},
-    {
-        "reactions": edges,
-        "nodes": nodes,
-        "text_labels": {},
-        "canvas": {
-            "x": -layout_width / 20,
-            "y": -layout_height / 20,
-            "width": layout_width * 1.1,
-            "height": layout_height * 1.1
+# create the segments for all reactions
+def create_all_segments(edges, layout_root, nodes):
+    """
+    Create the segments for all reactions
+    :param edges: all edges in the model
+    :param layout_root: layout root object, contains all layout information
+    :param nodes: all nodes in the model
+    :return: None
+    """
+    list_of_reaction_glyphs = layout_root['layout:listOfReactionGlyphs']['layout:reactionGlyph']
+    for reaction_glyph in list_of_reaction_glyphs:
+        reaction = edges[reaction_glyph['@layout:reaction']]
+        segments = {}
+        reaction_layout_id = reaction_glyph['@layout:id']
+
+        # add the segments of reaction
+        reaction_seg_start_node_id, reaction_seg_end_node_id = create_reaction_segments(reaction_glyph, reaction_layout_id, nodes, segments, reaction)
+
+        # create the segments of metabolites
+        create_metabolite_segments(reaction_glyph, reaction_layout_id, nodes, segments, reaction_seg_start_node_id,
+                                    reaction_seg_end_node_id)
+
+        reaction['segments'] = segments
+        edges[reaction_glyph['@layout:reaction']] = reaction
+
+
+def main(input_file_path, output_file_path):
+    """
+    Main function to convert the SBML JSON to Escher JSON
+    :param input_file_path: input file path
+    :param output_file_path: output file path
+    :return: None
+    """
+
+    # Load your original json data
+    data = load_json_data(input_file_path)
+
+    # map basic information
+    model = data['sbml']['model']
+    map_name = model['@id']
+    map_id = model['@id']
+    map_description = ""
+
+    # create species2bigg, for the convenience of getting bigg_id
+    species = model['listOfSpecies']['species']
+    specie2bigg = {}
+    for sp in species:
+        specie2bigg[sp['@id']] = sp['@name']
+
+    # define the list of layouts
+    list_of_layouts = model['layout:listOfLayouts']
+    # dict or list is better?
+    if isinstance(list_of_layouts, dict):
+        list_of_layouts = [list_of_layouts]
+
+    layout_root = list_of_layouts[0]['layout:layout']
+    layout_width = float(layout_root['layout:dimensions']['@layout:width'])
+    layout_height = float(layout_root['layout:dimensions']['@layout:height'])
+
+    # define edges
+    edges = {}
+    # create reactions, expect the label position and segments
+    create_reaction_basic_info(model, specie2bigg, layout_width, layout_height, edges)
+
+    # define nodes
+    nodes = {}
+    # create nodes, expect the multimarker nodes
+    create_metabolite_nodes(specie2bigg, layout_root, nodes)
+
+    # create the segments of edges
+    create_all_segments(edges, layout_root, nodes)
+
+    escher_maps = [{
+        "map_name": map_name,
+        "map_id": map_id,
+        "map_description": map_description,
+        "homepage": "https://escher.github.io",
+        "schema": "https://escher.github.io/escher/jsonschema/1-0-0#"
+    },
+        {
+            "reactions": edges,
+            "nodes": nodes,
+            "text_labels": {},
+            "canvas": {
+                "x": -layout_width / 20,
+                "y": -layout_height / 20,
+                "width": layout_width * 1.1,
+                "height": layout_height * 1.1
+            }
         }
-    }
-]
+    ]
 
-# Save the new JSON data
-save_json_data(escher_maps, output_file_path)
+    # Save the new JSON data
+    save_json_data(escher_maps, output_file_path)
 
-print(f"convert success, and save to {output_file_path}")
+    print(f"convert success, and save to {output_file_path}")
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='Process some JSON files.')
+    parser.add_argument('--input', default='SBML_new_PPP_6.json', help='Path to the input JSON file')
+    parser.add_argument('--output', default='sbml2escher_SBML_new_PPP_6.json', help='Path to the output JSON file')
+    args = parser.parse_args()
+    input_file_path = args.input
+    output_file_path = args.output
+
+    main(input_file_path, output_file_path)
