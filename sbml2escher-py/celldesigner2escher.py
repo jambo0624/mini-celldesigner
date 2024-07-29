@@ -488,7 +488,7 @@ def create_all_segments(edges, layout_root, nodes):
         edges[reaction_glyph['@layout:reaction']] = reaction
 
 
-def sbml2escher(input_file_path, output_file_path):
+def sbml2escher(input_file_path, output_file_path, delete_temp_file=False):
     """
     Main function to convert the SBML JSON to Escher JSON
     :param input_file_path: input file path
@@ -557,16 +557,13 @@ def sbml2escher(input_file_path, output_file_path):
     # Save the new JSON data
     save_json_data(escher_maps, output_file_path)
 
-    try:
-        os.remove(input_file_path)
-        print(f"File {input_file_path} deleted successfully")
-    except FileNotFoundError:
-        print(f"File {input_file_path} does not exist")
-    except PermissionError:
-        print(f"Permission denied to delete file {input_file_path}")
-    except Exception as e:
-        print(f"Error deleting file {input_file_path}: {
-        e}")
+    # if it is celldesigner2escher, the script will create the `sbml` temp file, and delete it after the conversion
+    if delete_temp_file:
+        try:
+            os.remove(input_file_path)
+            print(f"File {input_file_path} deleted successfully")
+        except Exception as e:
+            print(f"Error deleting file {input_file_path}: {e}")
 
     print(f"convert success, and save to {output_file_path}")
 
@@ -581,10 +578,12 @@ if __name__ == "__main__":
     input_file_path = args.input
     output_file_path = args.output
 
+    has_temp_output_file = False
     # Convert CellDesigner XML to SBML XML if needed
     if args.input_format == 'celldesigner':
+        has_temp_output_file = True
         temp_output_file_path = 'SBML_converted.xml'
         celldesigner2sbml(input_file_path, temp_output_file_path)
         input_file_path = temp_output_file_path
 
-    sbml2escher(input_file_path, output_file_path)
+    sbml2escher(input_file_path, output_file_path, has_temp_output_file)
