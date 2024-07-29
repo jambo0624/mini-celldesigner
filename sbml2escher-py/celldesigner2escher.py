@@ -3,6 +3,7 @@ import argparse
 import sys
 import xmltodict
 import requests
+import os
 
 def celldesigner2sbml(input_file_path, output_file_path):
     with open(input_file_path, 'rb') as file:
@@ -27,8 +28,6 @@ def celldesigner2sbml(input_file_path, output_file_path):
     else:
         print(f"CellDesigner2SBML request failed with status code {response.status_code}, error message: {response.text}")
 
-
-
 # Load XML data
 def load_xml_data(file_path):
     try:
@@ -44,8 +43,7 @@ def load_xml_data(file_path):
 # Save escher JSON data
 def save_json_data(data, file_path):
     if not file_path.endswith('.json'):
-        print(
-            f"Warning: The output file {file_path} does not have a .json extension. It might not be opened correctly by JSON readers.")
+            print(f"Warning: The output file {file_path} does not have a .json extension. It might not be opened correctly by JSON readers.")
     try:
         with open(file_path, 'w') as file:
             json.dump(data, file, indent=4)
@@ -559,14 +557,25 @@ def sbml2escher(input_file_path, output_file_path):
     # Save the new JSON data
     save_json_data(escher_maps, output_file_path)
 
+    try:
+        os.remove(input_file_path)
+        print(f"File {input_file_path} deleted successfully")
+    except FileNotFoundError:
+        print(f"File {input_file_path} does not exist")
+    except PermissionError:
+        print(f"Permission denied to delete file {input_file_path}")
+    except Exception as e:
+        print(f"Error deleting file {input_file_path}: {
+        e}")
+
     print(f"convert success, and save to {output_file_path}")
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Process some JSON files.')
-    parser.add_argument('--input', default='SBML_new_PPP_6.xml', help='Path to the input JSON file')
-    parser.add_argument('--output', default='sbml2escher_SBML_new_PPP_6.json', help='Path to the output JSON file')
-    parser.add_argument('--input-format', choices=['xml', 'celldesigner'], default='celldesigner', help='Format of the input file (xml, or celldesigner)')
+    parser.add_argument('--input', default='celldesigner.xml', help='Path to the input XML file')
+    parser.add_argument('--output', default='celldesigner2escher_output.json', help='Path to the output JSON file')
+    parser.add_argument('--input-format', choices=['sbml', 'celldesigner'], default='celldesigner', help='Format of the input file (sbml, or celldesigner)')
 
     args = parser.parse_args()
     input_file_path = args.input
