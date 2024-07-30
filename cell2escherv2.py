@@ -105,7 +105,6 @@ def create_edges(reactions, nodes):
             "label_y": 0,
         }
 
-        # 添加 metabolites（反和产）
         base_reactant = reaction['annotation']['celldesigner:extension']['celldesigner:baseReactants'][
             'celldesigner:baseReactant']
         base_product = reaction['annotation']['celldesigner:extension']['celldesigner:baseProducts'][
@@ -113,7 +112,6 @@ def create_edges(reactions, nodes):
         metabolites.append({"bigg_id": get_metabolite_name(base_reactant["@species"], nodes, True), "coefficient": -1})
         metabolites.append({"bigg_id": get_metabolite_name(base_product["@species"], nodes, True), "coefficient": 1})
 
-        # 中点信息，nodes 添加中点
         base_reactant_position = [nodes[base_reactant["@alias"]]['x'], nodes[base_reactant["@alias"]]['y']]
         base_product_position = [nodes[base_product["@alias"]]['x'], nodes[base_product["@alias"]]['y']]
         center_id = str(uuid.uuid4())
@@ -150,7 +148,7 @@ def create_edges(reactions, nodes):
 
             add_segment(segments, base_reactant["@alias"], left_id, base_reactant_position, left_position, 1 / 3)
 
-            if isinstance(reactants, dict):  # 如果reactants是字典，将其转换为列表
+            if isinstance(reactants, dict):
                 reactants = [reactants]
 
             for reactant in reactants:
@@ -178,7 +176,7 @@ def create_edges(reactions, nodes):
             add_segment_without_pos(segments, center_id, right_id)
             add_segment(segments, right_id, base_product["@alias"], right_position, base_product_position, 1 / 3)
 
-            if isinstance(products, dict):  # 如果products是字典，将其转换为列表
+            if isinstance(products, dict):
                 products = [products]
 
             for product in products:

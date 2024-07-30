@@ -1,7 +1,6 @@
 import csv
 import json
 
-# 读取CSV数据
 csv_file = 'test_TCA.csv'
 csv_data = {}
 with open(csv_file, mode='r') as file:

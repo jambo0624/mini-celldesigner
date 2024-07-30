@@ -93,7 +93,6 @@ def create_edges(reactions, nodes):
             "coefficient": 1
         })
 
-        # 中点信息
         base_reactant_position = [nodes[base_reactant_a_id]['x'], nodes[base_reactant_a_id]['y']]
         base_product_position = [nodes[base_product_a_id]['x'], nodes[base_product_a_id]['y']]
 
@@ -131,7 +130,8 @@ def create_edges(reactions, nodes):
                 base_reactant_position[0] - center_position[0]) / 3
             b2_y = base_reactant_position[1] + 2 * abs(
                 base_reactant_position[1] - center_position[1]) / 3
-            # 添加反应物到中点的连线
+
+
             segments.setdefault(str(uuid.uuid4()), {
                 "from_node_id": base_reactant_a_id,
                 "to_node_id": center_id,
@@ -151,7 +151,7 @@ def create_edges(reactions, nodes):
                 base_product_position[0] - center_position[0]) / 3
             b4_y = base_product_position[1] + 2 * abs(
                 base_product_position[1] - center_position[1]) / 3
-            # 添加产物到中点的连线
+
             segments.setdefault(str(uuid.uuid4()), {
                 "from_node_id": center_id,
                 "to_node_id": base_product_a_id,
@@ -206,7 +206,7 @@ def create_edges(reactions, nodes):
             })
 
 
-            if isinstance(reactants, dict):  # 如果reactants是字典，将其转换为列表
+            if isinstance(reactants, dict):
                 reactants = [reactants]
 
             for reactant in reactants:
@@ -247,7 +247,7 @@ def create_edges(reactions, nodes):
                 base_reactant_position[0] - center_position[0]) / 3
             b2_y = base_reactant_position[1] + 2 * abs(
                 base_reactant_position[1] - center_position[1]) / 3
-            # 添加反应物到中点的连线
+
             segments.setdefault(str(uuid.uuid4()), {
                 "from_node_id": base_reactant_a_id,
                 "to_node_id": center_id,
@@ -301,7 +301,7 @@ def create_edges(reactions, nodes):
             })
 
 
-            if isinstance(products, dict):  # 如果products是字典，将其转换为列表
+            if isinstance(products, dict):
                 products = [products]
 
             for product in products:
@@ -343,7 +343,6 @@ def create_edges(reactions, nodes):
                 base_product_position[0] - center_position[0]) / 3
             b4_y = base_product_position[1] + 2 * abs(
                 base_product_position[1] - center_position[1]) / 3
-            # 添加产物到中点的连线
             segments.setdefault(str(uuid.uuid4()), {
                 "from_node_id": center_id,
                 "to_node_id": base_product_a_id,

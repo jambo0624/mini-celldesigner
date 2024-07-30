@@ -105,7 +105,7 @@ def create_edges(reactions, nodes):
             "label_y": 0,
         }
 
-        # 添加 metabolites（反和产）
+        # add base reactants and products
         base_reactants = reaction['annotation']['celldesigner:extension']['celldesigner:baseReactants'][
             'celldesigner:baseReactant']
         base_products = reaction['annotation']['celldesigner:extension']['celldesigner:baseProducts'][
@@ -113,21 +113,21 @@ def create_edges(reactions, nodes):
 
         reactants = reaction.get('annotation', {}).get('celldesigner:extension', {}).get(
             'celldesigner:listOfReactantLinks', {}).get('celldesigner:reactantLink', [])
-        if isinstance(reactants, dict):  # 如果reactants是字典，将其转换为列表
+        if isinstance(reactants, dict):  # if reactants is dict, convert it to list
             reactants = [reactants]
         products = reaction.get('annotation', {}).get('celldesigner:extension', {}).get(
             'celldesigner:listOfProductLinks', {}).get('celldesigner:productLink', [])
-        if isinstance(products, dict):  # 如果products是字典，将其转换为列表
+        if isinstance(products, dict):  # if products is dict, convert it to list
             products = [products]
 
         base_reactant = base_reactants
         base_product = base_products
-        if not isinstance(base_reactants, dict):  # 如果base_reactants是字典，将其转换为列表
+        if not isinstance(base_reactants, dict):  # if base_reactants is dict, convert it to list
             base_reactant = base_reactants[0]
             for i in range(1, len(base_reactants)):
                 reactants.append(base_reactants[i])
 
-        if not isinstance(base_products, dict):  # 如果base_products是字典，将其转换为列表
+        if not isinstance(base_products, dict):  # if base_products is dict, convert it to list
             base_product = base_products[0]
             for i in range(1, len(base_products)):
                 products.append(base_products[i])
@@ -135,7 +135,7 @@ def create_edges(reactions, nodes):
         metabolites.append({"bigg_id": get_metabolite_name(base_reactant["@species"], nodes, True), "coefficient": -1})
         metabolites.append({"bigg_id": get_metabolite_name(base_product["@species"], nodes, True), "coefficient": 1})
 
-        # 中点信息，nodes 添加中点
+        # midmarker
         base_reactant_position = [nodes[base_reactant["@alias"]]['x'], nodes[base_reactant["@alias"]]['y']]
         base_product_position = [nodes[base_product["@alias"]]['x'], nodes[base_product["@alias"]]['y']]
         center_id = str(uuid.uuid4())
