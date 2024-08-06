@@ -6,6 +6,20 @@ import time
 import xmltodict
 import requests
 import os
+import re
+
+#Replace brackets with underscores
+def replace_brackets(input_string):
+    # Define the replacer function
+    def replacer(match):
+        # Get the inner text of the match
+        inner_text = match.group(1)
+        # Return the inner text with underscores
+        return f"_{inner_text}"
+
+    # Replace the brackets with underscores
+    result = re.sub(r'\[(.*?)\]', replacer, input_string)
+    return result
 
 # identify the file type, whether it is CellDesigner XML or SBML XML
 def identify_file_type(file_path):
@@ -250,7 +264,7 @@ def set_reaction_label_position(start, end, reaction):
         'y': (float(start['@layout:y']) + float(end['@layout:y'])) / 2
     }
     reaction['label_x'] = mid_node['x']
-    reaction['label_y'] = mid_node['y']
+    reaction['label_y'] = mid_node['y'] - 20
 
 
 def is_point_on_segment(px, py, x1, y1, x2, y2):
@@ -529,7 +543,8 @@ def sbml2escher(input_file_path, output_file_path, delete_temp_file=False):
     species = model['listOfSpecies']['species']
     specie2bigg = {}
     for sp in species:
-        specie2bigg[sp['@id']] = sp['@name']
+        # cause the bigg_id converted by minerva is not the format we want, so we need to replace the brackets for the link to the metabolite or reaction
+        specie2bigg[sp['@id']] = replace_brackets(sp['@name'])
 
     # define the list of layouts
     list_of_layouts = model['layout:listOfLayouts']
@@ -591,8 +606,8 @@ def sbml2escher(input_file_path, output_file_path, delete_temp_file=False):
 if __name__ == "__main__":
     start_time = time.time()
     parser = argparse.ArgumentParser(description='Process some JSON files.')
-    parser.add_argument('--input', default='MicroMap.xml', help='Path to the input XML file')
-    parser.add_argument('--output', default='test2.json', help='Path to the output JSON file')
+    parser.add_argument('--input', default='SBML_origin.xml', help='Path to the input XML file')
+    parser.add_argument('--output', default='sbml2escher_SBML_origin.json', help='Path to the output JSON file')
 
     args = parser.parse_args()
     input_file_path = args.input
