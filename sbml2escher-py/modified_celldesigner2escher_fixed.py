@@ -511,11 +511,12 @@ def create_reaction_segments(reaction_glyph, reaction_layout_id, segments, react
     return reaction_seg_start_node_id, reaction_seg_end_node_id
 
 
-def create_metabolite_segments(reaction_glyph, reaction_layout_id, segments,
+def create_metabolite_segments(reaction, reaction_glyph, reaction_layout_id, segments,
                                reaction_seg_start_node_id,
                                reaction_seg_end_node_id):
     """
     Create the segments for metabolites
+    :param reaction: reaction object
     :param reaction_glyph: reaction glyph
     :param reaction_layout_id: reaction layout id
     :param segments: all segments in the single reaction
@@ -543,6 +544,17 @@ def create_metabolite_segments(reaction_glyph, reaction_layout_id, segments,
         for index, metabolite_segment in enumerate(list_of_metabolite_segments):
             start_x = float(metabolite_segment['layout:start']['@layout:x'])
             start_y = float(metabolite_segment['layout:start']['@layout:y'])
+            # no reaction segments situation
+            if ((start_node_id is None) or (end_node_id is None) and index == 0):
+                center_node_id = f"{metabolite_curve_id}-center"
+                nodes[center_node_id] = {
+                    'node_type': 'multimarker',
+                    'x': start_x,
+                    'y': start_y,
+                }
+                start_node_id = end_node_id = center_node_id
+                reaction['label_x'] = start_x
+                reaction['label_y'] = start_y - 20
 
             # mark the primary metabolites
             if is_main_metabolite(role):
@@ -574,7 +586,7 @@ def create_all_segments(layout_root):
             segments, reaction)
 
         # create the segments of metabolites
-        create_metabolite_segments(reaction_glyph, reaction_layout_id, segments,
+        create_metabolite_segments(reaction, reaction_glyph, reaction_layout_id, segments,
                                    reaction_seg_start_node_id,
                                    reaction_seg_end_node_id)
 
@@ -660,8 +672,8 @@ def sbml2escher(input_file_path, output_file_path, delete_temp_file=False):
 if __name__ == "__main__":
     start_time = time.time()
     parser = argparse.ArgumentParser(description='Process some JSON files.')
-    parser.add_argument('--input', default='SBML_origin.xml', help='Path to the input XML file')
-    parser.add_argument('--output', default='sbml2escher_SBML_new_origin.json',
+    parser.add_argument('--input', default='SBML_new_PPP_6.xml', help='Path to the input XML file')
+    parser.add_argument('--output', default='sbml2escher_SBML_new_PPP_6.json',
                         help='Path to the output JSON file')
 
     args = parser.parse_args()
