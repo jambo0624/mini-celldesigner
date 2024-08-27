@@ -1,0 +1,376 @@
+{
+    "sbml": {
+        "@xmlns": "str",
+        "@layout:required": "str",
+        "@level": "str",
+        "@multi:required": "str",
+        "@render:required": "str",
+        "@version": "str",
+        "@xmlns:layout": "str",
+        "@xmlns:multi": "str",
+        "@xmlns:render": "str",
+        "model": {
+            "@areaUnits": "str",
+            "@extentUnits": "str",
+            "@id": "str",
+            "@lengthUnits": "str",
+            "@substanceUnits": "str",
+            "@timeUnits": "str",
+            "@volumeUnits": "str",
+            "notes": {
+                "body": {
+                    "@xmlns": "str",
+                    "p": "NoneType"
+                }
+            },
+            "annotation": {
+                "rdf:RDF": {
+                    "@xmlns:rdf": "str",
+                    "@xmlns:dc": "str",
+                    "@xmlns:dcterms": "str",
+                    "@xmlns:vCard": "str",
+                    "@xmlns:bqbiol": "str",
+                    "@xmlns:bqmodel": "str",
+                    "rdf:Description": {
+                        "@rdf:about": "str",
+                        "dcterms:modified": {
+                            "@rdf:parseType": "str"
+                        }
+                    }
+                }
+            },
+            "layout:listOfLayouts": {
+                "@xmlns:layout": "str",
+                "@xmlns:xsi": "str",
+                "layout:layout": {
+                    "@layout:id": "str",
+                    "render:listOfRenderInformation": {
+                        "@xmlns:render": "str",
+                        "render:renderInformation": {
+                            "@render:id": "str",
+                            "render:listOfColorDefinitions": {
+                                "render:colorDefinition": [
+                                    {
+                                        "@render:id": "str",
+                                        "@render:value": "str"
+                                    }
+                                ]
+                            },
+                            "render:listOfLineEndings": {
+                                "render:lineEnding": [
+                                    {
+                                        "@render:id": "str",
+                                        "render:g": "NoneType"
+                                    }
+                                ]
+                            },
+                            "render:listOfStyles": {
+                                "render:style": [
+                                    {
+                                        "@render:idList": "str",
+                                        "render:g": {
+                                            "@render:fill": "str",
+                                            "@render:font-size": "str",
+                                            "@render:stroke": "str",
+                                            "@render:stroke-width": "str",
+                                            "render:ellipse": {
+                                                "@render:cx": "str",
+                                                "@render:cy": "str",
+                                                "@render:rx": "str",
+                                                "@render:ry": "str"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "layout:dimensions": {
+                        "@layout:height": "str",
+                        "@layout:width": "str"
+                    },
+                    "layout:listOfCompartmentGlyphs": {
+                        "layout:compartmentGlyph": {
+                            "@layout:compartment": "str",
+                            "@layout:id": "str",
+                            "layout:boundingBox": {
+                                "layout:position": {
+                                    "@layout:x": "str",
+                                    "@layout:y": "str",
+                                    "@layout:z": "str"
+                                },
+                                "layout:dimensions": {
+                                    "@layout:height": "str",
+                                    "@layout:width": "str"
+                                }
+                            }
+                        }
+                    },
+                    "layout:listOfSpeciesGlyphs": {
+                        "layout:speciesGlyph": [
+                            {
+                                "@layout:id": "str",
+                                "@layout:species": "str",
+                                "layout:boundingBox": {
+                                    "layout:position": {
+                                        "@layout:x": "str",
+                                        "@layout:y": "str",
+                                        "@layout:z": "str"
+                                    },
+                                    "layout:dimensions": {
+                                        "@layout:height": "str",
+                                        "@layout:width": "str"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    "layout:listOfReactionGlyphs": {
+                        "layout:reactionGlyph": [
+                            {
+                                "@layout:id": "str",
+                                "@layout:reaction": "str",
+                                "layout:curve": {
+                                    "layout:listOfCurveSegments": {
+                                        "layout:curveSegment": {
+                                            "@xsi:type": "str",
+                                            "layout:start": {
+                                                "@layout:x": "str",
+                                                "@layout:y": "str",
+                                                "@layout:z": "str"
+                                            },
+                                            "layout:end": {
+                                                "@layout:x": "str",
+                                                "@layout:y": "str",
+                                                "@layout:z": "str"
+                                            }
+                                        }
+                                    }
+                                },
+                                "layout:listOfSpeciesReferenceGlyphs": {
+                                    "layout:speciesReferenceGlyph": [
+                                        {
+                                            "@layout:id": "str",
+                                            "@layout:role": "str",
+                                            "@layout:speciesGlyph": "str",
+                                            "layout:curve": {
+                                                "layout:listOfCurveSegments": {
+                                                    "layout:curveSegment": {
+                                                        "@xsi:type": "str",
+                                                        "layout:start": {
+                                                            "@layout:x": "str",
+                                                            "@layout:y": "str",
+                                                            "@layout:z": "str"
+                                                        },
+                                                        "layout:end": {
+                                                            "@layout:x": "str",
+                                                            "@layout:y": "str",
+                                                            "@layout:z": "str"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "layout:listOfTextGlyphs": {
+                        "layout:textGlyph": [
+                            {
+                                "@layout:graphicalObject": "str",
+                                "@layout:id": "str",
+                                "@layout:text": "str",
+                                "layout:boundingBox": {
+                                    "layout:position": {
+                                        "@layout:x": "str",
+                                        "@layout:y": "str",
+                                        "@layout:z": "str"
+                                    },
+                                    "layout:dimensions": {
+                                        "@layout:height": "str",
+                                        "@layout:width": "str"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            "multi:listOfSpeciesTypes": {
+                "@xmlns:multi": "str",
+                "multi:speciesType": [
+                    {
+                        "@multi:id": "str",
+                        "@multi:name": "str",
+                        "@sboTerm": "str",
+                        "multi:listOfSpeciesFeatureTypes": {
+                            "multi:speciesFeatureType": [
+                                {
+                                    "@multi:id": "str",
+                                    "@multi:name": "str",
+                                    "@multi:occur": "str",
+                                    "multi:listOfPossibleSpeciesFeatureValues": {
+                                        "multi:possibleSpeciesFeatureValue": [
+                                            {
+                                                "@multi:id": "str",
+                                                "@multi:name": "str"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "listOfUnitDefinitions": {
+                "unitDefinition": [
+                    {
+                        "@id": "str",
+                        "@name": "str",
+                        "listOfUnits": {
+                            "unit": {
+                                "@exponent": "str",
+                                "@kind": "str",
+                                "@multiplier": "str",
+                                "@scale": "str"
+                            }
+                        }
+                    }
+                ]
+            },
+            "listOfCompartments": {
+                "compartment": {
+                    "@constant": "str",
+                    "@id": "str",
+                    "@multi:isType": "str",
+                    "@size": "str",
+                    "@spatialDimensions": "str",
+                    "notes": {
+                        "body": {
+                            "@xmlns": "str",
+                            "p": "NoneType"
+                        }
+                    },
+                    "annotation": {
+                        "rdf:RDF": {
+                            "@xmlns:rdf": "str",
+                            "@xmlns:dc": "str",
+                            "@xmlns:dcterms": "str",
+                            "@xmlns:vCard": "str",
+                            "@xmlns:bqbiol": "str",
+                            "@xmlns:bqmodel": "str",
+                            "rdf:Description": {
+                                "@rdf:about": "str",
+                                "dcterms:modified": {
+                                    "@rdf:parseType": "str"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "listOfSpecies": {
+                "species": [
+                    {
+                        "@boundaryCondition": "str",
+                        "@compartment": "str",
+                        "@constant": "str",
+                        "@hasOnlySubstanceUnits": "str",
+                        "@id": "str",
+                        "@initialAmount": "str",
+                        "@multi:speciesType": "str",
+                        "@name": "str",
+                        "@sboTerm": "str",
+                        "notes": {
+                            "body": {
+                                "@xmlns": "str",
+                                "p": "NoneType"
+                            }
+                        },
+                        "annotation": {
+                            "rdf:RDF": {
+                                "@xmlns:rdf": "str",
+                                "@xmlns:dc": "str",
+                                "@xmlns:dcterms": "str",
+                                "@xmlns:vCard": "str",
+                                "@xmlns:bqbiol": "str",
+                                "@xmlns:bqmodel": "str",
+                                "rdf:Description": {
+                                    "@rdf:about": "str",
+                                    "dcterms:modified": {
+                                        "@rdf:parseType": "str"
+                                    }
+                                }
+                            }
+                        },
+                        "multi:listOfSpeciesFeatures": {
+                            "@xmlns:multi": "str",
+                            "multi:speciesFeature": [
+                                {
+                                    "@multi:occur": "str",
+                                    "@multi:speciesFeatureType": "str",
+                                    "multi:listOfSpeciesFeatureValues": {
+                                        "multi:speciesFeatureValue": {
+                                            "@multi:value": "str"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "listOfReactions": {
+                "reaction": [
+                    {
+                        "@id": "str",
+                        "@name": "str",
+                        "@reversible": "str",
+                        "@sboTerm": "str",
+                        "notes": {
+                            "body": {
+                                "@xmlns": "str",
+                                "p": "NoneType"
+                            }
+                        },
+                        "annotation": {
+                            "rdf:RDF": {
+                                "@xmlns:rdf": "str",
+                                "@xmlns:dc": "str",
+                                "@xmlns:dcterms": "str",
+                                "@xmlns:vCard": "str",
+                                "@xmlns:bqbiol": "str",
+                                "@xmlns:bqmodel": "str",
+                                "rdf:Description": {
+                                    "@rdf:about": "str",
+                                    "dcterms:modified": {
+                                        "@rdf:parseType": "str"
+                                    }
+                                }
+                            }
+                        },
+                        "listOfReactants": {
+                            "speciesReference": [
+                                {
+                                    "@constant": "str",
+                                    "@species": "str"
+                                }
+                            ]
+                        },
+                        "listOfProducts": {
+                            "speciesReference": [
+                                {
+                                    "@constant": "str",
+                                    "@species": "str"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
