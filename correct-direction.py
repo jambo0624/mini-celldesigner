@@ -12,7 +12,6 @@ def correct_segments(reactions):
                 # Second segment, set to_node_id as the new start_node_id and swap
                 segment['from_node_id'], segment['to_node_id'] = segment['to_node_id'], segment['from_node_id']
             else:
-                print(segment['from_node_id'], start_node_id, 'segment')
                 # For subsequent segments, swap if from_node_id matches start_node_id
                 if segment['from_node_id'] == start_node_id:
                     segment['from_node_id'], segment['to_node_id'] = segment['to_node_id'], segment['from_node_id']
